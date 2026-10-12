@@ -1,0 +1,13 @@
+{
+  "timestamp_utc": "2026-10-12T03:15:10.168189+00:00",
+  "endpoint": "https://api.ofox.ai/v1/user/balance",
+  "documentation": "https://ofox.ai/docs/api/openapi/balance",
+  "status": 200,
+  "account": {
+    "is_active": true,
+    "balance": 34.053928692,
+    "used": 25.946071308,
+    "total": 60,
+    "currency": "USD"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "source_environment": "SIM",
+  "scientific_inference": false,
+  "independent_checkpoints": 2,
+  "branches": 7,
+  "line_summaries": {
+    "p1": {
+      "line": "p1",
+      "n": 3,
+      "sampling_unit": "one matched SIM-origin checkpoint; branches are not independent tasks",
+      "groups": {
+        "oracle_attribution": {
+          "n": 1,
+          "successes": 1
+        },
+        "reflection": {
+          "n": 1,
+          "successes": 0
+        },
+        "no_intervention": {
+          "n": 1,
+          "successes": 1
+        }
+      },
+      "primary": "final_success",
+      "missing_arms": [],
+      "scientific_inference": false,
+      "measurements": [
+        {
+          "attribution_correct": null,
+          "diagnostic_value": null,
+          "invalid_retries": 0,
+          "cost": 3
+        },
+        {
+          "attribution_correct": null,
+          "diagnostic_value": null,
+          "invalid_retries": 0,
+          "cost": 8
+        },
+        {
+          "attribution_correct": null,
+          "diagnostic_value": null,
+          "invalid_retries": 0,
+          "cost": 5
+        }
+      ],
+      "unmeasured": [
+        "attribution_correct",
+        "diagnostic_value"
+      ],
+      "independent_checkpoints": 1,
+      "branch_count": 3
+    },
+    "p5": {
+      "line": "p5",
+      "n": 4,
+      "sampling_unit": "one matched SIM-origin checkpoint; branches are not independent tasks",
+      "groups": {
+        "full_replan": {
+          "n": 1,
+          "successes": 1
+        },
+        "selective_repair": {
+          "n": 1,
+          "successes": 1
+        },
+        "belief_only": {
+          "n": 1,
+          "successes": 1
+        },
+        "oracle_dependency": {
+          "n": 1,
+          "successes": 1
+        }
+      },
+      "primary": "final_success",
+      "missing_arms": [],
+      "scientific_inference": false,
+      "measurements": [
+        {
+          "invalid_action_rate": 0.0,
+          "valid_node_retention": 0.0,
+          "repair_cost": 6,
+          "completion": true
+        },
+        {
+          "invalid_action_rate": 0.0,
+          "valid_node_retention": 0.5,
+          "repair_cost": 5,
+          "completion": true
+        },
+        {
+          "invalid_action_rate": 0.0,
+          "valid_node_retention": 1.0,
+          "repair_cost": 4,
+          "completion": true
+        },
+        {
+          "invalid_action_rate": 0.0,
+          "valid_node_retention": 0.0,
+          "repair_cost": 6,
+          "completion": true
+        }
+      ],
+      "unmeasured": [],
+      "independent_checkpoints": 1,
+      "branch_count": 4
+    }
+  },
+  "paired_outcomes": {
+    "p1": {
+      "g2-p1-oracle_attribution": {
+        "paired_success_delta": 0,
+        "extra_cost": -2,
+        "harm": false,
+        "recovery": false
+      },
+      "g2-p1-reflection": {
+        "paired_success_delta": -1,
+        "extra_cost": 3,
+        "harm": true,
+        "recovery": false
+      }
+    },
+    "p5": {
+      "g2-p5-full_replan": {
+        "paired_success_delta": 0,
+        "extra_cost": 2,
+        "harm": false,
+        "recovery": false
+      },
+      "g2-p5-selective_repair": {
+        "paired_success_delta": 0,
+        "extra_cost": 1,
+        "harm": false,
+        "recovery": false
+      },
+      "g2-p5-oracle_dependency": {
+        "paired_success_delta": 0,
+        "extra_cost": 2,
+        "harm": false,
+        "recovery": false
+      }
+    }
+  },
+  "budget": [
+    {
+      "run": "g2-p5-full_replan",
+      "account_used_delta_usd": "0.000202735",
+      "reference_cny_conversion": "0.001356728816705336336275",
+      "actual_itemized_cost_cny": null,
+      "reserved_exposure_cny": 0.137988
+    },
+    {
+      "run": "g2-p1-oracle_attribution",
+      "account_used_delta_usd": "0.000079091",
+      "reference_cny_conversion": "0.000529287191861502731015",
+      "actual_itemized_cost_cny": null,
+      "reserved_exposure_cny": 0.068994
+    },
+    {
+      "run": "g2-p1-reflection",
+      "account_used_delta_usd": "0.000279119",
+      "reference_cny_conversion": "0.001867900414777797483635",
+      "actual_itemized_cost_cny": null,
+      "reserved_exposure_cny": 0.183984
+    },
+    {
+      "run": "g2-p1-no_intervention",
+      "account_used_delta_usd": "0.000143158",
+      "reference_cny_conversion": "0.000958031834374442199070",
+      "actual_itemized_cost_cny": null,
+      "reserved_exposure_cny": 0.11499
+    },
+    {
+      "run": "g2-p5-selective_repair",
+      "account_used_delta_usd": "0.000146106",
+      "reference_cny_conversion": "0.000977760231304658153490",
+      "actual_itemized_cost_cny": null,
+      "reserved_exposure_cny": 0.11499
+    },
+    {
+      "run": "g2-p5-belief_only",
+      "account_used_delta_usd": "0.000096760",
+      "reference_cny_conversion": "0.000647530422987685125400",
+      "actual_itemized_cost_cny": null,
+      "reserved_exposure_cny": 0.091992
+    },
+    {
+      "run": "g2-p5-oracle_dependency",
+      "account_used_delta_usd": "0.000143756",
+      "reference_cny_conversion": "0.000962033727645903915740",
+      "actual_itemized_cost_cny": null,
+      "reserved_exposure_cny": 0.137988
+    }
+  ],
+  "batch_reserved_cny": 0.850926,
+  "cumulative_exposure_cny": 0.981665,
+  "unreconciled_requests": 56,
+  "gate1_originals_unchanged": true,
+  "ledger_integrity": "ok",
+  "actual_itemized_cost_cny": null
+}

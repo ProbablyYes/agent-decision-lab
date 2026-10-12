@@ -171,13 +171,13 @@ class Gate1Engine:
                 return self.ledger.snapshot(run_id)
 
 
-def export(ledger, config, run_id, path):
+def export(ledger, config, run_id, path, *, world_type=CDW):
     path = Path(path); path.mkdir(parents=True,exist_ok=True)
     snap = ledger.snapshot(run_id)
     if not snap["runs"]:
         raise ValueError("unknown run")
     run = snap["runs"][0]; session = json.loads(run["session"])
-    w = CDW(); w.restore(session["environment"])
+    w = world_type(); w.restore(session["environment"])
     def write(name, value):
         (path/name).write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding="utf-8")
     (path/"hidden").mkdir(exist_ok=True)

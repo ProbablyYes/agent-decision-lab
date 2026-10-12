@@ -1,0 +1,580 @@
+{
+  "scientific_evidence": false,
+  "actual_api_calls": 0,
+  "actual_api_cost_cny": 0,
+  "scripts_chosen_by_evaluator": true,
+  "scores": {
+    "g2-p5-full_replan": {
+      "success": true,
+      "tool_calls": 6,
+      "invalid_actions": 0,
+      "redundant_probes": 0,
+      "invalid_action_rate": 0.0,
+      "valid_node_retention": 0.0,
+      "repair_cost": 6,
+      "completion": true,
+      "stale_node_executions": 0,
+      "shared_node_reexecutions": 2,
+      "decisions": 6,
+      "applied_decisions": 6,
+      "status": "completed",
+      "error": null,
+      "denominator": 1,
+      "excluded": false,
+      "source": "SIM",
+      "actual_api_cost_cny": 0,
+      "reserved_exposure_cny": 0.137988,
+      "unreconciled_requests": 6,
+      "completion_criterion": "correct change applied and verified",
+      "actual_network_calls": 0,
+      "transport_mock": true,
+      "scientific_evidence": false,
+      "reservation_is_synthetic": true
+    },
+    "g2-p1-oracle_attribution": {
+      "success": true,
+      "tool_calls": 2,
+      "invalid_actions": 0,
+      "redundant_probes": 0,
+      "decisions": 2,
+      "applied_decisions": 2,
+      "status": "completed",
+      "error": null,
+      "denominator": 1,
+      "excluded": false,
+      "source": "SIM",
+      "actual_api_cost_cny": 0,
+      "reserved_exposure_cny": 0.045996,
+      "unreconciled_requests": 2,
+      "completion_criterion": "correct change applied and verified",
+      "actual_network_calls": 0,
+      "transport_mock": true,
+      "scientific_evidence": false,
+      "reservation_is_synthetic": true
+    },
+    "g2-p1-reflection": {
+      "success": true,
+      "tool_calls": 3,
+      "invalid_actions": 0,
+      "redundant_probes": 0,
+      "decisions": 3,
+      "applied_decisions": 3,
+      "status": "completed",
+      "error": null,
+      "denominator": 1,
+      "excluded": false,
+      "source": "SIM",
+      "actual_api_cost_cny": 0,
+      "reserved_exposure_cny": 0.068994,
+      "unreconciled_requests": 3,
+      "completion_criterion": "correct change applied and verified",
+      "actual_network_calls": 0,
+      "transport_mock": true,
+      "scientific_evidence": false,
+      "reservation_is_synthetic": true
+    },
+    "g2-p1-no_intervention": {
+      "success": false,
+      "tool_calls": 8,
+      "invalid_actions": 1,
+      "redundant_probes": 0,
+      "decisions": 8,
+      "applied_decisions": 8,
+      "status": "failed",
+      "error": "decision/action budget exhausted",
+      "denominator": 1,
+      "excluded": false,
+      "source": "SIM",
+      "actual_api_cost_cny": 0,
+      "reserved_exposure_cny": 0.183984,
+      "unreconciled_requests": 8,
+      "completion_criterion": "correct change applied and verified",
+      "actual_network_calls": 0,
+      "transport_mock": true,
+      "scientific_evidence": false,
+      "reservation_is_synthetic": true
+    },
+    "g2-p5-selective_repair": {
+      "success": true,
+      "tool_calls": 4,
+      "invalid_actions": 0,
+      "redundant_probes": 0,
+      "invalid_action_rate": 0.0,
+      "valid_node_retention": 1.0,
+      "repair_cost": 4,
+      "completion": true,
+      "stale_node_executions": 0,
+      "shared_node_reexecutions": 0,
+      "decisions": 4,
+      "applied_decisions": 4,
+      "status": "completed",
+      "error": null,
+      "denominator": 1,
+      "excluded": false,
+      "source": "SIM",
+      "actual_api_cost_cny": 0,
+      "reserved_exposure_cny": 0.091992,
+      "unreconciled_requests": 4,
+      "completion_criterion": "correct change applied and verified",
+      "actual_network_calls": 0,
+      "transport_mock": true,
+      "scientific_evidence": false,
+      "reservation_is_synthetic": true
+    },
+    "g2-p5-belief_only": {
+      "success": false,
+      "tool_calls": 8,
+      "invalid_actions": 2,
+      "redundant_probes": 0,
+      "invalid_action_rate": 1.0,
+      "valid_node_retention": 1.0,
+      "repair_cost": 8,
+      "completion": false,
+      "stale_node_executions": 2,
+      "shared_node_reexecutions": 0,
+      "decisions": 8,
+      "applied_decisions": 8,
+      "status": "failed",
+      "error": "decision/action budget exhausted",
+      "denominator": 1,
+      "excluded": false,
+      "source": "SIM",
+      "actual_api_cost_cny": 0,
+      "reserved_exposure_cny": 0.183984,
+      "unreconciled_requests": 8,
+      "completion_criterion": "correct change applied and verified",
+      "actual_network_calls": 0,
+      "transport_mock": true,
+      "scientific_evidence": false,
+      "reservation_is_synthetic": true
+    },
+    "g2-p5-oracle_dependency": {
+      "success": true,
+      "tool_calls": 4,
+      "invalid_actions": 0,
+      "redundant_probes": 0,
+      "invalid_action_rate": 0.0,
+      "valid_node_retention": 1.0,
+      "repair_cost": 4,
+      "completion": true,
+      "stale_node_executions": 0,
+      "shared_node_reexecutions": 0,
+      "decisions": 4,
+      "applied_decisions": 4,
+      "status": "completed",
+      "error": null,
+      "denominator": 1,
+      "excluded": false,
+      "source": "SIM",
+      "actual_api_cost_cny": 0,
+      "reserved_exposure_cny": 0.091992,
+      "unreconciled_requests": 4,
+      "completion_criterion": "correct change applied and verified",
+      "actual_network_calls": 0,
+      "transport_mock": true,
+      "scientific_evidence": false,
+      "reservation_is_synthetic": true
+    }
+  },
+  "other_lines_offline_only": {
+    "p3-H": {
+      "no_intervention": {
+        "messages_before": [
+          {
+            "role": "system",
+            "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+          },
+          {
+            "role": "user",
+            "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+          }
+        ],
+        "intervention": null,
+        "actions": [
+          {
+            "kind": "apply_change",
+            "target": "A"
+          },
+          {
+            "kind": "verify"
+          }
+        ],
+        "observations": [
+          {
+            "feedback": "Service unavailable; attempted change did not restore service.",
+            "remaining_actions": 10,
+            "completed": false
+          },
+          {
+            "feedback": "Service unavailable.",
+            "remaining_actions": 9,
+            "completed": false
+          }
+        ],
+        "score": {
+          "success": false,
+          "tool_calls": 2,
+          "invalid_actions": 1,
+          "redundant_probes": 0
+        },
+        "checkpoint_hash": "5a3809cc19f2c5b1f004cb9e9ed610680320db4bb782926c55fa535855a184f2"
+      },
+      "fixed_reflection": {
+        "messages_before": [
+          {
+            "role": "system",
+            "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+          },
+          {
+            "role": "user",
+            "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+          },
+          {
+            "role": "user",
+            "content": "Reflect on the unsuccessful attempt, consider competing explanations, and choose your next action. No additional evidence is provided."
+          }
+        ],
+        "intervention": "fixed reflection message",
+        "actions": [
+          {
+            "kind": "apply_change",
+            "target": "A"
+          },
+          {
+            "kind": "verify"
+          }
+        ],
+        "observations": [
+          {
+            "feedback": "Service unavailable; attempted change did not restore service.",
+            "remaining_actions": 10,
+            "completed": false
+          },
+          {
+            "feedback": "Service unavailable.",
+            "remaining_actions": 9,
+            "completed": false
+          }
+        ],
+        "score": {
+          "success": false,
+          "tool_calls": 2,
+          "invalid_actions": 1,
+          "redundant_probes": 0
+        },
+        "checkpoint_hash": "5a3809cc19f2c5b1f004cb9e9ed610680320db4bb782926c55fa535855a184f2"
+      },
+      "diagnostic_intervention": {
+        "messages_before": [
+          {
+            "role": "system",
+            "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+          },
+          {
+            "role": "user",
+            "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+          }
+        ],
+        "intervention": "actual diagnose(A) action",
+        "actions": [
+          {
+            "kind": "diagnose",
+            "target": "A"
+          },
+          {
+            "kind": "apply_change",
+            "target": "B"
+          },
+          {
+            "kind": "verify"
+          }
+        ],
+        "observations": [
+          {
+            "feedback": "Command receipt: delivered.",
+            "remaining_actions": 10,
+            "completed": false
+          },
+          {
+            "feedback": "Change applied.",
+            "remaining_actions": 9,
+            "completed": false
+          },
+          {
+            "feedback": "Service restored and verified.",
+            "remaining_actions": 8,
+            "completed": true
+          }
+        ],
+        "score": {
+          "success": true,
+          "tool_calls": 3,
+          "invalid_actions": 0,
+          "redundant_probes": 0
+        },
+        "checkpoint_hash": "5a3809cc19f2c5b1f004cb9e9ed610680320db4bb782926c55fa535855a184f2"
+      }
+    },
+    "p3-E": {
+      "no_intervention": {
+        "messages_before": [
+          {
+            "role": "system",
+            "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+          },
+          {
+            "role": "user",
+            "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+          }
+        ],
+        "intervention": null,
+        "actions": [
+          {
+            "kind": "apply_change",
+            "target": "A"
+          },
+          {
+            "kind": "verify"
+          }
+        ],
+        "observations": [
+          {
+            "feedback": "Change applied.",
+            "remaining_actions": 10,
+            "completed": false
+          },
+          {
+            "feedback": "Service restored and verified.",
+            "remaining_actions": 9,
+            "completed": true
+          }
+        ],
+        "score": {
+          "success": true,
+          "tool_calls": 2,
+          "invalid_actions": 0,
+          "redundant_probes": 0
+        },
+        "checkpoint_hash": "c039274fd0c9005a1c00b4cafa2b0dc500335c43d664f49bfd7c92c393d8b67c"
+      },
+      "fixed_reflection": {
+        "messages_before": [
+          {
+            "role": "system",
+            "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+          },
+          {
+            "role": "user",
+            "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+          },
+          {
+            "role": "user",
+            "content": "Reflect on the unsuccessful attempt, consider competing explanations, and choose your next action. No additional evidence is provided."
+          }
+        ],
+        "intervention": "fixed reflection message",
+        "actions": [
+          {
+            "kind": "apply_change",
+            "target": "A"
+          },
+          {
+            "kind": "verify"
+          }
+        ],
+        "observations": [
+          {
+            "feedback": "Change applied.",
+            "remaining_actions": 10,
+            "completed": false
+          },
+          {
+            "feedback": "Service restored and verified.",
+            "remaining_actions": 9,
+            "completed": true
+          }
+        ],
+        "score": {
+          "success": true,
+          "tool_calls": 2,
+          "invalid_actions": 0,
+          "redundant_probes": 0
+        },
+        "checkpoint_hash": "c039274fd0c9005a1c00b4cafa2b0dc500335c43d664f49bfd7c92c393d8b67c"
+      },
+      "diagnostic_intervention": {
+        "messages_before": [
+          {
+            "role": "system",
+            "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+          },
+          {
+            "role": "user",
+            "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+          }
+        ],
+        "intervention": "actual diagnose(A) action",
+        "actions": [
+          {
+            "kind": "diagnose",
+            "target": "A"
+          },
+          {
+            "kind": "apply_change",
+            "target": "A"
+          },
+          {
+            "kind": "verify"
+          }
+        ],
+        "observations": [
+          {
+            "feedback": "Command receipt: absent.",
+            "remaining_actions": 10,
+            "completed": false
+          },
+          {
+            "feedback": "Change applied.",
+            "remaining_actions": 9,
+            "completed": false
+          },
+          {
+            "feedback": "Service restored and verified.",
+            "remaining_actions": 8,
+            "completed": true
+          }
+        ],
+        "score": {
+          "success": true,
+          "tool_calls": 3,
+          "invalid_actions": 0,
+          "redundant_probes": 0
+        },
+        "checkpoint_hash": "c039274fd0c9005a1c00b4cafa2b0dc500335c43d664f49bfd7c92c393d8b67c"
+      }
+    },
+    "p2-channel-pair": {
+      "user": [
+        {
+          "role": "system",
+          "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Task actions and node mapping: prepare creates shared snapshot; calibrate validates shared credentials; inspect A/B stages that configuration and inspects it (requires snapshot and credentials); apply_change A/B deploys it (requires matching staging and current requirement); diagnose A/B performs and registers its smoke test (requires matching applied change); verify completes service verification (requires applied current configuration and its smoke test). All primitive actions cost one, including redundant shared work. Old DAG: snapshot and credentials -> stage:A -> apply:A -> smoke:A -> verify:A. Completed nodes: snapshot, credentials, stage:A. Pending old actions: apply_change A, diagnose A, verify. The old plan is historical, not an instruction overriding new evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"feedback\": \"Requirement update: configuration B is now required. Shared snapshot and credentials remain valid.\", \"remaining_actions\": 9, \"completed\": false}"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "paired-fact",
+              "type": "function",
+              "function": {
+                "name": "cdw_action",
+                "arguments": "{\"action\": {\"kind\": \"diagnose\", \"target\": \"B\"}}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "paired-fact",
+          "content": "No additional information."
+        },
+        {
+          "role": "user",
+          "content": "Verified: configuration B is required; shared snapshot and credentials remain valid."
+        }
+      ],
+      "tool": [
+        {
+          "role": "system",
+          "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Task actions and node mapping: prepare creates shared snapshot; calibrate validates shared credentials; inspect A/B stages that configuration and inspects it (requires snapshot and credentials); apply_change A/B deploys it (requires matching staging and current requirement); diagnose A/B performs and registers its smoke test (requires matching applied change); verify completes service verification (requires applied current configuration and its smoke test). All primitive actions cost one, including redundant shared work. Old DAG: snapshot and credentials -> stage:A -> apply:A -> smoke:A -> verify:A. Completed nodes: snapshot, credentials, stage:A. Pending old actions: apply_change A, diagnose A, verify. The old plan is historical, not an instruction overriding new evidence."
+        },
+        {
+          "role": "user",
+          "content": "{\"feedback\": \"Requirement update: configuration B is now required. Shared snapshot and credentials remain valid.\", \"remaining_actions\": 9, \"completed\": false}"
+        },
+        {
+          "role": "assistant",
+          "content": null,
+          "tool_calls": [
+            {
+              "id": "paired-fact",
+              "type": "function",
+              "function": {
+                "name": "cdw_action",
+                "arguments": "{\"action\": {\"kind\": \"diagnose\", \"target\": \"B\"}}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "paired-fact",
+          "content": "Verified: configuration B is required; shared snapshot and credentials remain valid."
+        },
+        {
+          "role": "user",
+          "content": "No additional information."
+        }
+      ]
+    },
+    "p4-complementary": {
+      "actions": [
+        {
+          "kind": "calibrate"
+        },
+        {
+          "kind": "diagnose",
+          "target": "A"
+        },
+        {
+          "kind": "diagnose",
+          "target": "B"
+        },
+        {
+          "kind": "apply_change",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "observations": [
+        {
+          "feedback": "Instrument calibrated; no root cause disclosed.",
+          "remaining_actions": 10,
+          "completed": false
+        },
+        {
+          "feedback": "Probe A bit: 1. Use both bits: equal selects A, different selects B.",
+          "remaining_actions": 9,
+          "completed": false
+        },
+        {
+          "feedback": "Probe B bit: 0. Use both bits: equal selects A, different selects B.",
+          "remaining_actions": 8,
+          "completed": false
+        },
+        {
+          "feedback": "Change applied.",
+          "remaining_actions": 7,
+          "completed": false
+        },
+        {
+          "feedback": "Service restored and verified.",
+          "remaining_actions": 6,
+          "completed": true
+        }
+      ],
+      "score": {
+        "success": true,
+        "tool_calls": 5,
+        "invalid_actions": 0,
+        "redundant_probes": 0
+      }
+    }
+  }
+}

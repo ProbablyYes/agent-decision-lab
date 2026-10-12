@@ -1,5 +1,7 @@
 # Decision log
 
+2026-10-12（Gate 2 配对实测结束）：103项测试通过；七分支、两个 checkpoint、37次收费模型请求，无重试。P1 无干预成功5动作、反思失败8动作、Oracle归因成功3动作；反思分支显式知道 A不兼容却把prepare当作修正配置，重做A，决策horizon耗尽而非财务预算不足。P5 四组均成功，Belief-only/整体重规划/选择性修复/Oracle依赖提示工具数4/6/5/6，成功率饱和，未调整任务。账户USD累计used增量0.001090725非逐请求账单；新预留¥0.850926、含历史累计¥0.981665，56笔账单未核验继续保留。Gate 1所有文件哈希不变，账本增量迁移与完整性正常。源任务新语义和人工构造不得当作算法提升；新猜想写入OPEN_QUESTIONS。暂停共同审查，不扩展其他真实研究线。
+
 2026-10-12（g1-01真实执行）：仅1次真实请求，HTTP200，response model=qwen/qwen-flash，usage输入578/输出65/总计643，cache未知。供应商返回tool_calls及finish_reason=stop，冻结适配器要求tool_calls而拒绝；0 primitive，success=false，属于仪器协议兼容性中止，不能当作Agent错误归因。原始失败保留、不重试、不改冻结实现、不执行后两条。实际账单未知，预留¥0.006881；公开价参考估算约¥0.000181非账单。生成首条报告并人工复核，追加实际响应形状回归，最终78项通过；账本备份在.state内不入Git。暂停审查。
 
 2026-10-12（首条评审）：用户原则确认qwen/qwen-flash，先要求核验账户字段；公开控制台跳转登录，无法核实。期间用户进一步明确“大概估价即可”、本地API可用。依最新授权仅g1-01启用估算准入，不要求伪造账户确认；实际收费和缺失cache字段保留未知，预留不释放。其余轨迹在此模式下明确阻断。增加model_access独立确认字段及首条¥1持久化上限，保留8决策/12 primitive、¥8本批/¥10阶段。新增首条报告从账本自动生成，并在对账后更新；77项无网测试通过。公开Models价目在发送前无鉴权再次核验，所选模型元数据未变。没有改变五线指标、动作空间或开发新算法。
@@ -25,3 +27,7 @@
 User explicitly authorized g1-01b, g1-02, g1-03 with unchanged model/prompt/schema/limits. Accept stop only with one complete valid native cdw_action; retain compatibility anomaly. Original g1-01 remains immutable. Unknown bills stay reserved; named continuation may proceed past terminal unreconciled runs without marking bills reviewed or releasing liabilities. 86 offline tests passed, including the saved actual g1-01 response and matching next-request Tool Message. Each new run cap CNY1; batch cap CNY8 remains stricter than Gate 1 CNY10. No new research algorithms.
 
 Three authorized runs completed: six decisions/primitives each, all task-success; 18 new requests, no retries or model fallback. Original g1-01 file hashes unchanged. Reopened ledger integrity ok, total 19 unreconciled requests and CNY0.130739 reserved exposure; actual bills unknown. E trajectory explicitly misdescribed execution-failure evidence, then succeeded; no causal/statistical claims. Paused for review.
+
+
+## Gate 2A paired pilot v1, 2026-10-12
+User authorized minimal P1/P5 contrasts only after Mock verification. Versioned PilotWorld adds ambiguous H/E failure and partial DAG invalidation without modifying Gate 1 CDW/tasks/results. Exact arms, random order, fairness limits and metrics pre-registered in research/GATE2_PROTOCOL.md. 103 offline tests pass; Mock native loops, checkpoint forks, P2 legal matched carriers, P3 natural successes, P4 complementary probes and dual-effect staging calibrated. Scripted success differences are not Agent scientific evidence. USD account lifetime consumption checked via documented read-only balance endpoint, not attributed to project. Gate 1 unknown CNY0.130739 remains reserved. Additive same-ledger pilot authorization: cumulative CNY40, batch CNY5, per branch CNY1; no retries, no later arms.

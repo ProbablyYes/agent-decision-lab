@@ -1,0 +1,31 @@
+# Controlled paired Pilot (not statistical evidence)
+
+{
+  "success": true,
+  "tool_calls": 6,
+  "invalid_actions": 0,
+  "redundant_probes": 0,
+  "invalid_action_rate": 0.0,
+  "valid_node_retention": 0.0,
+  "repair_cost": 6,
+  "completion": true,
+  "stale_node_executions": 0,
+  "shared_node_reexecutions": 2,
+  "decisions": 6,
+  "applied_decisions": 6,
+  "status": "completed",
+  "error": null,
+  "denominator": 1,
+  "excluded": false,
+  "source": "ORACLE",
+  "actual_api_cost_cny": null,
+  "reserved_exposure_cny": 0.137988,
+  "unreconciled_requests": 6,
+  "completion_criterion": "correct change applied and verified",
+  "environment_origin": "SIM",
+  "checkpoint_hash": "c11ddf07d9271fc63f029a4b6c70d9c98501c15583f7ab57f11191ecce83ffb2",
+  "condition": "oracle_dependency",
+  "remaining_primitives": 3,
+  "cost": 6,
+  "failure_layer": null
+}

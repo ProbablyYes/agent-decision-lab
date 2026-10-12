@@ -1,0 +1,8 @@
+{
+  "actual_requests_replayed_offline": 37,
+  "all_tool_results_and_final_states_match": true,
+  "matching_native_tool_messages": true,
+  "frozen_fingerprint_matches": true,
+  "gate1_database_run_and_request_rows_unchanged": true,
+  "no_credentials_in_results": true
+}

@@ -1,0 +1,239 @@
+{
+  "provider": "ofox",
+  "base_url": "https://api.ofox.ai/v1",
+  "model_id": "qwen/qwen-flash",
+  "model_revision": "qwen-flash",
+  "model_confirmed": true,
+  "model_access_confirmed": false,
+  "estimate_based_first_run_authorized": true,
+  "account_currency_confirmed": false,
+  "account_rates_confirmed": false,
+  "fx_confirmed": false,
+  "usage_cache_semantics_confirmed": false,
+  "temperature": 0,
+  "max_tokens": 512,
+  "max_decisions": 8,
+  "primitive_budget": 12,
+  "input_token_bound": 32768,
+  "seed": 0,
+  "automatic_retries": 0,
+  "concurrency": 1,
+  "tune_on_test": false,
+  "stage_cap_cny": 40,
+  "batch_cap_cny": 5,
+  "first_run_cap_cny": 1,
+  "prompt_version": "gate2-paired-v1",
+  "tools_hash": "a6e7633757ec3f3764e182ffd8fc981c44ae1273301b303464bb093d0dd79d20",
+  "catalog_path": "research/provider/ofox-models-2026-10-12.json",
+  "catalog_sha256": "6aafcedaca3d4a4c4ee26191447434f5a84d470863d9428bff4b5600d04391d4",
+  "pricing": {
+    "currency": "USD",
+    "input": "0.022",
+    "output": "0.22",
+    "cache_read": "0.0043",
+    "cache_write": "0.027",
+    "source": "https://api.ofox.ai/v1/models",
+    "retrieved_date": "2026-10-12",
+    "cny_per_usd": "6.692129216491165",
+    "fx_source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.fi.html",
+    "fx_date": "2026-10-09",
+    "cache_write_semantics": "unconfirmed"
+  },
+  "estimate_authorized_run_ids": [
+    "g1-01b",
+    "g1-02",
+    "g1-03"
+  ],
+  "gate": 2,
+  "world_version": "gate2-pilot-v1",
+  "batch_id": "gate2-p1-p5-v1",
+  "run_order": [
+    [
+      "g2-p5-full_replan",
+      "p5",
+      "full_replan"
+    ],
+    [
+      "g2-p1-oracle_attribution",
+      "p1",
+      "oracle_attribution"
+    ],
+    [
+      "g2-p1-reflection",
+      "p1",
+      "reflection"
+    ],
+    [
+      "g2-p1-no_intervention",
+      "p1",
+      "no_intervention"
+    ],
+    [
+      "g2-p5-selective_repair",
+      "p5",
+      "selective_repair"
+    ],
+    [
+      "g2-p5-belief_only",
+      "p5",
+      "belief_only"
+    ],
+    [
+      "g2-p5-oracle_dependency",
+      "p5",
+      "oracle_dependency"
+    ]
+  ],
+  "prompt_manifest": {
+    "g2-p5-full_replan": [
+      {
+        "role": "system",
+        "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Task actions and node mapping: prepare creates shared snapshot; calibrate validates shared credentials; inspect A/B stages that configuration and inspects it (requires snapshot and credentials); apply_change A/B deploys it (requires matching staging and current requirement); diagnose A/B performs and registers its smoke test (requires matching applied change); verify completes service verification (requires applied current configuration and its smoke test). All primitive actions cost one, including redundant shared work. Old DAG: snapshot and credentials -> stage:A -> apply:A -> smoke:A -> verify:A. Completed nodes: snapshot, credentials, stage:A. Pending old actions: apply_change A, diagnose A, verify. The old plan is historical, not an instruction overriding new evidence."
+      },
+      {
+        "role": "user",
+        "content": "{\"feedback\": \"Requirement update: configuration B is now required. Shared snapshot and credentials remain valid.\", \"remaining_actions\": 9, \"completed\": false}"
+      },
+      {
+        "role": "user",
+        "content": "New verified requirement: configuration B is required; the shared snapshot and credentials remain valid. Discard the old plan as a plan and construct a complete new plan from the goal, checking all prerequisites. Do not assume that discarding a plan erases valid environment state."
+      }
+    ],
+    "g2-p1-oracle_attribution": [
+      {
+        "role": "system",
+        "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+      },
+      {
+        "role": "user",
+        "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+      },
+      {
+        "role": "user",
+        "content": "Privileged evaluator attribution: hypothesis error; the prior command executed but its configuration is incompatible."
+      }
+    ],
+    "g2-p1-reflection": [
+      {
+        "role": "system",
+        "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+      },
+      {
+        "role": "user",
+        "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+      },
+      {
+        "role": "user",
+        "content": "Reflect on the unsuccessful attempt, consider competing explanations, and choose your next action. No additional evidence is provided."
+      }
+    ],
+    "g2-p1-no_intervention": [
+      {
+        "role": "system",
+        "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Two explanations for the prior unsuccessful A command are possible: unsuitable configuration or missing execution. inspect reports service status; diagnose A checks command delivery receipt; diagnose B tests whether A is compatible. apply_change A/B submits a configuration, verify checks restoration. Other tools have their usual CDW meaning."
+      },
+      {
+        "role": "user",
+        "content": "{\"feedback\": \"Service unavailable; attempted change did not restore service.\", \"remaining_actions\": 11, \"completed\": false}"
+      }
+    ],
+    "g2-p5-selective_repair": [
+      {
+        "role": "system",
+        "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Task actions and node mapping: prepare creates shared snapshot; calibrate validates shared credentials; inspect A/B stages that configuration and inspects it (requires snapshot and credentials); apply_change A/B deploys it (requires matching staging and current requirement); diagnose A/B performs and registers its smoke test (requires matching applied change); verify completes service verification (requires applied current configuration and its smoke test). All primitive actions cost one, including redundant shared work. Old DAG: snapshot and credentials -> stage:A -> apply:A -> smoke:A -> verify:A. Completed nodes: snapshot, credentials, stage:A. Pending old actions: apply_change A, diagnose A, verify. The old plan is historical, not an instruction overriding new evidence."
+      },
+      {
+        "role": "user",
+        "content": "{\"feedback\": \"Requirement update: configuration B is now required. Shared snapshot and credentials remain valid.\", \"remaining_actions\": 9, \"completed\": false}"
+      },
+      {
+        "role": "user",
+        "content": "New verified requirement: configuration B is required; the shared snapshot and credentials remain valid. Repair only the steps whose prerequisites or effects are invalidated by this evidence; retain valid completed steps and dependencies."
+      }
+    ],
+    "g2-p5-belief_only": [
+      {
+        "role": "system",
+        "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Task actions and node mapping: prepare creates shared snapshot; calibrate validates shared credentials; inspect A/B stages that configuration and inspects it (requires snapshot and credentials); apply_change A/B deploys it (requires matching staging and current requirement); diagnose A/B performs and registers its smoke test (requires matching applied change); verify completes service verification (requires applied current configuration and its smoke test). All primitive actions cost one, including redundant shared work. Old DAG: snapshot and credentials -> stage:A -> apply:A -> smoke:A -> verify:A. Completed nodes: snapshot, credentials, stage:A. Pending old actions: apply_change A, diagnose A, verify. The old plan is historical, not an instruction overriding new evidence."
+      },
+      {
+        "role": "user",
+        "content": "{\"feedback\": \"Requirement update: configuration B is now required. Shared snapshot and credentials remain valid.\", \"remaining_actions\": 9, \"completed\": false}"
+      },
+      {
+        "role": "user",
+        "content": "New verified requirement: configuration B is required; the shared snapshot and credentials remain valid."
+      }
+    ],
+    "g2-p5-oracle_dependency": [
+      {
+        "role": "system",
+        "content": "Restore and verify service. Return JSON {\"action\":{\"kind\":\"...\",\"target\":\"A or B for apply_change\"}}. Available kinds: inspect, diagnose, prepare, calibrate, apply_change, verify, undo, wait, combo. A combo contains an actions array of primitive actions, each charged separately. Optional belief and plan are self-reports. Do not infer privileged evaluator state. Use the cdw_action function instead of JSON text. Return exactly one function call per decision. Optional belief/plan remain self-reports, not required measurements. Task actions and node mapping: prepare creates shared snapshot; calibrate validates shared credentials; inspect A/B stages that configuration and inspects it (requires snapshot and credentials); apply_change A/B deploys it (requires matching staging and current requirement); diagnose A/B performs and registers its smoke test (requires matching applied change); verify completes service verification (requires applied current configuration and its smoke test). All primitive actions cost one, including redundant shared work. Old DAG: snapshot and credentials -> stage:A -> apply:A -> smoke:A -> verify:A. Completed nodes: snapshot, credentials, stage:A. Pending old actions: apply_change A, diagnose A, verify. The old plan is historical, not an instruction overriding new evidence."
+      },
+      {
+        "role": "user",
+        "content": "{\"feedback\": \"Requirement update: configuration B is now required. Shared snapshot and credentials remain valid.\", \"remaining_actions\": 9, \"completed\": false}"
+      },
+      {
+        "role": "user",
+        "content": "New verified requirement: configuration B is required; the shared snapshot and credentials remain valid. Privileged evaluator dependency hint: invalid old nodes are stage:A, apply:A, smoke:A, verify:A. Valid completed nodes are snapshot and credentials. Replace only invalid target-specific nodes with their B counterparts."
+      }
+    ]
+  },
+  "base_prompt_hash": "8b27e91bc1978fbc6bbd6e17be2d1cbba64391049daf299ed95e7df18581c5b7",
+  "prompt_hash": "3740ff097b1ae684904972038ee9d69106fa0f47a6c0d64ca655f3fbac4f7809",
+  "public_model_preflight": {
+    "id": "qwen/qwen-flash",
+    "object": "model",
+    "created": 1753660800,
+    "owned_by": "dashscope",
+    "canonical_slug": "qwen-flash",
+    "name": "Qwen Flash",
+    "description": "Alibaba Qwen Flash via Dashscope. Ultra-fast inference for latency-sensitive tasks. Lowest cost option in the Qwen family.",
+    "context_length": 1000000,
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "qwen",
+      "instruct_type": null
+    },
+    "pricing": {
+      "prompt": "0.000000022",
+      "completion": "0.00000022",
+      "input_cache_read": "0.0000000043",
+      "input_cache_write": "0.000000027",
+      "web_search": "0.01"
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 32000,
+      "is_moderated": false
+    },
+    "per_request_limits": null,
+    "supported_parameters": [
+      "temperature",
+      "top_p",
+      "max_tokens",
+      "stop",
+      "tools",
+      "tool_choice",
+      "response_format"
+    ],
+    "default_parameters": null,
+    "expiration_date": null,
+    "is_deprecated": false,
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/responses"
+    ],
+    "aliases": [
+      "qwen-flash",
+      "bailian/qwen-flash"
+    ]
+  }
+}

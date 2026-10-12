@@ -103,9 +103,16 @@ class Ledger:
                 raise BudgetStop("decision sequence/limit violated")
             if db.execute("SELECT 1 FROM requests WHERE status IN ('reserved','received','ambiguous','billing_mismatch')").fetchone():
                 raise BudgetStop("outstanding request: recover/reconcile; never resend")
-            cap = min(db.execute("SELECT cap FROM account WHERE id=1").fetchone()[0], 10000000, 90000000, 100000000)
+            batch = None
+            if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='pilot_batches'").fetchone():
+                batch = db.execute("SELECT b.* FROM pilot_batches b JOIN pilot_members m ON b.id=m.batch WHERE m.run=?",(run_id,)).fetchone()
+            cap = min(db.execute("SELECT cap FROM account WHERE id=1").fetchone()[0], 40000000 if batch else 8000000, 90000000, 100000000)
             if self.exposure(db) + amount > cap:
                 raise BudgetStop("cumulative budget exceeded")
+            if batch:
+                exposure = db.execute("SELECT COALESCE(SUM(CASE WHEN r.billed IS NULL THEN r.reserved ELSE r.billed END),0) FROM requests r JOIN pilot_members m ON r.run=m.run WHERE m.batch=?",(batch['id'],)).fetchone()[0]
+                if exposure + amount > batch['cap']:
+                    raise BudgetStop('Gate 2 pilot batch cap exceeded')
             run_exposure = db.execute("SELECT COALESCE(SUM(CASE WHEN billed IS NULL THEN reserved ELSE billed END),0) FROM requests WHERE run=?", (run_id,)).fetchone()[0]
             if run_exposure + amount > row["spend_cap"]:
                 raise BudgetStop("independent trajectory budget exceeded")
@@ -120,8 +127,10 @@ class Ledger:
             row = db.execute("SELECT * FROM requests WHERE id=?", (request_id,)).fetchone()
             if not row or row["status"] != "reserved":
                 raise BudgetStop("response not matched to reservation")
+            pilot = db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='pilot_members'").fetchone()
+            pilot_authorized = bool(pilot and db.execute('SELECT 1 FROM pilot_members WHERE run=?',(row['run'],)).fetchone())
             safe = valid and ((calculated is not None and calculated <= row["reserved"]) or
-                              (allow_estimate and row["run"] in {"g1-01", "g1-01b", "g1-02", "g1-03"} and calculated is None))
+                              (allow_estimate and (row["run"] in {"g1-01", "g1-01b", "g1-02", "g1-03"} or pilot_authorized) and calculated is None))
             db.execute("UPDATE requests SET response=?,usage=?,calculated=?,status=? WHERE id=?",
                 (json.dumps(response), json.dumps(usage), calculated, "received" if safe else "ambiguous", request_id))
             self.audit(db, "response_saved", {"request": request_id, "usage_valid": safe, "estimate_authorized": allow_estimate})
@@ -130,6 +139,26 @@ class Ledger:
                 session = json.loads(run[0])
                 session["error"] = response.get("cost_error") or response.get("transport_error") or "unknown or excessive cost; reservation retained"
                 db.execute("UPDATE runs SET status='paused_unknown_cost',session=? WHERE id=?", (json.dumps(session), row["run"]))
+
+    def authorize_pilot(self, batch_id, run_ids, fingerprint, evidence, *, cap=5000000):
+        """Explicit additive migration; preserve every prior request and liability."""
+        if batch_id != 'gate2-p1-p5-v1' or not run_ids or len(set(run_ids)) != len(run_ids) or not evidence.strip() or type(cap) is not int or not 0 < cap <= 5000000:
+            raise BudgetStop('invalid Gate 2 batch authorization')
+        with self.transaction() as db:
+            if db.execute("SELECT 1 FROM requests WHERE status IN ('reserved','received','ambiguous','billing_mismatch')").fetchone():
+                raise BudgetStop('unresolved in-flight request')
+            db.execute('CREATE TABLE IF NOT EXISTS pilot_batches(id TEXT PRIMARY KEY,cap INTEGER NOT NULL,evidence TEXT NOT NULL)')
+            db.execute('CREATE TABLE IF NOT EXISTS pilot_members(run TEXT PRIMARY KEY,batch TEXT NOT NULL)')
+            db.execute('INSERT INTO pilot_batches VALUES(?,?,?)',(batch_id,cap,evidence))
+            for rid in run_ids:
+                row=db.execute('SELECT * FROM runs WHERE id=?',(rid,)).fetchone()
+                if not rid.startswith(('g2-p1-','g2-p5-')) or not row or row['status']!='ready' or row['approval'] or row['fingerprint']!=fingerprint:
+                    raise BudgetStop('pilot member not frozen/unstarted')
+                db.execute('INSERT INTO pilot_members VALUES(?,?)',(rid,batch_id))
+                db.execute('UPDATE runs SET approval=? WHERE id=?',(evidence,rid))
+            # Stage 2 cumulative cap includes Gate 1. Gate 1 retains its own stricter cap.
+            db.execute('UPDATE account SET cap=40000000 WHERE id=1')
+            self.audit(db,'gate2_batch_authorized',{'batch':batch_id,'run_ids':run_ids,'fingerprint':fingerprint,'batch_cap_micro_cny':cap,'stage_cumulative_cap_micro_cny':40000000,'evidence':evidence,'prior_liabilities_retained':self.exposure(db)})
 
     def apply(self, request_id, session, trajectory, *, terminal=False, error=None):
         # Environment state, tool history, decision count and request consumption commit together.

@@ -1,0 +1,23 @@
+# Mock instrument calibration, zero real API calls
+
+{
+  "success": false,
+  "tool_calls": 8,
+  "invalid_actions": 1,
+  "redundant_probes": 0,
+  "decisions": 8,
+  "applied_decisions": 8,
+  "status": "failed",
+  "error": "decision/action budget exhausted",
+  "denominator": 1,
+  "excluded": false,
+  "source": "SIM",
+  "actual_api_cost_cny": 0,
+  "reserved_exposure_cny": 0.183984,
+  "unreconciled_requests": 8,
+  "completion_criterion": "correct change applied and verified",
+  "actual_network_calls": 0,
+  "transport_mock": true,
+  "scientific_evidence": false,
+  "reservation_is_synthetic": true
+}
