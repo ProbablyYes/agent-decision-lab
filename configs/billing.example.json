@@ -1,0 +1,11 @@
+{
+  "request_id": "g1-01:1",
+  "actual_cny": null,
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "cached_tokens": null,
+    "cache_write_tokens": null
+  },
+  "evidence": "Replace with itemized supplier bill reference, account currency, settlement FX and date; unknown is never zero. This is a non-executable template."
+}

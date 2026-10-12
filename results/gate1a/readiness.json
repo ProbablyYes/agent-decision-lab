@@ -1,0 +1,14 @@
+﻿{
+  "ready_for_approval": false,
+  "blockers": [
+    "model_confirmed",
+    "account_currency_confirmed",
+    "account_rates_confirmed",
+    "fx_confirmed",
+    "usage_cache_semantics_confirmed"
+  ],
+  "fingerprint": "a1d85194894039d8fbd9247132e8319d92743ce5aedca58e479e4a679adab5ed",
+  "real_calls": 0,
+  "estimated_three_envelope_cny": 0.165144,
+  "estimated_five_envelope_cny": 0.27524
+}

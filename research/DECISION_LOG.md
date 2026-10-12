@@ -7,3 +7,11 @@
 2026-10-12：预算预留最大输出，未知账单按预留额锁定并停止；不自动重试；同 guard 禁止并发。阶段限额 10/40/70/90，硬上限 100。真实跨进程账单与批准令牌尚未实现，Gate 1 前不得接入网络。
 
 2026-10-12：未收集的 attribution/belief/plan/Oracle 数据输出 null 并报告 unmeasured；不以 scripted 成功替代机制验证。不实施全套研究算法、不改变五线或指标。
+
+2026-10-12（Gate 1A）：依用户追加指令仅准备，不执行 Gate 1B。未打开 .env 或读取凭据；只检查非密钥配置和访问公开 Models API，保存 159 个模型的实际元数据/定价。优先比较 Qwen Flash/Turbo/3.5 Flash，推荐精确 id qwen/qwen-flash，仍 model_confirmed=false。USD/token 单位由供应商文档明确，账户币种和实际结算另待确认。使用 ECB 2026-10-09 参考交叉汇率估算，不冒充供应商结算汇率。
+
+2026-10-12（Gate 1A）：增加 urllib 单次 HTTPS transport、拒绝重定向/自动重试、真实 native function tool schema、审批前不加载凭据。Prompt 从 Gate 0 JSON 文本载体改为 v0.2-native-tools-1，保持动作空间、环境及主要指标，optional belief/plan 不变。此载体版本变化已显式记录；首批三条不是反馈角色比较实验。
+
+2026-10-12（Gate 1A）：SQLite 项目唯一账本，整数微元、事务性审批/预留/响应/状态恢复；保留未知费用、核验实际账单后才能释放预留；跨进程不重置花费，不自动重发未知请求。审批绑定单条轨迹及配置/源码/Prompt/Schema 指纹。预登记顺序以用户最新要求为准：P1 H、P1 E、P2 plan H，各 seed=0、最多8决策/12 primitive，累计本批8元/阶段10元。首条实际审查前阻断后续审批。
+
+2026-10-12（Gate 1A）：无网测试发现并修复 crash-reservation 的 NULL usage 账单解析路径；原 Gate 0 测试和新增 transport/跨进程/恢复/未知费用测试合计72项最终通过。GATE1_REPORT.md 明确尚未执行，不填造真实结果。停止等待最终模型确认及第一条批准。

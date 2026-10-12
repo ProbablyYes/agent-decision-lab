@@ -1,0 +1,12 @@
+Date: 2026-10-12 (Asia/Shanghai)
+Command: python -m pytest -q
+Result: 72 passed in 2.93s
+Gate 0 regression tests: 42
+Gate 1A added tests: 30
+Real inference requests: 0
+Actual new spend CNY: 0
+Credentials read: no
+Network in pytest: prohibited by autouse fixture
+Public metadata: unauthenticated GET https://api.ofox.ai/v1/models
+FX reference: ECB 2026-10-09, retrieved 2026-10-12
+Readiness: false; final model/account tariffs/FX/cache semantics awaiting confirmation

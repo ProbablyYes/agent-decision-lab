@@ -80,3 +80,7 @@ results/gate0/
 ```
 
 Git commit/id 记录在 `results/GATE0_COMMIT.txt`；该记录指向包含实现、测试和本报告的交付提交。暂停等待 Gate 1 审查，不会后台继续实验。
+
+## Gate 1A 后续交接（2026-10-12）
+
+上述为 Gate 0 的历史验收记录。Gate 1A 新增真实 transport、持久化预算/审批/恢复和 Mock 网络测试；当前状况以 GATE1_READINESS.md、GATE1_MODEL_SELECTION.md 为准。最终72项无网测试通过。推荐 qwen/qwen-flash 待确认，实际账户计价/缓存语义仍阻断收费；没有读取密钥、没有推理调用、实际新增花费¥0。GATE1_REPORT.md 现标记未执行。按最新用户要求暂停，等最终模型确认及第一条轨迹批准。
