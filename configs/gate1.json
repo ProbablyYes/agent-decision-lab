@@ -39,5 +39,10 @@
     "fx_source": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.fi.html",
     "fx_date": "2026-10-09",
     "cache_write_semantics": "unconfirmed"
-  }
+  },
+  "estimate_authorized_run_ids": [
+    "g1-01b",
+    "g1-02",
+    "g1-03"
+  ]
 }

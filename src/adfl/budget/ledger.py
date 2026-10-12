@@ -69,21 +69,26 @@ class Ledger:
             db.execute("INSERT INTO runs(id,fingerprint,status,session,spend_cap) VALUES(?,?,?,?,?)", (run_id, fingerprint, "ready", json.dumps(session), spend_cap))
             self.audit(db, "run_registered", {"run": run_id, "spend_cap_micro_cny": spend_cap})
 
-    def approve(self, run_id, fingerprint, evidence, *, ready=False, predecessor=None):
+    def approve(self, run_id, fingerprint, evidence, *, ready=False, predecessor=None, retain_unknown_bills=False):
         if not ready or not evidence.strip():
             raise BudgetStop("model/price/FX/account confirmation and explicit human evidence required")
         with self.transaction() as db:
             row = db.execute("SELECT * FROM runs WHERE id=?", (run_id,)).fetchone()
             if row is None or row["fingerprint"] != fingerprint or row["status"] != "ready":
                 raise BudgetStop("approval does not match a frozen ready run")
-            if db.execute("SELECT 1 FROM runs WHERE approval IS NOT NULL AND reviewed IS NULL AND id<>?", (run_id,)).fetchone():
+            if retain_unknown_bills and run_id not in {"g1-01b", "g1-02", "g1-03"}:
+                raise BudgetStop("continuation authorization limited to three named trajectories")
+            pending_sql = "SELECT 1 FROM runs WHERE approval IS NOT NULL AND reviewed IS NULL AND id<>?"
+            if retain_unknown_bills:
+                pending_sql += " AND status NOT IN ('completed','failed')"
+            if db.execute(pending_sql, (run_id,)).fetchone():
                 raise BudgetStop("previous approved trajectory requires review")
             if predecessor:
-                prev = db.execute("SELECT reviewed FROM runs WHERE id=?", (predecessor,)).fetchone()
-                if not prev or not prev[0]:
+                prev = db.execute("SELECT reviewed,status FROM runs WHERE id=?", (predecessor,)).fetchone()
+                if not prev or not (prev[0] or (retain_unknown_bills and prev[1] in {'completed','failed'})):
                     raise BudgetStop("predecessor review required")
             db.execute("UPDATE runs SET approval=? WHERE id=?", (evidence, run_id))
-            self.audit(db, "human_approval", {"run": run_id, "fingerprint": fingerprint, "evidence": evidence})
+            self.audit(db, "human_approval", {"run": run_id, "fingerprint": fingerprint, "evidence": evidence, "unknown_bills_remain_reserved": retain_unknown_bills})
 
     def reserve(self, run_id, fingerprint, step, amount, payload):
         if type(amount) is not int or amount <= 0:
@@ -116,7 +121,7 @@ class Ledger:
             if not row or row["status"] != "reserved":
                 raise BudgetStop("response not matched to reservation")
             safe = valid and ((calculated is not None and calculated <= row["reserved"]) or
-                              (allow_estimate and row["run"] == "g1-01" and calculated is None))
+                              (allow_estimate and row["run"] in {"g1-01", "g1-01b", "g1-02", "g1-03"} and calculated is None))
             db.execute("UPDATE requests SET response=?,usage=?,calculated=?,status=? WHERE id=?",
                 (json.dumps(response), json.dumps(usage), calculated, "received" if safe else "ambiguous", request_id))
             self.audit(db, "response_saved", {"request": request_id, "usage_valid": safe, "estimate_authorized": allow_estimate})

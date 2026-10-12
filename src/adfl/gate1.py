@@ -14,7 +14,7 @@ from adfl.world import CDW
 
 ROOT = Path(__file__).resolve().parents[2]
 LEDGER_PATH = ROOT / ".state" / "gate1.sqlite3"
-RUNS = [("g1-01", "p1", "attribution:H"), ("g1-02", "p1", "attribution:E"), ("g1-03", "p2", "plan:H")]
+RUNS = [("g1-01", "p1", "attribution:H"), ("g1-01b", "p1", "attribution:H"), ("g1-02", "p1", "attribution:E"), ("g1-03", "p2", "plan:H")]
 
 
 def digest(value):
@@ -90,7 +90,7 @@ class Gate1Engine:
         if not readiness(self.config)["ready_for_approval"]:
             raise BudgetStop("model/account pricing/FX/cache semantics not confirmed")
         estimated = self.config.get("estimate_based_first_run_authorized") is True
-        if estimated and run_id != "g1-01":
+        if estimated and run_id not in {"g1-01", *self.config.get("estimate_authorized_run_ids", [])}:
             raise BudgetStop("estimate-based authorization is restricted to g1-01")
         while True:
             snap = self.ledger.snapshot(run_id)
@@ -99,7 +99,7 @@ class Gate1Engine:
             run = snap["runs"][0]
             if run["fingerprint"] != self.fp or not run["approval"]:
                 raise BudgetStop("explicit approval for this exact frozen run required")
-            if run_id == "g1-01" and run["spend_cap"] > micro_cny(self.config["first_run_cap_cny"]):
+            if run_id in {"g1-01", "g1-01b"} and run["spend_cap"] > micro_cny(self.config["first_run_cap_cny"]):
                 raise BudgetStop("ledger first-run cap is higher than approved independent budget")
             if run["status"] in {"completed", "failed"}:
                 return snap
@@ -160,6 +160,7 @@ class Gate1Engine:
                 error = "decision/action budget exhausted"
             session.update(environment=w.snapshot(),error=error)
             trajectory = {"step": session["decisions"], "visible_before": before, "action": decision.get("action") if decision else None,
+                "compatibility_anomaly": "native_tool_call_with_finish_reason_stop" if decision and not error and response["body"]["choices"][0]["finish_reason"] == "stop" else None,
                 "tool_result": result, "belief_report": decision.get("belief") if decision else None,
                 "plan_snapshot": decision.get("plan") if decision else None,
                 "messages":session["messages"], "usage":json.loads(request["usage"]),

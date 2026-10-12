@@ -22,6 +22,7 @@ from adfl.gate1 import Gate1Engine, fingerprint, initial_session, readiness, exp
 def config():
     c=json.loads(Path('configs/gate1.json').read_text(encoding='utf-8'))
     c['estimate_based_first_run_authorized']=False
+    c.pop('estimate_authorized_run_ids', None)
     for k in ('model_confirmed','model_access_confirmed','account_currency_confirmed','account_rates_confirmed','fx_confirmed','usage_cache_semantics_confirmed'):
         c[k]=True
     c['pricing']['cache_write_semantics']='exclusive_prompt_subset'
@@ -350,9 +351,55 @@ def test_estimate_mode_still_stops_missing_primary_usage(tmp_path,config):
     assert len(calls)==1 and l.snapshot()['runs'][0]['status']=='paused_unknown_cost'
 
 
-def test_observed_provider_tool_with_stop_is_rejected_without_execution():
-    # Characterize g1-01 without changing frozen protocol or issuing a request.
-    r=response({'kind':'diagnose','target':'A'})
-    r['body']['choices'][0]['finish_reason']='stop'
-    with pytest.raises(ValueError,match='completed native tool call'):
-        decode_tool(r['body'],'qwen/qwen-flash',12)
+def test_saved_g101_response_native_loop(tmp_path, config):
+    saved = next(json.loads(x) for x in Path('results/gate1/g1-01/events.jsonl').read_text(encoding='utf-8').splitlines() if json.loads(x).get('event') == 'request_record')
+    actual = json.loads(saved['response'])
+    message, call_id, decision = decode_tool(actual['body'], 'qwen/qwen-flash', 12)
+    assert decision['action'] == {'kind':'diagnose','target':'A'}
+    config['estimate_based_first_run_authorized'] = True
+    config['pricing']['cache_write_semantics'] = 'unconfirmed'
+    ledger = registered(tmp_path, config)
+    seen = []
+    def transport(payload, **kwargs):
+        seen.append(copy.deepcopy(payload))
+        if len(seen) == 1:
+            return copy.deepcopy(actual)
+        assert payload['messages'][-1]['role'] == 'tool'
+        assert payload['messages'][-1]['tool_call_id'] == call_id
+        assert payload['messages'][-2] == message
+        return response({'kind':'combo','actions':[{'kind':'apply_change','target':'B'},{'kind':'verify'}]})
+    result = Gate1Engine(ledger, config, transport).run('g1-01')
+    assert len(seen) == 2 and result['runs'][0]['status'] == 'completed'
+    assert any('native_tool_call_with_finish_reason_stop' in e['details'] for e in result['audit'])
+
+
+@pytest.mark.parametrize('mode',['length','content_filter','refusal','incomplete','multiple','schema','missing_action'])
+def test_stop_compatibility_still_rejects_invalid(mode):
+    body = response({'kind':'diagnose','target':'A'})['body']
+    choice = body['choices'][0]; choice['finish_reason'] = 'stop'
+    message = choice['message']; call = message['tool_calls'][0]
+    if mode in {'length','content_filter'}: choice['finish_reason'] = mode
+    if mode == 'refusal': message['refusal'] = 'refused'
+    if mode == 'incomplete': call['function']['arguments'] = '{"action":'
+    if mode == 'multiple': message['tool_calls'].append(copy.deepcopy(call))
+    if mode == 'schema': call['function']['arguments'] = '{"action":{"kind":"diagnose","extra":true}}'
+    if mode == 'missing_action': call['function']['arguments'] = '{}'
+    with pytest.raises(ValueError): decode_tool(body, 'qwen/qwen-flash', 12)
+
+
+def test_named_continuation_retains_prior_liability(tmp_path, config):
+    config['estimate_based_first_run_authorized'] = True
+    config['estimate_authorized_run_ids'] = ['g1-01b','g1-02','g1-03']
+    config['pricing']['cache_write_semantics'] = 'unconfirmed'
+    ledger = registered(tmp_path, config)
+    transport = lambda *a,**k: response({'kind':'combo','actions':[{'kind':'apply_change','target':'B'},{'kind':'verify'}]})
+    Gate1Engine(ledger, config, transport).run('g1-01')
+    old_exposure = ledger.snapshot()['exposure_micro_cny']
+    ledger.register('g1-01b',fingerprint(config),initial_session('attribution:H','p1'),spend_cap=1000000)
+    with pytest.raises(BudgetStop): ledger.approve('g1-01b',fingerprint(config),'synthetic',ready=True)
+    ledger.approve('g1-01b',fingerprint(config),'synthetic scoped continuation',ready=True,retain_unknown_bills=True)
+    Gate1Engine(Ledger(ledger.path),config,transport).run('g1-01b')
+    snap=Ledger(ledger.path).snapshot()
+    assert snap['exposure_micro_cny'] == old_exposure * 2
+    assert snap['unreconciled_requests'] == 2
+    assert all(r['billed'] is None for r in snap['requests'])

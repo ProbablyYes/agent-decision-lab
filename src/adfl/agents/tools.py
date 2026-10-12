@@ -42,15 +42,19 @@ def decode_tool(body, model_id, remaining):
     if body.get("model") != model_id:
         raise ValueError("returned model differs from frozen model; no fallback accepted")
     choices = body.get("choices")
-    if not isinstance(choices, list) or len(choices) != 1 or choices[0].get("finish_reason") != "tool_calls":
+    if not isinstance(choices, list) or len(choices) != 1 or choices[0].get("finish_reason") not in {"tool_calls", "stop"}:
         raise ValueError("expected one completed native tool call; truncation/refusal retained")
     message = choices[0]["message"]
+    if message.get("refusal") or message.get("role") != "assistant":
+        raise ValueError("refusal or invalid assistant message")
     calls = message.get("tool_calls")
     if not isinstance(calls, list) or len(calls) != 1:
         raise ValueError("exactly one tool call required")
     call = calls[0]
-    if call.get("type") != "function" or call.get("function", {}).get("name") != "cdw_action" or not call.get("id"):
+    if call.get("type") != "function" or call.get("function", {}).get("name") != "cdw_action" or not isinstance(call.get("id"), str) or not call["id"]:
         raise ValueError("invalid tool identity")
+    if not isinstance(call["function"].get("arguments"), str):
+        raise ValueError("tool arguments must be complete JSON text")
     decision = json.loads(call["function"]["arguments"])
     if not isinstance(decision, dict) or set(decision) - {"action", "belief", "plan"}:
         raise ValueError("invalid tool arguments")

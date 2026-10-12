@@ -19,3 +19,9 @@
 2026-10-12（Gate 1A）：SQLite 项目唯一账本，整数微元、事务性审批/预留/响应/状态恢复；保留未知费用、核验实际账单后才能释放预留；跨进程不重置花费，不自动重发未知请求。审批绑定单条轨迹及配置/源码/Prompt/Schema 指纹。预登记顺序以用户最新要求为准：P1 H、P1 E、P2 plan H，各 seed=0、最多8决策/12 primitive，累计本批8元/阶段10元。首条实际审查前阻断后续审批。
 
 2026-10-12（Gate 1A）：无网测试发现并修复 crash-reservation 的 NULL usage 账单解析路径；原 Gate 0 测试和新增 transport/跨进程/恢复/未知费用测试合计72项最终通过。GATE1_REPORT.md 明确尚未执行，不填造真实结果。停止等待最终模型确认及第一条批准。
+
+
+## 2026-10-12 Gate 1 native-tool compatibility and scoped continuation
+User explicitly authorized g1-01b, g1-02, g1-03 with unchanged model/prompt/schema/limits. Accept stop only with one complete valid native cdw_action; retain compatibility anomaly. Original g1-01 remains immutable. Unknown bills stay reserved; named continuation may proceed past terminal unreconciled runs without marking bills reviewed or releasing liabilities. 86 offline tests passed, including the saved actual g1-01 response and matching next-request Tool Message. Each new run cap CNY1; batch cap CNY8 remains stricter than Gate 1 CNY10. No new research algorithms.
+
+Three authorized runs completed: six decisions/primitives each, all task-success; 18 new requests, no retries or model fallback. Original g1-01 file hashes unchanged. Reopened ledger integrity ok, total 19 unreconciled requests and CNY0.130739 reserved exposure; actual bills unknown. E trajectory explicitly misdescribed execution-failure evidence, then succeeded; no causal/statistical claims. Paused for review.

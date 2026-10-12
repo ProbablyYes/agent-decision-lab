@@ -1,0 +1,249 @@
+{
+  "original_g1_01_files_unchanged": true,
+  "sqlite_integrity_check": "ok",
+  "gate1_exposure_micro_cny": 130739,
+  "unreconciled_requests": 19,
+  "actual_billed_cny": null,
+  "runs": [
+    {
+      "run": "g1-01",
+      "status": "failed",
+      "input_tokens": 578,
+      "output_tokens": 65,
+      "reported_cache_read_tokens": null,
+      "cache_write_tokens": null,
+      "reserved_exposure_cny": 0.006881,
+      "ordinary_input_scenario_estimate_cny": "0.00018079456291272531364",
+      "actual_billed_cny": null,
+      "cache_read_missing_requests": 1
+    },
+    {
+      "run": "g1-01b",
+      "status": "completed",
+      "input_tokens": 5293,
+      "output_tokens": 435,
+      "reported_cache_read_tokens": 1536,
+      "cache_write_tokens": null,
+      "reserved_exposure_cny": 0.041286,
+      "ordinary_input_scenario_estimate_cny": "0.00141970844476173469009",
+      "actual_billed_cny": null,
+      "cache_read_missing_requests": 3
+    },
+    {
+      "run": "g1-02",
+      "status": "completed",
+      "input_tokens": 5242,
+      "output_tokens": 395,
+      "reported_cache_read_tokens": 3584,
+      "cache_write_tokens": null,
+      "reserved_exposure_cny": 0.041286,
+      "ordinary_input_scenario_estimate_cny": "0.00135330913867570935096",
+      "actual_billed_cny": null,
+      "cache_read_missing_requests": 0
+    },
+    {
+      "run": "g1-03",
+      "status": "completed",
+      "input_tokens": 5264,
+      "output_tokens": 409,
+      "reported_cache_read_tokens": 3584,
+      "cache_write_tokens": null,
+      "reserved_exposure_cny": 0.041286,
+      "ordinary_input_scenario_estimate_cny": "0.00137715988720328386302",
+      "actual_billed_cny": null,
+      "cache_read_missing_requests": 0
+    }
+  ],
+  "requests": [
+    {
+      "id": "g1-01:1",
+      "run": "g1-01",
+      "step": 1,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 578, \"output_tokens\": 65, \"cached_tokens\": null, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-01b:1",
+      "run": "g1-01b",
+      "step": 1,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 580, \"output_tokens\": 75, \"cached_tokens\": null, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-01b:2",
+      "run": "g1-01b",
+      "step": 2,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 705, \"output_tokens\": 77, \"cached_tokens\": null, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-01b:3",
+      "run": "g1-01b",
+      "step": 3,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 832, \"output_tokens\": 73, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-01b:4",
+      "run": "g1-01b",
+      "step": 4,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 947, \"output_tokens\": 72, \"cached_tokens\": null, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-01b:5",
+      "run": "g1-01b",
+      "step": 5,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 1061, \"output_tokens\": 65, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-01b:6",
+      "run": "g1-01b",
+      "step": 6,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 1168, \"output_tokens\": 73, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-02:1",
+      "run": "g1-02",
+      "step": 1,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 580, \"output_tokens\": 75, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-02:2",
+      "run": "g1-02",
+      "step": 2,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 706, \"output_tokens\": 68, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-02:3",
+      "run": "g1-02",
+      "step": 3,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 817, \"output_tokens\": 74, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-02:4",
+      "run": "g1-02",
+      "step": 4,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 941, \"output_tokens\": 64, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-02:5",
+      "run": "g1-02",
+      "step": 5,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 1047, \"output_tokens\": 62, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-02:6",
+      "run": "g1-02",
+      "step": 6,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 1151, \"output_tokens\": 52, \"cached_tokens\": 1024, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-03:1",
+      "run": "g1-03",
+      "step": 1,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 580, \"output_tokens\": 75, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-03:2",
+      "run": "g1-03",
+      "step": 2,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 705, \"output_tokens\": 75, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-03:3",
+      "run": "g1-03",
+      "step": 3,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 830, \"output_tokens\": 72, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-03:4",
+      "run": "g1-03",
+      "step": 4,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 944, \"output_tokens\": 65, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-03:5",
+      "run": "g1-03",
+      "step": 5,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 1051, \"output_tokens\": 61, \"cached_tokens\": 512, \"cache_write_tokens\": null}"
+    },
+    {
+      "id": "g1-03:6",
+      "run": "g1-03",
+      "step": 6,
+      "reserved": 6881,
+      "calculated": null,
+      "billed": null,
+      "status": "applied",
+      "usage": "{\"input_tokens\": 1154, \"output_tokens\": 61, \"cached_tokens\": 1024, \"cache_write_tokens\": null}"
+    }
+  ]
+}
