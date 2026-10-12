@@ -1,0 +1,17 @@
+{
+  "task_id": "complement:U",
+  "template_family": "complement",
+  "line": "p4",
+  "source": "SIM",
+  "split": "calibration",
+  "condition": "scripted_calibration",
+  "seed": 0,
+  "checkpoint_hash": "c78cf8a78b87da60ed509b1c5e4b4f0a65293261d489132afa582db97d0dd010",
+  "hidden_gt_path": "hidden/initial.json",
+  "model": "Mock",
+  "prompt_hash": "3af54004b6190bdd29992a2dcf5ffacf09ba95428fb872dc280ded88c8e7d775",
+  "action_budget": 12,
+  "test_tuning": false,
+  "automatic_retries": 0,
+  "pricing": null
+}

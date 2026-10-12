@@ -1,0 +1,17 @@
+{
+  "task_id": "plan:E",
+  "template_family": "plan",
+  "line": "p5",
+  "source": "SIM",
+  "split": "calibration",
+  "condition": "scripted_calibration",
+  "seed": 0,
+  "checkpoint_hash": "7a96714c4a0a2b8d0c4d7b862843efae7e5f9cd54e8c67caedc568553ded8a1d",
+  "hidden_gt_path": "hidden/initial.json",
+  "model": "Mock",
+  "prompt_hash": "3af54004b6190bdd29992a2dcf5ffacf09ba95428fb872dc280ded88c8e7d775",
+  "action_budget": 12,
+  "test_tuning": false,
+  "automatic_retries": 0,
+  "pricing": null
+}

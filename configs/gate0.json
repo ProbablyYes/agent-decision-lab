@@ -1,0 +1,12 @@
+{
+  "protocol": "V0.2",
+  "gate": 0,
+  "approved": false,
+  "model_id": "unselected",
+  "source": "SIM",
+  "split": "calibration",
+  "automatic_retries": 0,
+  "concurrency": 1,
+  "max_spend_cny": 0,
+  "tune_on_test": false
+}

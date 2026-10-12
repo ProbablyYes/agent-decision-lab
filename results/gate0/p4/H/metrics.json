@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "tool_calls": 5,
+  "invalid_actions": 0,
+  "redundant_probes": 0,
+  "condition": "scripted_calibration",
+  "source": "SIM",
+  "error": null,
+  "excluded": false,
+  "completion_criterion": "applied target and successful verify",
+  "denominator": 1,
+  "actual_api_cost_cny": 0,
+  "first_two_actions": [
+    {
+      "kind": "calibrate"
+    },
+    {
+      "kind": "diagnose"
+    }
+  ],
+  "action_cost": 5,
+  "preparatory_action_selected": true
+}

@@ -1,0 +1,70 @@
+{
+  "line": "p2",
+  "n": 3,
+  "sampling_unit": "fixture (SIM)",
+  "groups": {
+    "scripted_calibration": {
+      "n": 3,
+      "successes": 3
+    }
+  },
+  "primary": "final_success",
+  "missing_arms": [
+    "all scientific comparison arms; calibration only"
+  ],
+  "scientific_inference": false,
+  "measurements": [
+    {
+      "reception": null,
+      "belief_adoption": null,
+      "plan_change": null,
+      "action_change": null,
+      "first_two_actions": [
+        {
+          "kind": "diagnose"
+        },
+        {
+          "kind": "prepare"
+        }
+      ],
+      "cost": null
+    },
+    {
+      "reception": null,
+      "belief_adoption": null,
+      "plan_change": null,
+      "action_change": null,
+      "first_two_actions": [
+        {
+          "kind": "diagnose"
+        },
+        {
+          "kind": "prepare"
+        }
+      ],
+      "cost": null
+    },
+    {
+      "reception": null,
+      "belief_adoption": null,
+      "plan_change": null,
+      "action_change": null,
+      "first_two_actions": [
+        {
+          "kind": "diagnose"
+        },
+        {
+          "kind": "prepare"
+        }
+      ],
+      "cost": null
+    }
+  ],
+  "unmeasured": [
+    "reception",
+    "belief_adoption",
+    "plan_change",
+    "action_change",
+    "cost"
+  ]
+}

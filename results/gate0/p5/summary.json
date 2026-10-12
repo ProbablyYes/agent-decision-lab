@@ -1,0 +1,39 @@
+{
+  "line": "p5",
+  "n": 3,
+  "sampling_unit": "fixture (SIM)",
+  "groups": {
+    "scripted_calibration": {
+      "n": 3,
+      "successes": 3
+    }
+  },
+  "primary": "final_success",
+  "missing_arms": [
+    "all scientific comparison arms; calibration only"
+  ],
+  "scientific_inference": false,
+  "measurements": [
+    {
+      "invalid_action_rate": 0.0,
+      "valid_node_retention": null,
+      "repair_cost": 4,
+      "completion": true
+    },
+    {
+      "invalid_action_rate": 0.0,
+      "valid_node_retention": null,
+      "repair_cost": 4,
+      "completion": true
+    },
+    {
+      "invalid_action_rate": 0.0,
+      "valid_node_retention": null,
+      "repair_cost": 4,
+      "completion": true
+    }
+  ],
+  "unmeasured": [
+    "valid_node_retention"
+  ]
+}

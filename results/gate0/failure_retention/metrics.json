@@ -1,0 +1,21 @@
+{
+  "success": false,
+  "tool_calls": 1,
+  "invalid_actions": 1,
+  "redundant_probes": 0,
+  "condition": "scripted_calibration",
+  "source": "SIM",
+  "error": "StopIteration: ",
+  "excluded": false,
+  "completion_criterion": "applied target and successful verify",
+  "denominator": 1,
+  "actual_api_cost_cny": 0,
+  "first_two_actions": [
+    {
+      "kind": "apply_change",
+      "target": "A"
+    }
+  ],
+  "attribution_correct": null,
+  "invalid_retries": 0
+}

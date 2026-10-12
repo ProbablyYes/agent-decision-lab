@@ -1,0 +1,17 @@
+{
+  "task_id": "attribution:U",
+  "template_family": "attribution",
+  "line": "p3",
+  "source": "SIM",
+  "split": "calibration",
+  "condition": "scripted_calibration",
+  "seed": 0,
+  "checkpoint_hash": "ac91cc14490869cd8a58076b5cf2e5b0faa0dd5f1f86aa9572256d9d4ca23e3d",
+  "hidden_gt_path": "hidden/initial.json",
+  "model": "Mock",
+  "prompt_hash": "3af54004b6190bdd29992a2dcf5ffacf09ba95428fb872dc280ded88c8e7d775",
+  "action_budget": 12,
+  "test_tuning": false,
+  "automatic_retries": 0,
+  "pricing": null
+}

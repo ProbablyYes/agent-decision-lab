@@ -1,0 +1,2 @@
+# Research constraints
+Read Codex_START_HERE_V0.2.md and research/Agent_Decision_Failure_Lab_Codex_Research_Brief_V0.2.md in full before changing experiments. Preserve P1–P5 and their primary metrics. No real API requests until explicit Gate 1 approval and verified pricing. Mock results are instrument calibration, not scientific evidence. Hidden GT must never enter ordinary agent context. Keep changes in research/DECISION_LOG.md. Do not tune on test splits.

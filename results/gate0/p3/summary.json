@@ -1,0 +1,42 @@
+{
+  "line": "p3",
+  "n": 3,
+  "sampling_unit": "fixture (SIM)",
+  "groups": {
+    "scripted_calibration": {
+      "n": 3,
+      "successes": 3
+    }
+  },
+  "primary": "final_success",
+  "missing_arms": [
+    "all scientific comparison arms; calibration only"
+  ],
+  "scientific_inference": false,
+  "measurements": [
+    {
+      "paired_success_delta": null,
+      "extra_cost": null,
+      "harm": null,
+      "recovery": null
+    },
+    {
+      "paired_success_delta": null,
+      "extra_cost": null,
+      "harm": null,
+      "recovery": null
+    },
+    {
+      "paired_success_delta": null,
+      "extra_cost": null,
+      "harm": null,
+      "recovery": null
+    }
+  ],
+  "unmeasured": [
+    "paired_success_delta",
+    "extra_cost",
+    "harm",
+    "recovery"
+  ]
+}

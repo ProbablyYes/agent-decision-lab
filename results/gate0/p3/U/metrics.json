@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "tool_calls": 3,
+  "invalid_actions": 0,
+  "redundant_probes": 0,
+  "condition": "scripted_calibration",
+  "source": "SIM",
+  "error": null,
+  "excluded": false,
+  "completion_criterion": "applied target and successful verify",
+  "denominator": 1,
+  "actual_api_cost_cny": 0,
+  "first_two_actions": [
+    {
+      "kind": "diagnose"
+    },
+    {
+      "kind": "apply_change",
+      "target": "B"
+    }
+  ]
+}
