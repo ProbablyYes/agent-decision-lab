@@ -15,13 +15,14 @@ from adfl.agents.transport import OFoxTransport, redact, NoRedirect
 from adfl.budget.guard import BudgetStop
 from adfl.budget.ledger import Ledger
 from adfl.budget.pricing import RateCard, usage_from
-from adfl.gate1 import Gate1Engine, fingerprint, initial_session, readiness, export
+from adfl.gate1 import Gate1Engine, fingerprint, initial_session, readiness, export, first_run_report
 
 
 @pytest.fixture
 def config():
     c=json.loads(Path('configs/gate1.json').read_text(encoding='utf-8'))
-    for k in ('model_confirmed','account_currency_confirmed','account_rates_confirmed','fx_confirmed','usage_cache_semantics_confirmed'):
+    c['estimate_based_first_run_authorized']=False
+    for k in ('model_confirmed','model_access_confirmed','account_currency_confirmed','account_rates_confirmed','fx_confirmed','usage_cache_semantics_confirmed'):
         c[k]=True
     c['pricing']['cache_write_semantics']='exclusive_prompt_subset'
     return c
@@ -37,9 +38,9 @@ def response(action,model='qwen/qwen-flash',**overrides):
     return {'status':200,'body':b,'raw':json.dumps(b),'request_id':'synthetic'}
 
 
-def registered(tmp_path,config,run_id='g1-01'):
+def registered(tmp_path,config,run_id='g1-01',spend_cap=1000000):
     l=Ledger(tmp_path/'ledger.db',create=True)
-    l.register(run_id,fingerprint(config),initial_session('attribution:H','p1'))
+    l.register(run_id,fingerprint(config),initial_session('attribution:H','p1'),spend_cap=spend_cap)
     l.approve(run_id,fingerprint(config),'synthetic test approval; not real authorization',ready=True)
     return l
 
@@ -100,6 +101,7 @@ def test_price_currency_cache_and_unknown(config):
 
 def test_unconfirmed_configuration_blocks_send(tmp_path):
     c=json.loads(Path('configs/gate1.json').read_text(encoding='utf-8'))
+    c['estimate_based_first_run_authorized']=False
     l=Ledger(tmp_path/'ledger.db',create=True)
     calls=[]
     with pytest.raises(BudgetStop): Gate1Engine(l,c,lambda *a,**kw:calls.append(1)).run('g1-01')
@@ -266,7 +268,7 @@ def test_unknown_bill_manual_close_and_no_resend(tmp_path,config):
 
 
 def test_spend_does_not_reset_when_all_calls_settled(tmp_path,config):
-    l=registered(tmp_path,config)
+    l=registered(tmp_path,config,spend_cap=8000000)
     req=l.reserve('g1-01',fingerprint(config),1,7999999,{})
     u={'input_tokens':100,'output_tokens':20,'cached_tokens':0,'cache_write_tokens':0}
     l.receive(req,response({'kind':'wait'}),u,7999999)
@@ -282,3 +284,75 @@ def test_absent_ledger_is_not_automatically_initialized(tmp_path):
     p=tmp_path/'absent.sqlite3'
     with pytest.raises(BudgetStop): Ledger(p)
     assert not p.exists()
+
+
+def test_first_run_independent_cap_survives_restart(tmp_path,config):
+    l=registered(tmp_path,config)
+    req=l.reserve('g1-01',fingerprint(config),1,999999,{})
+    u={'input_tokens':100,'output_tokens':20,'cached_tokens':0,'cache_write_tokens':0}
+    l.receive(req,response({'kind':'wait'}),u,50)
+    s=json.loads(l.snapshot()['runs'][0]['session']); s['decisions']=1
+    l.apply(req,s,{},terminal=False)
+    reopened=Ledger(l.path)
+    with pytest.raises(BudgetStop,match='independent trajectory'): reopened.reserve('g1-01',fingerprint(config),2,2,{})
+    assert reopened.snapshot()['exposure_micro_cny']==999999
+    assert reopened.snapshot()['runs'][0]['spend_cap']==1000000
+
+
+def test_first_run_report_actual_records_and_unknown_bill(tmp_path,config):
+    l=registered(tmp_path,config)
+    def transport(*a,**kw):
+        return response({'kind':'combo','actions':[{'kind':'apply_change','target':'B'},{'kind':'verify'}]})
+    Gate1Engine(l,config,transport).run('g1-01')
+    p=tmp_path/'first.md'
+    first_run_report(l,config,p)
+    text=p.read_text(encoding='utf-8')
+    assert 'qwen/qwen-flash' in text and '未知' in text and '决策 1' in text
+    assert 'root_cause' not in text and '¥1.00' in text
+    r=l.snapshot()['requests'][0]
+    l.reconcile(r['id'],r['calculated'],json.loads(r['usage']),'synthetic bill')
+    first_run_report(l,config,p)
+    assert '未知（尚有请求未核对实际账单）' not in p.read_text(encoding='utf-8')
+
+
+def test_confirmed_model_does_not_imply_model_permission(tmp_path,config):
+    config['model_access_confirmed']=False
+    l=registered(tmp_path,config); calls=[]
+    with pytest.raises(BudgetStop): Gate1Engine(l,config,lambda *a,**kw:calls.append(1)).run('g1-01')
+    assert not calls and 'model_access_confirmed' in readiness(config)['blockers']
+
+
+def test_explicit_estimate_authorization_preserves_unknown_cost(tmp_path,config):
+    config['estimate_based_first_run_authorized']=True
+    config['usage_cache_semantics_confirmed']=False
+    config['pricing']['cache_write_semantics']='unconfirmed'
+    l=registered(tmp_path,config)
+    def transport(*a,**kw):
+        r=response({'kind':'combo','actions':[{'kind':'apply_change','target':'B'},{'kind':'verify'}]})
+        r['body']['usage'].pop('prompt_tokens_details')
+        return r
+    s=Gate1Engine(l,config,transport).run('g1-01')
+    assert s['runs'][0]['status']=='completed'
+    r=s['requests'][0]
+    assert r['billed'] is None and r['calculated'] is None
+    assert json.loads(r['usage'])['cached_tokens'] is None
+    assert s['exposure_micro_cny']==r['reserved']>0
+    with pytest.raises(BudgetStop,match='restricted to g1-01'):
+        Gate1Engine(l,config,transport).run('g1-02')
+
+
+def test_estimate_mode_still_stops_missing_primary_usage(tmp_path,config):
+    config['estimate_based_first_run_authorized']=True
+    l=registered(tmp_path,config); calls=[]
+    def transport(*a,**kw):
+        calls.append(1); return response({'kind':'wait'},usage={})
+    with pytest.raises(BudgetStop): Gate1Engine(l,config,transport).run('g1-01')
+    assert len(calls)==1 and l.snapshot()['runs'][0]['status']=='paused_unknown_cost'
+
+
+def test_observed_provider_tool_with_stop_is_rejected_without_execution():
+    # Characterize g1-01 without changing frozen protocol or issuing a request.
+    r=response({'kind':'diagnose','target':'A'})
+    r['body']['choices'][0]['finish_reason']='stop'
+    with pytest.raises(ValueError,match='completed native tool call'):
+        decode_tool(r['body'],'qwen/qwen-flash',12)

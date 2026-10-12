@@ -1,0 +1,17 @@
+Date: 2026-10-12 (Asia/Shanghai)
+Final offline test result: 78 passed in 6.51s
+Actual inference requests: 1 (g1-01 only)
+HTTP status: 200
+Requested/response model: qwen/qwen-flash
+Input/output/total tokens: 578 / 65 / 643
+Cache read/write tokens: unknown
+Primitive tools executed: 0
+Outcome: adapter rejected finish_reason=stop despite tool_calls
+Actual supplier bill: unknown (never recorded as zero)
+Retained reservation CNY: 0.006881
+Independent g1-01 cap CNY: 1
+Batch / Gate 1 cap CNY: 8 / 10
+Automatic retries: 0
+Subsequent runs: not approved, not executed
+Frozen adapter unchanged after observation
+Durable ledger backup: .state/backups/gate1-post-g1-01.sqlite3 (Git ignored)

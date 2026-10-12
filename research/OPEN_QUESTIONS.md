@@ -1,5 +1,7 @@
 # Open questions and blocked experiment parts
 
+2026-10-12首条：OFox tool_calls存在而finish_reason=stop；严格适配器拒绝，工具未执行。仪器猜想：终止标志差异会制造Agent失败假象。最低成本可证伪对照是离线重放同一响应，仅比较解析契约并验证参数/预算；不能把离线修复后推演当作新真实成功，不自动收费重跑。适配器变更和后续轨迹待审查。提出diagnose是可见行为，未取得工具结果，不能检验归因更新或证据采纳。
+
 1. P2 原生 Tool 载体需要合法 tool_call_id 和匹配历史。当前离线 feedback helper 的 Tool 消息不能直接发送到供应商；真实角色实验暂停。最低成本检查：同 checkpoint、同事实文本、同历史长度/动作成本，只改变消息角色；可证伪预测：匹配后角色差异消失。批准前需确定供应商消息 schema。
 2. P4 regret 需要预定义 reward/cost 权重和有限时域 Oracle；协议未给定数值权重。暂停计算 regret 和最终 scalar return，保留成功、动作次数与准备动作选择。最低成本对照：同 horizon 下即时进展 vs 2-step lookahead vs 穷举上界；预测：校准后诊断提高成功，若无差距则该实例没有机会空间。
 3. 当前 plan DAG 是最小 prepare→apply→verify，保留 prepare、使 apply/verify 过期；不足以代表一般复杂 DAG。最低成本检查：从已 prepare checkpoint 对比保留准备与重做准备，若成本无差异或成功已饱和，不扩展算法。正式 P5 需记录旧计划节点及前提，而非根据动作文本推断计划采纳。

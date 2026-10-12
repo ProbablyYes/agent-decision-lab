@@ -36,6 +36,8 @@ def validate(config):
         raise ValueError("frozen Gate 1 limits changed")
     if config.get("input_token_bound") != 8192 or config.get("stage_cap_cny") != 10 or config.get("batch_cap_cny") != 8:
         raise ValueError("reviewed budget envelope changed")
+    if config.get("first_run_cap_cny") != 1:
+        raise ValueError("first trajectory independent cap must be CNY 1")
     if config.get("tools_hash") != digest(TOOLS) or config.get("prompt_hash") != digest(TOOL_PROMPT):
         raise ValueError("tool/prompt hash mismatch")
     if not config.get("model_id") or config["model_id"] == "unselected":
@@ -60,9 +62,11 @@ def validate(config):
 
 def readiness(config):
     validate(config)
-    fields = ("model_confirmed", "account_currency_confirmed", "account_rates_confirmed", "fx_confirmed", "usage_cache_semantics_confirmed")
+    fields = ("model_confirmed", "model_access_confirmed", "account_currency_confirmed", "account_rates_confirmed", "fx_confirmed", "usage_cache_semantics_confirmed")
     missing = [k for k in fields if config.get(k) is not True]
-    return {"ready_for_approval": not missing, "blockers": missing, "fingerprint": fingerprint(config),
+    estimated = config.get("estimate_based_first_run_authorized") is True and config.get("model_confirmed") is True
+    return {"ready_for_approval": not missing or estimated, "blockers": [] if estimated else missing,
+            "unverified_account_fields": missing, "authorization_mode":"estimated_first_run_only" if estimated else "verified_pricing", "fingerprint": fingerprint(config),
             "real_calls": 0, "estimated_three_envelope_cny": RateCard(config["pricing"]).reserve(8192,512)*24/1e6,
             "estimated_five_envelope_cny": RateCard(config["pricing"]).reserve(8192,512)*40/1e6}
 
@@ -85,6 +89,9 @@ class Gate1Engine:
     def run(self, run_id):
         if not readiness(self.config)["ready_for_approval"]:
             raise BudgetStop("model/account pricing/FX/cache semantics not confirmed")
+        estimated = self.config.get("estimate_based_first_run_authorized") is True
+        if estimated and run_id != "g1-01":
+            raise BudgetStop("estimate-based authorization is restricted to g1-01")
         while True:
             snap = self.ledger.snapshot(run_id)
             if not snap["runs"]:
@@ -92,6 +99,8 @@ class Gate1Engine:
             run = snap["runs"][0]
             if run["fingerprint"] != self.fp or not run["approval"]:
                 raise BudgetStop("explicit approval for this exact frozen run required")
+            if run_id == "g1-01" and run["spend_cap"] > micro_cny(self.config["first_run_cap_cny"]):
+                raise BudgetStop("ledger first-run cap is higher than approved independent budget")
             if run["status"] in {"completed", "failed"}:
                 return snap
             session = json.loads(run["session"])
@@ -123,12 +132,12 @@ class Gate1Engine:
                     if usage["input_tokens"] > 8192 or usage["output_tokens"] > 512:
                         raise BudgetStop("observed usage exceeds reserved token bounds")
                     calculated = self.rates.calculated(usage)
-                    if calculated is None:
+                    if calculated is None and not estimated:
                         raise BudgetStop("cache usage/charging semantics unknown")
                 except Exception as exc:
                     cost_error = type(exc).__name__ + ": " + str(exc)
                 response["cost_error"] = cost_error
-                self.ledger.receive(req_id,response,usage,calculated,valid=cost_error is None)
+                self.ledger.receive(req_id,response,usage,calculated,valid=cost_error is None,allow_estimate=estimated)
                 request = self.ledger.snapshot(run_id)["requests"][-1]
                 if request["status"] != "received":
                     raise BudgetStop("unknown charge/usage: response preserved, reservation retained")
@@ -204,6 +213,45 @@ def export(ledger, config, run_id, path):
         json.dumps(metrics,ensure_ascii=False,indent=2)+"\n\nAll responses/failures retained. Costs remain unknown until reconciled.\n",encoding="utf-8")
 
 
+def first_run_report(ledger, config, path):
+    """Derived from durable records; does not interpret hidden beliefs or invent outcomes."""
+    snap = ledger.snapshot("g1-01")
+    if not snap["runs"]:
+        raise ValueError("g1-01 is not registered")
+    run = snap["runs"][0]
+    session = json.loads(run["session"])
+    world = CDW(); world.restore(session["environment"])
+    records = snap["requests"]
+    unknown = any(r["billed"] is None for r in records)
+    actual = "未知（尚有请求未核对实际账单）" if unknown else f"¥{sum(r['billed'] for r in records)/1e6:.6f}"
+    rows = ["# Gate 1 首条真实轨迹", "", "机制 Pilot（不可当作统计显著或 SOTA）。", "",
+        f"Run: g1-01；状态：{run['status']}；来源 SIM；seed=0。",
+        f"固定模型：{config['model_id']}；temperature=0；max_tokens=512；最多8决策/12 primitive。",
+        f"首条独立账本上限：¥{run['spend_cap']/1e6:.2f}；本批¥8；Gate 1累计¥10。",
+        f"持久化请求次数：{len(records)}；已应用决策：{session['decisions']}。",
+        f"任务评分：{json.dumps(world.score(),ensure_ascii=False)}；实际费用：{actual}。",
+        f"错误/停止原因：{session['error']}。", "",
+        "## 每步实际记录", ""]
+    applied = {json.loads(e["details"])["request"]:json.loads(e["details"])["trajectory"]
+        for e in snap["audit"] if e["event"] == "decision_applied" and json.loads(e["details"]).get("run") == "g1-01"}
+    if not records:
+        rows.append("尚未发送真实请求；没有真实行为数据。")
+    for r in records:
+        response = json.loads(r["response"]) if r["response"] else {}
+        body = response.get("body") or {}
+        t = applied.get(r["id"])
+        payload = json.loads(r["request"])
+        rows.extend([f"### 决策 {r['step']}", "", f"请求标识：{r['id']}；供应商响应ID：{body.get('id') if isinstance(body,dict) else None}；HTTP状态：{response.get('status')}。",
+            f"API响应模型：{body.get('model') if isinstance(body,dict) else None}；请求状态：{r['status']}。",
+            "发送前最新可见消息：`"+json.dumps(payload["messages"][-1],ensure_ascii=False)+"`",
+            "实际选择/执行记录：`"+json.dumps(t,ensure_ascii=False)+"`" if t else "未应用工具动作；原始响应和异常保留在 events.jsonl。",
+            f"Token统计（unknown保留null）：{r['usage']}；计算费微元：{r['calculated']}；预留微元：{r['reserved']}；实际账单微元：{r['billed']}。",
+            "异常：`"+json.dumps({k:response.get(k) for k in ("transport_error","cost_error")},ensure_ascii=False)+"`", ""])
+    rows.extend(["## 科研观察与审查", "", "是否诊断、如何回应冲突和是否无效重试应根据以上可见行动及原始记录人工审查。未显式报告的归因/belief保持未测；工具成功不是内部belief的证据。没有自动提出数据未支持的科研结论。",
+        "首条后暂停，不自动重试或运行g1-02/g1-03。费用未核验时保留预算；本报告可在逐请求对账后从同一账本更新。", ""])
+    Path(path).write_text("\n".join(rows),encoding="utf-8")
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("command",choices=["prepare","init-ledger","approve","run","export","reconcile","review","close-uncertain","status"])
@@ -224,7 +272,8 @@ def main():
     if args.command == "init-ledger":
         ledger=Ledger(LEDGER_PATH,create=True)
         for rid,line,task in RUNS:
-            ledger.register(rid,fingerprint(config),initial_session(task,line))
+            cap = micro_cny(config["first_run_cap_cny"] if rid == "g1-01" else config["batch_cap_cny"])
+            ledger.register(rid,fingerprint(config),initial_session(task,line),spend_cap=cap)
         print("Ledger initialized; all runs unapproved."); return
     ledger=Ledger(LEDGER_PATH)
     if args.command in {"approve","review","close-uncertain"}:
@@ -232,6 +281,8 @@ def main():
             raise BudgetStop("human evidence file required")
         evidence=Path(args.evidence_file).read_text(encoding="utf-8")
         if args.command == "approve":
+            if config.get("estimate_based_first_run_authorized") is True and args.run_id != "g1-01":
+                raise BudgetStop("only g1-01 authorized under estimate-based pricing")
             previous = {"g1-02":"g1-01","g1-03":"g1-02"}.get(args.run_id)
             ledger.approve(args.run_id,fingerprint(config),evidence,ready=readiness(config)["ready_for_approval"],predecessor=previous)
         elif args.command == "review":
@@ -250,11 +301,15 @@ def main():
             Gate1Engine(ledger,config).run(args.run_id)
         finally:
             export(ledger,config,args.run_id,ROOT/"results"/"gate1"/args.run_id)
+            if args.run_id == "g1-01":
+                first_run_report(ledger,config,ROOT/"GATE1_FIRST_RUN.md")
         print("Single trajectory ended; reconcile bills and review before any next trajectory.")
     elif args.command == "export":
         export(ledger,config,args.run_id,ROOT/"results"/"gate1"/args.run_id)
     elif args.command == "status":
         s=ledger.snapshot(); print(json.dumps({k:s[k] for k in ("exposure_micro_cny","actual_verified_micro_cny","unreconciled_requests")},indent=2))
+    if args.command in {"reconcile","review","close-uncertain","export"} and ledger.snapshot("g1-01")["runs"]:
+        first_run_report(ledger,config,ROOT/"GATE1_FIRST_RUN.md")
 
 
 if __name__ == "__main__":

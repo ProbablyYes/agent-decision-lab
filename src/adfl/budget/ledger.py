@@ -22,7 +22,8 @@ class Ledger:
                 CREATE TABLE account(id INTEGER PRIMARY KEY CHECK(id=1), cap INTEGER NOT NULL);
                 INSERT INTO account VALUES(1,8000000);
                 CREATE TABLE runs(id TEXT PRIMARY KEY, fingerprint TEXT NOT NULL, approval TEXT,
-                  reviewed TEXT, status TEXT NOT NULL, session TEXT NOT NULL);
+                  reviewed TEXT, status TEXT NOT NULL, session TEXT NOT NULL,
+                  spend_cap INTEGER NOT NULL);
                 CREATE TABLE requests(id TEXT PRIMARY KEY, run TEXT NOT NULL, step INTEGER NOT NULL,
                   reserved INTEGER NOT NULL, calculated INTEGER, billed INTEGER, status TEXT NOT NULL,
                   request TEXT NOT NULL, response TEXT, usage TEXT, evidence TEXT, UNIQUE(run,step));
@@ -33,6 +34,8 @@ class Ledger:
             else:
                 if db.execute("SELECT cap FROM account WHERE id=1").fetchone() is None:
                     raise BudgetStop("invalid ledger")
+                if "spend_cap" not in {r[1] for r in db.execute("PRAGMA table_info(runs)")}:
+                    raise BudgetStop("old ledger requires reviewed migration; do not recreate or reset spending")
 
     @contextmanager
     def transaction(self):
@@ -59,10 +62,12 @@ class Ledger:
     def exposure(db):
         return db.execute("SELECT COALESCE(SUM(CASE WHEN billed IS NULL THEN reserved ELSE billed END),0) FROM requests").fetchone()[0]
 
-    def register(self, run_id, fingerprint, session):
+    def register(self, run_id, fingerprint, session, *, spend_cap=8000000):
+        if type(spend_cap) is not int or not 0 < spend_cap <= 8000000:
+            raise BudgetStop("invalid independent trajectory cap")
         with self.transaction() as db:
-            db.execute("INSERT INTO runs(id,fingerprint,status,session) VALUES(?,?,?,?)", (run_id, fingerprint, "ready", json.dumps(session)))
-            self.audit(db, "run_registered", {"run": run_id})
+            db.execute("INSERT INTO runs(id,fingerprint,status,session,spend_cap) VALUES(?,?,?,?,?)", (run_id, fingerprint, "ready", json.dumps(session), spend_cap))
+            self.audit(db, "run_registered", {"run": run_id, "spend_cap_micro_cny": spend_cap})
 
     def approve(self, run_id, fingerprint, evidence, *, ready=False, predecessor=None):
         if not ready or not evidence.strip():
@@ -96,21 +101,25 @@ class Ledger:
             cap = min(db.execute("SELECT cap FROM account WHERE id=1").fetchone()[0], 10000000, 90000000, 100000000)
             if self.exposure(db) + amount > cap:
                 raise BudgetStop("cumulative budget exceeded")
+            run_exposure = db.execute("SELECT COALESCE(SUM(CASE WHEN billed IS NULL THEN reserved ELSE billed END),0) FROM requests WHERE run=?", (run_id,)).fetchone()[0]
+            if run_exposure + amount > row["spend_cap"]:
+                raise BudgetStop("independent trajectory budget exceeded")
             db.execute("INSERT INTO requests(id,run,step,reserved,status,request) VALUES(?,?,?,?,?,?)",
                        (req_id, run_id, step, amount, "reserved", json.dumps(payload)))
             db.execute("UPDATE runs SET status='running' WHERE id=?", (run_id,))
             self.audit(db, "request_reserved", {"request": req_id, "micro_cny": amount})
         return req_id
 
-    def receive(self, request_id, response, usage=None, calculated=None, *, valid=True):
+    def receive(self, request_id, response, usage=None, calculated=None, *, valid=True, allow_estimate=False):
         with self.transaction() as db:
             row = db.execute("SELECT * FROM requests WHERE id=?", (request_id,)).fetchone()
             if not row or row["status"] != "reserved":
                 raise BudgetStop("response not matched to reservation")
-            safe = valid and calculated is not None and calculated <= row["reserved"]
+            safe = valid and ((calculated is not None and calculated <= row["reserved"]) or
+                              (allow_estimate and row["run"] == "g1-01" and calculated is None))
             db.execute("UPDATE requests SET response=?,usage=?,calculated=?,status=? WHERE id=?",
                 (json.dumps(response), json.dumps(usage), calculated, "received" if safe else "ambiguous", request_id))
-            self.audit(db, "response_saved", {"request": request_id, "usage_valid": safe})
+            self.audit(db, "response_saved", {"request": request_id, "usage_valid": safe, "estimate_authorized": allow_estimate})
             if not safe:
                 run = db.execute("SELECT session FROM runs WHERE id=?", (row["run"],)).fetchone()
                 session = json.loads(run[0])

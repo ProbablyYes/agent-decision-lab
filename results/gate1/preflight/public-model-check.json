@@ -1,0 +1,32 @@
+{
+  "source": "https://api.ofox.ai/v1/models",
+  "checked_date": "2026-10-12",
+  "auth_used": false,
+  "selected_model_metadata_unchanged": true,
+  "model": {
+    "id": "qwen/qwen-flash",
+    "canonical_slug": "qwen-flash",
+    "pricing": {
+      "prompt": "0.000000022",
+      "completion": "0.00000022",
+      "input_cache_read": "0.0000000043",
+      "input_cache_write": "0.000000027",
+      "web_search": "0.01"
+    },
+    "supported_parameters": [
+      "temperature",
+      "top_p",
+      "max_tokens",
+      "stop",
+      "tools",
+      "tool_choice",
+      "response_format"
+    ],
+    "context_length": 1000000,
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 32000,
+      "is_moderated": false
+    }
+  }
+}
