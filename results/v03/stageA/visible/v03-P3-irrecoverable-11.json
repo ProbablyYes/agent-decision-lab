@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+  },
+  {
+    "role": "user",
+    "content": "{\"actions\": [{\"kind\": \"advance\"}, {\"kind\": \"wait\"}, {\"kind\": \"rollback\"}, {\"kind\": \"probe\"}, {\"kind\": \"verify\"}], \"observation\": {\"completed_stage\": 1, \"observation\": \"Job partially complete. Status pending; next observation not yet available.\", \"remaining\": 1, \"terminal\": false, \"window\": 2}, \"task\": \"Restore/complete and verify\"}"
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "status": "BLOCKED_DEPENDENCY",
+  "reset_verified": false,
+  "reason": "alfworld not installed; Windows Jericho build also failed in dependency dry-run."
+}

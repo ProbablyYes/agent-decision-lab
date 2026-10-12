@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+  },
+  {
+    "role": "user",
+    "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"A\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+  }
+]

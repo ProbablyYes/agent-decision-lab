@@ -1,0 +1,4 @@
+{
+  "version": "v03-mechanisms-1",
+  "prompt": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+}

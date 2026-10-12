@@ -1,0 +1,236 @@
+[
+  {
+    "family": "recoverable",
+    "first_action": {
+      "kind": "advance"
+    },
+    "best_net_utility": 0.85,
+    "oracle_continuation": {
+      "actions": [
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 11,
+      "feasible": true
+    },
+    "privileged": true
+  },
+  {
+    "family": "recoverable",
+    "first_action": {
+      "kind": "wait"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 156,
+      "feasible": false
+    },
+    "privileged": true
+  },
+  {
+    "family": "recoverable",
+    "first_action": {
+      "kind": "rollback"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 106,
+      "feasible": false
+    },
+    "privileged": true
+  },
+  {
+    "family": "recoverable",
+    "first_action": {
+      "kind": "probe"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 156,
+      "feasible": false
+    },
+    "privileged": true
+  },
+  {
+    "family": "recoverable",
+    "first_action": {
+      "kind": "verify"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 156,
+      "feasible": false
+    },
+    "privileged": true
+  },
+  {
+    "family": "fragile_success",
+    "first_action": {
+      "kind": "advance"
+    },
+    "best_net_utility": 0.85,
+    "oracle_continuation": {
+      "actions": [
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 11,
+      "feasible": true
+    },
+    "privileged": true
+  },
+  {
+    "family": "fragile_success",
+    "first_action": {
+      "kind": "wait"
+    },
+    "best_net_utility": 0.9,
+    "oracle_continuation": {
+      "actions": [
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 6,
+      "feasible": true
+    },
+    "privileged": true
+  },
+  {
+    "family": "fragile_success",
+    "first_action": {
+      "kind": "rollback"
+    },
+    "best_net_utility": 0.85,
+    "oracle_continuation": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    },
+    "privileged": true
+  },
+  {
+    "family": "fragile_success",
+    "first_action": {
+      "kind": "probe"
+    },
+    "best_net_utility": 0.85,
+    "oracle_continuation": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    },
+    "privileged": true
+  },
+  {
+    "family": "fragile_success",
+    "first_action": {
+      "kind": "verify"
+    },
+    "best_net_utility": 0.85,
+    "oracle_continuation": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    },
+    "privileged": true
+  },
+  {
+    "family": "irrecoverable",
+    "first_action": {
+      "kind": "advance"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 1,
+      "feasible": false
+    },
+    "privileged": true
+  },
+  {
+    "family": "irrecoverable",
+    "first_action": {
+      "kind": "wait"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 1,
+      "feasible": false
+    },
+    "privileged": true
+  },
+  {
+    "family": "irrecoverable",
+    "first_action": {
+      "kind": "rollback"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 1,
+      "feasible": false
+    },
+    "privileged": true
+  },
+  {
+    "family": "irrecoverable",
+    "first_action": {
+      "kind": "probe"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 1,
+      "feasible": false
+    },
+    "privileged": true
+  },
+  {
+    "family": "irrecoverable",
+    "first_action": {
+      "kind": "verify"
+    },
+    "best_net_utility": -0.05,
+    "oracle_continuation": {
+      "actions": null,
+      "expanded": 1,
+      "feasible": false
+    },
+    "privileged": true
+  }
+]

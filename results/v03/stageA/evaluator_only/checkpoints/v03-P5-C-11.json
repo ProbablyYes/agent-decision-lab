@@ -1,0 +1,164 @@
+{
+  "state": {
+    "version": "v03-world-1",
+    "line": "P5",
+    "family": "C",
+    "seed": 11,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 11
+    },
+    "primitive_cost": 1,
+    "remaining": 12,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Unverified report (reliability 0.8): snapshot revision 2 might be required. Audit available; report is not authoritative.",
+    "prior": "B",
+    "alternative": "A",
+    "deps": {
+      "snapshot": [],
+      "credentials": [],
+      "left": [
+        "snapshot"
+      ],
+      "right": [
+        "snapshot",
+        "credentials"
+      ],
+      "merge": [
+        "left",
+        "right"
+      ],
+      "publish": [
+        "merge",
+        "credentials"
+      ]
+    },
+    "required": {
+      "snapshot": 2,
+      "credentials": 1,
+      "left": 1,
+      "right": 1,
+      "merge": 1,
+      "publish": 1
+    },
+    "done": {
+      "snapshot": {
+        "revision": 1,
+        "inputs": {}
+      },
+      "credentials": {
+        "revision": 1,
+        "inputs": {}
+      },
+      "left": {
+        "revision": 1,
+        "inputs": {
+          "snapshot": 1
+        }
+      },
+      "right": {
+        "revision": 1,
+        "inputs": {
+          "snapshot": 1,
+          "credentials": 1
+        }
+      }
+    },
+    "generations": {
+      "snapshot": 1,
+      "credentials": 1,
+      "left": 1,
+      "right": 1,
+      "merge": 0,
+      "publish": 0
+    },
+    "hidden": {
+      "changed": "snapshot",
+      "actual_change": true
+    },
+    "audited": false
+  },
+  "initial": {
+    "version": "v03-world-1",
+    "line": "P5",
+    "family": "C",
+    "seed": 11,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 11
+    },
+    "primitive_cost": 1,
+    "remaining": 12,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Unverified report (reliability 0.8): snapshot revision 2 might be required. Audit available; report is not authoritative.",
+    "prior": "B",
+    "alternative": "A",
+    "deps": {
+      "snapshot": [],
+      "credentials": [],
+      "left": [
+        "snapshot"
+      ],
+      "right": [
+        "snapshot",
+        "credentials"
+      ],
+      "merge": [
+        "left",
+        "right"
+      ],
+      "publish": [
+        "merge",
+        "credentials"
+      ]
+    },
+    "required": {
+      "snapshot": 2,
+      "credentials": 1,
+      "left": 1,
+      "right": 1,
+      "merge": 1,
+      "publish": 1
+    },
+    "done": {
+      "snapshot": {
+        "revision": 1,
+        "inputs": {}
+      },
+      "credentials": {
+        "revision": 1,
+        "inputs": {}
+      },
+      "left": {
+        "revision": 1,
+        "inputs": {
+          "snapshot": 1
+        }
+      },
+      "right": {
+        "revision": 1,
+        "inputs": {
+          "snapshot": 1,
+          "credentials": 1
+        }
+      }
+    },
+    "generations": {
+      "snapshot": 1,
+      "credentials": 1,
+      "left": 1,
+      "right": 1,
+      "merge": 0,
+      "publish": 0
+    },
+    "hidden": {
+      "changed": "snapshot",
+      "actual_change": true
+    },
+    "audited": false
+  }
+}

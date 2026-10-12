@@ -1,0 +1,914 @@
+[
+  {
+    "seed": 0,
+    "unreliable": false,
+    "design": {
+      "checkpoint": {
+        "state": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 0,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 0
+          },
+          "primitive_cost": 1,
+          "remaining": 11,
+          "history": [
+            {
+              "action": {
+                "kind": "compatibility"
+              },
+              "observation": "Prior A compatibility: incompatible",
+              "invalid": false,
+              "unnecessary": false
+            }
+          ],
+          "success": false,
+          "terminal": false,
+          "last": "Diagnostic completed; evidence delivery controlled by experimental channel.",
+          "prior": "A",
+          "alternative": "B",
+          "hidden": {
+            "target": "B",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        },
+        "initial": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 0,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 0
+          },
+          "primitive_cost": 1,
+          "remaining": 12,
+          "history": [],
+          "success": false,
+          "terminal": false,
+          "last": "Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+          "prior": "A",
+          "alternative": "B",
+          "hidden": {
+            "target": "B",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        }
+      },
+      "raw_tool_checkpoint": {
+        "state": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 0,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 0
+          },
+          "primitive_cost": 1,
+          "remaining": 11,
+          "history": [
+            {
+              "action": {
+                "kind": "compatibility"
+              },
+              "observation": "Prior A compatibility: incompatible",
+              "invalid": false,
+              "unnecessary": false
+            }
+          ],
+          "success": false,
+          "terminal": false,
+          "last": "Prior A compatibility: incompatible",
+          "prior": "A",
+          "alternative": "B",
+          "hidden": {
+            "target": "B",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        },
+        "initial": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 0,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 0
+          },
+          "primitive_cost": 1,
+          "remaining": 12,
+          "history": [],
+          "success": false,
+          "terminal": false,
+          "last": "Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+          "prior": "A",
+          "alternative": "B",
+          "hidden": {
+            "target": "B",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        }
+      },
+      "fact": "Prior A compatibility: incompatible Source reliability: 1.0 (authoritative).",
+      "histories": {
+        "C0": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"A\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          },
+          {
+            "role": "user",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          }
+        ],
+        "C1": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"A\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          },
+          {
+            "role": "user",
+            "content": "Prior A compatibility: incompatible Source reliability: 1.0 (authoritative)."
+          }
+        ],
+        "C2": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"A\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Prior A compatibility: incompatible Source reliability: 1.0 (authoritative)."
+          },
+          {
+            "role": "user",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          }
+        ]
+      },
+      "prefix_cost": 1,
+      "manipulation": "delivery filter; C1/C2 have identical fact string, different role scaffolding"
+    }
+  },
+  {
+    "seed": 0,
+    "unreliable": true,
+    "design": {
+      "checkpoint": {
+        "state": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 0,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 0
+          },
+          "primitive_cost": 1,
+          "remaining": 11,
+          "history": [
+            {
+              "action": {
+                "kind": "compatibility"
+              },
+              "observation": "Prior A compatibility: incompatible",
+              "invalid": false,
+              "unnecessary": false
+            }
+          ],
+          "success": false,
+          "terminal": false,
+          "last": "Diagnostic completed; evidence delivery controlled by experimental channel.",
+          "prior": "A",
+          "alternative": "B",
+          "hidden": {
+            "target": "B",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        },
+        "initial": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 0,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 0
+          },
+          "primitive_cost": 1,
+          "remaining": 12,
+          "history": [],
+          "success": false,
+          "terminal": false,
+          "last": "Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+          "prior": "A",
+          "alternative": "B",
+          "hidden": {
+            "target": "B",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        }
+      },
+      "raw_tool_checkpoint": {
+        "state": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 0,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 0
+          },
+          "primitive_cost": 1,
+          "remaining": 11,
+          "history": [
+            {
+              "action": {
+                "kind": "compatibility"
+              },
+              "observation": "Prior A compatibility: incompatible",
+              "invalid": false,
+              "unnecessary": false
+            }
+          ],
+          "success": false,
+          "terminal": false,
+          "last": "Prior A compatibility: incompatible",
+          "prior": "A",
+          "alternative": "B",
+          "hidden": {
+            "target": "B",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        },
+        "initial": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 0,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 0
+          },
+          "primitive_cost": 1,
+          "remaining": 12,
+          "history": [],
+          "success": false,
+          "terminal": false,
+          "last": "Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+          "prior": "A",
+          "alternative": "B",
+          "hidden": {
+            "target": "B",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        }
+      },
+      "fact": "Prior A compatibility: compatible Source reliability: 0.8 (separate unreliable subgroup).",
+      "histories": {
+        "C0": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"A\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          },
+          {
+            "role": "user",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          }
+        ],
+        "C1": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"A\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          },
+          {
+            "role": "user",
+            "content": "Prior A compatibility: compatible Source reliability: 0.8 (separate unreliable subgroup)."
+          }
+        ],
+        "C2": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"A\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Prior A compatibility: compatible Source reliability: 0.8 (separate unreliable subgroup)."
+          },
+          {
+            "role": "user",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          }
+        ]
+      },
+      "prefix_cost": 1,
+      "manipulation": "delivery filter; C1/C2 have identical fact string, different role scaffolding"
+    }
+  },
+  {
+    "seed": 1,
+    "unreliable": false,
+    "design": {
+      "checkpoint": {
+        "state": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 1,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 1
+          },
+          "primitive_cost": 1,
+          "remaining": 11,
+          "history": [
+            {
+              "action": {
+                "kind": "compatibility"
+              },
+              "observation": "Prior B compatibility: incompatible",
+              "invalid": false,
+              "unnecessary": false
+            }
+          ],
+          "success": false,
+          "terminal": false,
+          "last": "Diagnostic completed; evidence delivery controlled by experimental channel.",
+          "prior": "B",
+          "alternative": "A",
+          "hidden": {
+            "target": "A",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        },
+        "initial": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 1,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 1
+          },
+          "primitive_cost": 1,
+          "remaining": 12,
+          "history": [],
+          "success": false,
+          "terminal": false,
+          "last": "Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+          "prior": "B",
+          "alternative": "A",
+          "hidden": {
+            "target": "A",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        }
+      },
+      "raw_tool_checkpoint": {
+        "state": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 1,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 1
+          },
+          "primitive_cost": 1,
+          "remaining": 11,
+          "history": [
+            {
+              "action": {
+                "kind": "compatibility"
+              },
+              "observation": "Prior B compatibility: incompatible",
+              "invalid": false,
+              "unnecessary": false
+            }
+          ],
+          "success": false,
+          "terminal": false,
+          "last": "Prior B compatibility: incompatible",
+          "prior": "B",
+          "alternative": "A",
+          "hidden": {
+            "target": "A",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        },
+        "initial": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 1,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 1
+          },
+          "primitive_cost": 1,
+          "remaining": 12,
+          "history": [],
+          "success": false,
+          "terminal": false,
+          "last": "Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+          "prior": "B",
+          "alternative": "A",
+          "hidden": {
+            "target": "A",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        }
+      },
+      "fact": "Prior B compatibility: incompatible Source reliability: 1.0 (authoritative).",
+      "histories": {
+        "C0": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"B\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          },
+          {
+            "role": "user",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          }
+        ],
+        "C1": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"B\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          },
+          {
+            "role": "user",
+            "content": "Prior B compatibility: incompatible Source reliability: 1.0 (authoritative)."
+          }
+        ],
+        "C2": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"B\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Prior B compatibility: incompatible Source reliability: 1.0 (authoritative)."
+          },
+          {
+            "role": "user",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          }
+        ]
+      },
+      "prefix_cost": 1,
+      "manipulation": "delivery filter; C1/C2 have identical fact string, different role scaffolding"
+    }
+  },
+  {
+    "seed": 1,
+    "unreliable": true,
+    "design": {
+      "checkpoint": {
+        "state": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 1,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 1
+          },
+          "primitive_cost": 1,
+          "remaining": 11,
+          "history": [
+            {
+              "action": {
+                "kind": "compatibility"
+              },
+              "observation": "Prior B compatibility: incompatible",
+              "invalid": false,
+              "unnecessary": false
+            }
+          ],
+          "success": false,
+          "terminal": false,
+          "last": "Diagnostic completed; evidence delivery controlled by experimental channel.",
+          "prior": "B",
+          "alternative": "A",
+          "hidden": {
+            "target": "A",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        },
+        "initial": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 1,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 1
+          },
+          "primitive_cost": 1,
+          "remaining": 12,
+          "history": [],
+          "success": false,
+          "terminal": false,
+          "last": "Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+          "prior": "B",
+          "alternative": "A",
+          "hidden": {
+            "target": "A",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        }
+      },
+      "raw_tool_checkpoint": {
+        "state": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 1,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 1
+          },
+          "primitive_cost": 1,
+          "remaining": 11,
+          "history": [
+            {
+              "action": {
+                "kind": "compatibility"
+              },
+              "observation": "Prior B compatibility: incompatible",
+              "invalid": false,
+              "unnecessary": false
+            }
+          ],
+          "success": false,
+          "terminal": false,
+          "last": "Prior B compatibility: incompatible",
+          "prior": "B",
+          "alternative": "A",
+          "hidden": {
+            "target": "A",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        },
+        "initial": {
+          "version": "v03-world-1",
+          "line": "P2",
+          "family": "H",
+          "seed": 1,
+          "rng_state": {
+            "algorithm": "deterministic seed mapping; no random draws",
+            "seed": 1
+          },
+          "primitive_cost": 1,
+          "remaining": 12,
+          "history": [],
+          "success": false,
+          "terminal": false,
+          "last": "Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+          "prior": "B",
+          "alternative": "A",
+          "hidden": {
+            "target": "A",
+            "delivered": true,
+            "sensor_stale": false
+          },
+          "applied": null
+        }
+      },
+      "fact": "Prior B compatibility: incompatible Source reliability: 0.8 (separate unreliable subgroup).",
+      "histories": {
+        "C0": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"B\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          },
+          {
+            "role": "user",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          }
+        ],
+        "C1": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"B\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          },
+          {
+            "role": "user",
+            "content": "Prior B compatibility: incompatible Source reliability: 0.8 (separate unreliable subgroup)."
+          }
+        ],
+        "C2": [
+          {
+            "role": "system",
+            "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+          },
+          {
+            "role": "user",
+            "content": "{\"actions\": [{\"kind\": \"receipt\"}, {\"kind\": \"compatibility\"}, {\"kind\": \"audit_monitor\"}, {\"kind\": \"apply\", \"target\": \"A\"}, {\"kind\": \"apply\", \"target\": \"B\"}, {\"kind\": \"verify\"}, {\"kind\": \"wait\"}], \"observation\": {\"observation\": \"Prior configuration B submitted. Monitor: service unavailable. Receipt and monitor validity not checked.\", \"prior\": \"B\", \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+          },
+          {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "v03_fact_001",
+                "type": "function",
+                "function": {
+                  "name": "cdw_v03_action",
+                  "arguments": "{\"kind\":\"compatibility\"}"
+                }
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "v03_fact_001",
+            "content": "Prior B compatibility: incompatible Source reliability: 0.8 (separate unreliable subgroup)."
+          },
+          {
+            "role": "user",
+            "content": "Diagnostic completed; factual payload withheld from this channel."
+          }
+        ]
+      },
+      "prefix_cost": 1,
+      "manipulation": "delivery filter; C1/C2 have identical fact string, different role scaffolding"
+    }
+  }
+]

@@ -1,0 +1,394 @@
+{
+  "protocol": "V0.3-StageA-1",
+  "status": "FROZEN_FOR_REVIEW_NOT_APPROVED",
+  "paid_execution_authorized": false,
+  "created_date": "2026-10-12",
+  "base_git_commit": "3cb52802e2acc545dbe669aa95a5b927558cea1a",
+  "code_identity": "base commit + exact file hashes; a reviewed final code commit required before paid approval",
+  "file_hashes": {
+    "src/adfl/__init__.py": "2f534deeda9ac1d56e1fbd0b31cafc397cf7d255b9283105279a5785e11df424",
+    "src/adfl/agents/__init__.py": "11afb83caf59878b7e754906cea457f48da63ee427287839d1f5709e33ebe0ec",
+    "src/adfl/agents/interface.py": "09ca3f650d75ff45271cf5879491c50416651b33372d6aa51acaa278601d3d25",
+    "src/adfl/agents/tools.py": "05dcf3d384f2bbfcca2718b7b551feeb13818a4363ed4cc58da50f8e25f8407b",
+    "src/adfl/agents/transport.py": "c8f1f58f06642d66c0838940aff9c12c3028d805c207777bd697e8e8f8845ed2",
+    "src/adfl/budget/__init__.py": "ff8a1153a040d88442e0feb088286f359844963621f683d0d132e24d533635b8",
+    "src/adfl/budget/guard.py": "fe92528fdcf172855e0d7176aa0ae45834d7a6942cea3225e02c8ba793483a5f",
+    "src/adfl/budget/ledger.py": "14458da9272e52377fe2f5bfd189dc60adb3c1b332118bee84aad98de532111f",
+    "src/adfl/budget/pricing.py": "bb3b23d2534d86dabcd1a9cf68c0ca70ca318c38dda76ea1815cf59d86f4862b",
+    "src/adfl/config.py": "fc887a08b21df34e207c1c40e00e9a1174abe20f18a7752a72da9e75f554cb94",
+    "src/adfl/evaluation/__init__.py": "cb657c85e89cc348b054fd30a15f5e16b3a23934a0da3fd0d25259ee529dbd5a",
+    "src/adfl/gate1.py": "5400f74acfb66e06480a7db0e7712b80b4799b6d7c5d5e0ee7676897defdbad7",
+    "src/adfl/gate2.py": "eae965fb86e4e300214b6e76cec058fb9f7119f980c9c81bf6b454eb598fea86",
+    "src/adfl/interventions/__init__.py": "67eb97b632b00b4c42ed27a0332e1168dd70596fb8bfc1e4fb62043b28708f20",
+    "src/adfl/pilot_design.py": "0fb86ff9e38208527f04eb22358d9c8d837df5c45b8ec73542cb72b44bea7885",
+    "src/adfl/runner.py": "158a9d892405a9a528c500c5800a140c8de3351409924fe8b30eb7a3df24e38d",
+    "src/adfl/v03/__init__.py": "3f09031d56b42ae6f54b0a2a15553e8d22233e85fd603759c1adbc26e20e3fbc",
+    "src/adfl/v03/design.py": "9497e06f67801548e7835bc2a6698529da6c82cf83097b7213ebc45cd2edc401",
+    "src/adfl/v03/pomdp.py": "ad13b3c343e54497566eb55c06ded9db3c9c3be4273aef641f5104ce7427fa4b",
+    "src/adfl/v03/review.py": "878042e29b064b000d69d84a1012e2d2024a591a3a48c2e4b9d9e6b8b2ea6cc6",
+    "src/adfl/v03/stage_a.py": "fbf986273fe436189b8c4aa5ae7e817a6b012bbbbfce8fa4b31c5f2b52a6d23e",
+    "src/adfl/v03/world.py": "37731a618ea43d3c6b40a118e4a82dce4254c5cc4dab00e9bb1e4191704318f0",
+    "src/adfl/world/__init__.py": "23855c3ab02d5044b694787bd16bcdd8818126e7ce8806e06ef34e5fe9a7e1a4",
+    "src/adfl/world/cdw.py": "4a98c6fcb5d6edc85f34ffec2ebccfb287fedbf2100ad4887bded19e182e30a9",
+    "src/adfl/world/pilot.py": "26050ecb89b10e22c12bda9e5502ef25dc0aeff28ba7efc9a258a5a981e6b58f",
+    "experiments/v03_alfworld_smoke.py": "5d4b29d67328f546a181adf4d7fc92dec2eb49414f372ecb7c8e0f0f67511304",
+    "research/V03_TASK_MANIFEST.jsonl": "a7eba8ca7b28e63eaa8ec0d8a09617ad616c2a53817a805202db2dacc76d3166",
+    "research/provider/v03/models.json": "0eaf1c081fafaba956e451f22b996d3fcfde00403823c6d03e2b4d490dfda3a5",
+    "research/provider/ecb-fx.json": "2d1b95faee2e0d7986a87fcf77218ba84cd5876ac3af73796889ae4b842cbe8b",
+    "results/v03/stageA/tool_schema.json": "362ea3da6755e12594be390aa5b95ffa2e4e9faebe0af3b5d56b1eddaba6d85e",
+    "results/v03/stageA/prompt.json": "8860fc1e16190411fbb9fd05f97360cb0543996f6f2928136e52d6596224f159",
+    "research/V03_SCIENTIFIC_PROTOCOL.md": "3f335a75198d29382c1dffbe7342d27845b95dd16924f8827d2f416e21096f70",
+    "research/V03_LITERATURE_ASSET_GAPS.md": "3d6a0001b8eaeed2d6d0c17c813d76a009902a32a7ab634a2b85f2c1d4b0a1c7",
+    "research/V03_FRONTIER_MODEL_OPTIONS.md": "d2120c2d395af299e7ed3aadad23b1dd1892a2fd64605963efd0bb5fe5264660",
+    "research/V03_SOURCE_PROVENANCE.json": "a7caedd3007aa9e9a84e69fa6e10dd216854a0360285153d16171b8c87ab2873",
+    "tests/test_v03_mechanisms.py": "473bc6f3b2008cade36c35faefaf73bfb060369faec42a3eb9b0bc80f574f402"
+  },
+  "splits": {
+    "design": [
+      0,
+      1,
+      2
+    ],
+    "dev": [
+      10,
+      11,
+      12
+    ],
+    "holdout": [
+      1000,
+      1001,
+      1002
+    ]
+  },
+  "selection_rule": "first dev seed 10, preselected H/E pair and P5 B; no frontier outcome observed; holdout untouched",
+  "task_generation": "World VERSION v03-world-1 / POMDP v03-pomdp-1; deterministic seed mapping; P5 common DAG with three update mechanisms",
+  "proposed_primary_model": "google/gemini-3.8-flash",
+  "secondary_model": "anthropic/claude-sonnet-5.5",
+  "model_revision": "catalog canonical slug; immutable weights UNKNOWN",
+  "base_url": "https://api.ofox.ai/v1",
+  "endpoint": "/chat/completions",
+  "temperature": 0,
+  "max_tokens": 512,
+  "reasoning": {
+    "proposed_level": "low",
+    "provider_wire_mapping": null,
+    "status": "BLOCKING: verify OFox mapping and reasoning token accounting before approval"
+  },
+  "max_decisions": 8,
+  "max_primitive": 12,
+  "input_token_bound": 4096,
+  "prompt_version": "v03-mechanisms-1",
+  "prompt_sha256": "f3bec843fe269b34136f6570d9b23717149cb6c002f3fc08413d3a0a2c9a844d",
+  "tool_schema_sha256": "9a78c0ff355d7b4517c362eab2d77fd5c6636b20fa133546e806f479f5011377",
+  "visible_context": "design.context()/intervention() only; checkpoint/manifest/evaluator truth prohibited",
+  "arms": [
+    {
+      "run_id": "v03-p1-h-natural",
+      "task_id": "v03-P1-H-10",
+      "condition": "no_intervention",
+      "checkpoint": "results/v03/stageA/evaluator_only/checkpoints/v03-P1-H-10.json",
+      "checkpoint_sha256": "9f54318917d7e38b239a7af69c90c42cbeb5d0f3033feada52a38a787a52e809"
+    },
+    {
+      "run_id": "v03-p1-e-natural",
+      "task_id": "v03-P1-E-10",
+      "condition": "no_intervention",
+      "checkpoint": "results/v03/stageA/evaluator_only/checkpoints/v03-P1-E-10.json",
+      "checkpoint_sha256": "c9d6fe26f4d4c4571980783254ab70e412285d5c85a3c7990ada053d8e1a95ce"
+    },
+    {
+      "run_id": "v03-p5-b-belief",
+      "task_id": "v03-P5-B-10",
+      "condition": "belief_only",
+      "checkpoint": "results/v03/stageA/evaluator_only/checkpoints/v03-P5-B-10.json",
+      "checkpoint_sha256": "71fea619b6520550b16ca8c7f665b0c29f8b3671e7292f9c22c9b6b06a8b3f98"
+    },
+    {
+      "run_id": "v03-p5-b-selective",
+      "task_id": "v03-P5-B-10",
+      "condition": "selective_dependency_repair",
+      "checkpoint": "results/v03/stageA/evaluator_only/checkpoints/v03-P5-B-10.json",
+      "checkpoint_sha256": "71fea619b6520550b16ca8c7f665b0c29f8b3671e7292f9c22c9b6b06a8b3f98"
+    }
+  ],
+  "execution_order": [
+    "v03-p1-h-natural",
+    "v03-p1-e-natural",
+    "v03-p5-b-selective",
+    "v03-p5-b-belief"
+  ],
+  "fairness": "P1 H/E identical public context. P5 same snapshot, model, schema and caps; intervention wording only. Token consumption charged, not artificially equalized.",
+  "first_trajectory_review_required": true,
+  "secondary_family_requires_separate_approval": true,
+  "budget": {
+    "proposed_batch_cap_cny": 8,
+    "gate2_cumulative_cap_cny": 40,
+    "project_cap_cny": 100,
+    "project_stop_cny": 90,
+    "per_trajectory_proposed_cap_cny": 2,
+    "prior_ledger": {
+      "requests": 56,
+      "unsettled": 56,
+      "exposure_micro_cny": 981665,
+      "requests_summary_hash": "77442ccbed93af0e9da0d0bb3e5c07f5f8cde98913777bf1d7f3905be037f67e",
+      "all_tables_hash": "a1f8c9186026639b762a45b77765cc17f49415d16e00fa67aba3e73edcc2db3c",
+      "disposition": "Every unknown bill retains its full reservation. No aggregate balance allocation."
+    },
+    "model_cost_estimates": [
+      {
+        "id": "google/gemini-3.8-flash",
+        "metadata": {
+          "id": "google/gemini-3.8-flash",
+          "object": "model",
+          "created": 1788307200,
+          "owned_by": "google",
+          "canonical_slug": "gemini-3.8-flash",
+          "name": "Google: Gemini 3.8 Flash",
+          "description": "Gemini 3.8 Flash is Google's most intelligent Flash model, with significant gains over 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning. All input modalities (text/image/video/audio) unified pricing; batch tier at 50% discount. Thinking model with configurable levels. 1M context. Released September 2, 2026.",
+          "context_length": 1000000,
+          "architecture": {
+            "modality": "text+image+audio+file->text",
+            "input_modalities": [
+              "text",
+              "image",
+              "audio",
+              "file"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "tokenizer": "gemini",
+            "instruct_type": null
+          },
+          "pricing": {
+            "prompt": "0.0000015",
+            "completion": "0.0000075",
+            "audio": "0.0000015",
+            "input_cache_read": "0.00000015",
+            "input_cache_write": "0.000000083",
+            "input_cache_write_1h": "0.000001",
+            "input_cached_audio": "0.00000015",
+            "web_search": "0.014"
+          },
+          "top_provider": {
+            "context_length": 1000000,
+            "max_completion_tokens": 65536,
+            "is_moderated": false
+          },
+          "per_request_limits": null,
+          "supported_parameters": [
+            "temperature",
+            "top_p",
+            "max_tokens",
+            "stop",
+            "tools",
+            "tool_choice",
+            "response_format",
+            "reasoning"
+          ],
+          "default_parameters": null,
+          "expiration_date": null,
+          "is_deprecated": false,
+          "supported_endpoints": [
+            "/v1/chat/completions"
+          ],
+          "aliases": [
+            "gemini-3.8-flash"
+          ]
+        },
+        "usd_per_million": {
+          "prompt": "1.5000000",
+          "completion": "7.5000000",
+          "input_cache_read": "0.15000000",
+          "input_cache_write": "0.083000000",
+          "input_cache_write_1h": "1.000000"
+        },
+        "conservative_ratecard": {
+          "currency": "USD",
+          "input": "1.5000000",
+          "output": "7.5000000",
+          "cache_read": "0.15000000",
+          "cache_write": "1.000000",
+          "cny_per_usd": "6.692129216491165",
+          "cache_write_semantics": "unconfirmed"
+        },
+        "request_reserve_micro_cny": 215862,
+        "trajectory_reserve_micro_cny": 1726896,
+        "assumptions": {
+          "max_decisions": 8,
+          "max_input_tokens_per_request": 4096,
+          "max_output_tokens": 512,
+          "cache_discount": false,
+          "contingency": 2,
+          "account_tariff_verified": false
+        },
+        "counts": {
+          "2": {
+            "uncached_reference_cny": "1.0690274895591646617600",
+            "conservative_reserve_cny": "3.453792"
+          },
+          "4": {
+            "uncached_reference_cny": "2.1380549791183293235200",
+            "conservative_reserve_cny": "6.907584"
+          },
+          "6": {
+            "uncached_reference_cny": "3.2070824686774939852800",
+            "conservative_reserve_cny": "10.361376"
+          },
+          "12": {
+            "uncached_reference_cny": "6.4141649373549879705600",
+            "conservative_reserve_cny": "20.722752"
+          }
+        }
+      },
+      {
+        "id": "anthropic/claude-sonnet-5.5",
+        "metadata": {
+          "id": "anthropic/claude-sonnet-5.5",
+          "object": "model",
+          "created": 1790553600,
+          "owned_by": "bedrock",
+          "canonical_slug": "claude-sonnet-5-5",
+          "name": "Anthropic: Claude Sonnet 5.5",
+          "description": "Claude Sonnet 5.5 is Anthropic's Sonnet-tier model, offering a balance of speed and intelligence for coding, reasoning, and agentic workloads. It supports text, image, and file inputs with text output, with a 1M-token context window and up to 128K output tokens, at a lower per-token price than Claude Opus 5.5.",
+          "context_length": 1000000,
+          "architecture": {
+            "modality": "text+image+file->text",
+            "input_modalities": [
+              "text",
+              "image",
+              "file"
+            ],
+            "output_modalities": [
+              "text"
+            ],
+            "tokenizer": "claude",
+            "instruct_type": null
+          },
+          "pricing": {
+            "prompt": "0.000002",
+            "completion": "0.00001",
+            "input_cache_read": "0.0000002",
+            "input_cache_write_5m": "0.0000025",
+            "input_cache_write_1h": "0.000004",
+            "web_search": "0.015"
+          },
+          "top_provider": {
+            "context_length": 1000000,
+            "max_completion_tokens": 128000,
+            "is_moderated": false
+          },
+          "per_request_limits": null,
+          "supported_parameters": [
+            "temperature",
+            "top_p",
+            "max_tokens",
+            "stop",
+            "tools",
+            "tool_choice",
+            "response_format",
+            "reasoning"
+          ],
+          "default_parameters": null,
+          "expiration_date": null,
+          "is_deprecated": false,
+          "supported_endpoints": [
+            "/v1/chat/completions",
+            "/v1/responses"
+          ],
+          "aliases": [
+            "claude-sonnet-5-5",
+            "claude-sonnet-5.5"
+          ]
+        },
+        "usd_per_million": {
+          "prompt": "2.000000",
+          "completion": "10.00000",
+          "input_cache_read": "0.2000000",
+          "input_cache_write_5m": "2.5000000",
+          "input_cache_write_1h": "4.000000"
+        },
+        "conservative_ratecard": {
+          "currency": "USD",
+          "input": "2.000000",
+          "output": "10.00000",
+          "cache_read": "0.2000000",
+          "cache_write": "4.000000",
+          "cny_per_usd": "6.692129216491165",
+          "cache_write_semantics": "unconfirmed"
+        },
+        "request_reserve_micro_cny": 397459,
+        "trajectory_reserve_micro_cny": 3179672,
+        "assumptions": {
+          "max_decisions": 8,
+          "max_input_tokens_per_request": 4096,
+          "max_output_tokens": 512,
+          "cache_discount": false,
+          "contingency": 2,
+          "account_tariff_verified": false
+        },
+        "counts": {
+          "2": {
+            "uncached_reference_cny": "1.425369986078886215680",
+            "conservative_reserve_cny": "6.359344"
+          },
+          "4": {
+            "uncached_reference_cny": "2.850739972157772431360",
+            "conservative_reserve_cny": "12.718688"
+          },
+          "6": {
+            "uncached_reference_cny": "4.276109958236658647040",
+            "conservative_reserve_cny": "19.078032"
+          },
+          "12": {
+            "uncached_reference_cny": "8.552219916473317294080",
+            "conservative_reserve_cny": "38.156064"
+          }
+        }
+      }
+    ],
+    "known_unknowns": [
+      "account tariff",
+      "cache write/TTL/storage units",
+      "reasoning cap and accounting",
+      "settlement FX",
+      "per-request bills"
+    ]
+  },
+  "primary_outcomes": [
+    "task_success",
+    "tool_cost",
+    "net_utility = success - 0.05 * primitive calls"
+  ],
+  "secondary_outcomes": [
+    "P1 diagnostic choices and wrong-target modifications",
+    "P5 valid-work-retention",
+    "P5 obsolete-action-execution",
+    "P5 unnecessary-reexecution",
+    "P5 plan-consistency"
+  ],
+  "statuses": [
+    "SUCCESS",
+    "AGENT_TASK_FAIL",
+    "HARNESS_FAIL",
+    "BUDGET_TRUNCATION",
+    "UNIDENTIFIABLE"
+  ],
+  "exclusions": "None silently. Retain every candidate/run/error in denominator with cause; no retries, rerun selection, model fallback or prompt repair.",
+  "stop_rules": [
+    "No paid calls before explicit approval bound to this hash and final reviewed code commit",
+    "Unknown tariffs beyond estimate: stop, do not assume zero",
+    "Unknown bills retain full reservations",
+    "First-run review before continuation",
+    "Any schema/transport/model mismatch: preserve and pause",
+    "No tuning after frontier outcome; saturation/negative findings retained"
+  ],
+  "deferred": [
+    "P1 reflection/diagnostic/oracle paid arms",
+    "P2/P3 paid arms",
+    "P4 new algorithms",
+    "P5 full-replan/oracle paid arms",
+    "ALFWorld OBS trajectories",
+    "new V03 paid runner binding versioned schema to existing transport/ledger"
+  ]
+}

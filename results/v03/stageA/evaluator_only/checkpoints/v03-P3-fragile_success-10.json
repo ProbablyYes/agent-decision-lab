@@ -1,0 +1,48 @@
+{
+  "state": {
+    "version": "v03-world-1",
+    "line": "P3",
+    "family": "fragile_success",
+    "seed": 10,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 10
+    },
+    "primitive_cost": 1,
+    "remaining": 12,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Job partially complete. Status pending; next observation not yet available.",
+    "prior": "A",
+    "alternative": "B",
+    "stage": 1,
+    "window": 2,
+    "hidden": {
+      "required_stage": 3
+    }
+  },
+  "initial": {
+    "version": "v03-world-1",
+    "line": "P3",
+    "family": "fragile_success",
+    "seed": 10,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 10
+    },
+    "primitive_cost": 1,
+    "remaining": 12,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Job partially complete. Status pending; next observation not yet available.",
+    "prior": "A",
+    "alternative": "B",
+    "stage": 1,
+    "window": 2,
+    "hidden": {
+      "required_stage": 3
+    }
+  }
+}

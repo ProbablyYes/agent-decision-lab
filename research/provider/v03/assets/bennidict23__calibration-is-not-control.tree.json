@@ -1,0 +1,123 @@
+{
+  "sha": "9e3825b7eea89ee9dc88f1ccd11f277f8e10beb3",
+  "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/trees/9e3825b7eea89ee9dc88f1ccd11f277f8e10beb3",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d0ea012c3f2d7f0cafd2b8550076bb08e5ab366",
+      "size": 41,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/2d0ea012c3f2d7f0cafd2b8550076bb08e5ab366"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a8ec0887bcc6d3b337ba3d29355364aefff1f97",
+      "size": 1155,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/0a8ec0887bcc6d3b337ba3d29355364aefff1f97"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c193662e067008684a9ce849d8c0d42e7cd191bd",
+      "size": 3630,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/c193662e067008684a9ce849d8c0d42e7cd191bd"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "352b70fd52577adc43a0eae515ff22d2d692633c",
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/trees/352b70fd52577adc43a0eae515ff22d2d692633c"
+    },
+    {
+      "path": "docs/overview.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b14faaa04c117dbf103ac50ceb5bf03c559f58c6",
+      "size": 1293777,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/b14faaa04c117dbf103ac50ceb5bf03c559f58c6"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c7cc0b630b2ee7872b36accf5485fd8ec34b6d3",
+      "size": 75,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/0c7cc0b630b2ee7872b36accf5485fd8ec34b6d3"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2d9df7b74247a22e369e3b985785105972baca9",
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/trees/e2d9df7b74247a22e369e3b985785105972baca9"
+    },
+    {
+      "path": "scripts/collect_alfworld_branches.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3666de185ef68f4c6294d7a28c564ff1798d659e",
+      "size": 44575,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/3666de185ef68f4c6294d7a28c564ff1798d659e"
+    },
+    {
+      "path": "scripts/evaluate_controllers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5421a936c80516e3e19b1535790873506753786",
+      "size": 11614,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/a5421a936c80516e3e19b1535790873506753786"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e919def0937a3056ad1f3f23f5aab263613645e0",
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/trees/e919def0937a3056ad1f3f23f5aab263613645e0"
+    },
+    {
+      "path": "src/oversight_branching",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09c863020ee90b491b5eaaa645962cf97cf5ca41",
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/trees/09c863020ee90b491b5eaaa645962cf97cf5ca41"
+    },
+    {
+      "path": "src/oversight_branching/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1603ba7d65b0b8332fdcdbba2444ad5400d48d48",
+      "size": 89,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/1603ba7d65b0b8332fdcdbba2444ad5400d48d48"
+    },
+    {
+      "path": "src/oversight_branching/alfworld_text.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3df065846975a1430a3af55c042f8ae62f5dce08",
+      "size": 15556,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/3df065846975a1430a3af55c042f8ae62f5dce08"
+    },
+    {
+      "path": "src/oversight_branching/local_llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a47d45424d076749b4b23102c0b9bf78ed3016c3",
+      "size": 9163,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/a47d45424d076749b4b23102c0b9bf78ed3016c3"
+    },
+    {
+      "path": "src/oversight_branching/policy_learning.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f701358a244a7716da4c158353eed41d4aef8a2b",
+      "size": 26271,
+      "url": "https://api.github.com/repos/bennidict23/calibration-is-not-control/git/blobs/f701358a244a7716da4c158353eed41d4aef8a2b"
+    }
+  ],
+  "truncated": false
+}

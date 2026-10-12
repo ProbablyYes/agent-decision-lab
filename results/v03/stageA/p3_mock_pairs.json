@@ -1,0 +1,395 @@
+[
+  {
+    "family": "recoverable",
+    "condition": "continue",
+    "checkpoint_sha256": "08f30c3201ac8616442baa3618cae45b07d9c3341054067daf3ec3844eeabff6",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "wait"
+          },
+          "observation": {
+            "observation": "Scheduled observation: stage 1",
+            "remaining": 11,
+            "terminal": false,
+            "completed_stage": 1,
+            "window": 1
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Not complete.",
+            "remaining": 10,
+            "terminal": false,
+            "completed_stage": 1,
+            "window": 0
+          }
+        }
+      ],
+      "score": {
+        "task_success": false,
+        "tool_cost": 2,
+        "net_utility": -0.1,
+        "invalid_actions": 0,
+        "status": "AGENT_TASK_FAIL"
+      }
+    }
+  },
+  {
+    "family": "recoverable",
+    "condition": "generic_warning",
+    "checkpoint_sha256": "08f30c3201ac8616442baa3618cae45b07d9c3341054067daf3ec3844eeabff6",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "probe"
+          },
+          "observation": {
+            "observation": "Independent status: stage 1",
+            "remaining": 11,
+            "terminal": false,
+            "completed_stage": 1,
+            "window": 1
+          }
+        },
+        {
+          "action": {
+            "kind": "advance"
+          },
+          "observation": {
+            "observation": "Advance accepted.",
+            "remaining": 10,
+            "terminal": false,
+            "completed_stage": 2,
+            "window": 0
+          }
+        },
+        {
+          "action": {
+            "kind": "advance"
+          },
+          "observation": {
+            "observation": "Recovery window closed.",
+            "remaining": 9,
+            "terminal": false,
+            "completed_stage": 2,
+            "window": 0
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Not complete.",
+            "remaining": 8,
+            "terminal": false,
+            "completed_stage": 2,
+            "window": 0
+          }
+        }
+      ],
+      "score": {
+        "task_success": false,
+        "tool_cost": 4,
+        "net_utility": -0.2,
+        "invalid_actions": 1,
+        "status": "AGENT_TASK_FAIL"
+      }
+    }
+  },
+  {
+    "family": "recoverable",
+    "condition": "selective_repair",
+    "checkpoint_sha256": "08f30c3201ac8616442baa3618cae45b07d9c3341054067daf3ec3844eeabff6",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "advance"
+          },
+          "observation": {
+            "observation": "Advance accepted.",
+            "remaining": 11,
+            "terminal": false,
+            "completed_stage": 2,
+            "window": 1
+          }
+        },
+        {
+          "action": {
+            "kind": "advance"
+          },
+          "observation": {
+            "observation": "Advance accepted.",
+            "remaining": 10,
+            "terminal": false,
+            "completed_stage": 3,
+            "window": 0
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 9,
+            "terminal": true,
+            "completed_stage": 3,
+            "window": 0
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 3,
+        "net_utility": 0.85,
+        "invalid_actions": 0,
+        "status": "SUCCESS"
+      }
+    }
+  },
+  {
+    "family": "fragile_success",
+    "condition": "continue",
+    "checkpoint_sha256": "ec72777a2d7f01305e1d2bc2d4050490a9b41d75955063c9b3b6a1d461df89b6",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "wait"
+          },
+          "observation": {
+            "observation": "Scheduled observation: stage 3",
+            "remaining": 11,
+            "terminal": false,
+            "completed_stage": 3,
+            "window": 1
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 10,
+            "terminal": true,
+            "completed_stage": 3,
+            "window": 0
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 2,
+        "net_utility": 0.9,
+        "invalid_actions": 0,
+        "status": "SUCCESS"
+      }
+    }
+  },
+  {
+    "family": "fragile_success",
+    "condition": "rollback",
+    "checkpoint_sha256": "ec72777a2d7f01305e1d2bc2d4050490a9b41d75955063c9b3b6a1d461df89b6",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "rollback"
+          },
+          "observation": {
+            "observation": "Reversible rollback completed; progress removed.",
+            "remaining": 11,
+            "terminal": false,
+            "completed_stage": 0,
+            "window": 1
+          }
+        },
+        {
+          "action": {
+            "kind": "advance"
+          },
+          "observation": {
+            "observation": "Advance accepted.",
+            "remaining": 10,
+            "terminal": false,
+            "completed_stage": 1,
+            "window": 0
+          }
+        },
+        {
+          "action": {
+            "kind": "advance"
+          },
+          "observation": {
+            "observation": "Recovery window closed.",
+            "remaining": 9,
+            "terminal": false,
+            "completed_stage": 1,
+            "window": 0
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Not complete.",
+            "remaining": 8,
+            "terminal": false,
+            "completed_stage": 1,
+            "window": 0
+          }
+        }
+      ],
+      "score": {
+        "task_success": false,
+        "tool_cost": 4,
+        "net_utility": -0.2,
+        "invalid_actions": 1,
+        "status": "AGENT_TASK_FAIL"
+      }
+    }
+  },
+  {
+    "family": "fragile_success",
+    "condition": "wait_one_observation",
+    "checkpoint_sha256": "ec72777a2d7f01305e1d2bc2d4050490a9b41d75955063c9b3b6a1d461df89b6",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "wait"
+          },
+          "observation": {
+            "observation": "Scheduled observation: stage 3",
+            "remaining": 11,
+            "terminal": false,
+            "completed_stage": 3,
+            "window": 1
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 10,
+            "terminal": true,
+            "completed_stage": 3,
+            "window": 0
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 2,
+        "net_utility": 0.9,
+        "invalid_actions": 0,
+        "status": "SUCCESS"
+      }
+    }
+  },
+  {
+    "family": "irrecoverable",
+    "condition": "continue",
+    "checkpoint_sha256": "2b5668d233eb341242f97c5e6b5e271d8f86772e84562e6d0153d3c6384af2e3",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "advance"
+          },
+          "observation": {
+            "observation": "Advance accepted.",
+            "remaining": 0,
+            "terminal": false,
+            "completed_stage": 2,
+            "window": 1
+          }
+        }
+      ],
+      "score": {
+        "task_success": false,
+        "tool_cost": 1,
+        "net_utility": -0.05,
+        "invalid_actions": 0,
+        "status": "BUDGET_TRUNCATION"
+      }
+    }
+  },
+  {
+    "family": "irrecoverable",
+    "condition": "diagnostic_probe",
+    "checkpoint_sha256": "2b5668d233eb341242f97c5e6b5e271d8f86772e84562e6d0153d3c6384af2e3",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "probe"
+          },
+          "observation": {
+            "observation": "Independent status: stage 1",
+            "remaining": 0,
+            "terminal": false,
+            "completed_stage": 1,
+            "window": 1
+          }
+        }
+      ],
+      "score": {
+        "task_success": false,
+        "tool_cost": 1,
+        "net_utility": -0.05,
+        "invalid_actions": 0,
+        "status": "BUDGET_TRUNCATION"
+      }
+    }
+  },
+  {
+    "family": "irrecoverable",
+    "condition": "selective_repair",
+    "checkpoint_sha256": "2b5668d233eb341242f97c5e6b5e271d8f86772e84562e6d0153d3c6384af2e3",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "advance"
+          },
+          "observation": {
+            "observation": "Advance accepted.",
+            "remaining": 0,
+            "terminal": false,
+            "completed_stage": 2,
+            "window": 1
+          }
+        }
+      ],
+      "score": {
+        "task_success": false,
+        "tool_cost": 1,
+        "net_utility": -0.05,
+        "invalid_actions": 0,
+        "status": "BUDGET_TRUNCATION"
+      }
+    }
+  }
+]

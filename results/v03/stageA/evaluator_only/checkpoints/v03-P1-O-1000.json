@@ -1,0 +1,50 @@
+{
+  "state": {
+    "version": "v03-world-1",
+    "line": "P1",
+    "family": "O",
+    "seed": 1000,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 1000
+    },
+    "primitive_cost": 1,
+    "remaining": 12,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+    "prior": "A",
+    "alternative": "B",
+    "hidden": {
+      "target": "A",
+      "delivered": true,
+      "sensor_stale": true
+    },
+    "applied": "A"
+  },
+  "initial": {
+    "version": "v03-world-1",
+    "line": "P1",
+    "family": "O",
+    "seed": 1000,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 1000
+    },
+    "primitive_cost": 1,
+    "remaining": 12,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Prior configuration A submitted. Monitor: service unavailable. Receipt and monitor validity not checked.",
+    "prior": "A",
+    "alternative": "B",
+    "hidden": {
+      "target": "A",
+      "delivered": true,
+      "sensor_stale": true
+    },
+    "applied": "A"
+  }
+}

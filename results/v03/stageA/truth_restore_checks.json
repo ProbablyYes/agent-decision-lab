@@ -1,0 +1,1952 @@
+[
+  {
+    "task": "v03-P1-H-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-H-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-H-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-E-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-E-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-E-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-O-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "audit_monitor"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-O-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "audit_monitor"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-O-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "audit_monitor"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-U-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-U-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-U-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-H-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-H-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-H-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-E-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-E-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-E-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-recoverable-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 26,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-recoverable-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 26,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-recoverable-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 26,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-fragile_success-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-fragile_success-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-fragile_success-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-irrecoverable-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": null,
+      "expanded": 6,
+      "feasible": false
+    }
+  },
+  {
+    "task": "v03-P3-irrecoverable-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": null,
+      "expanded": 6,
+      "feasible": false
+    }
+  },
+  {
+    "task": "v03-P3-irrecoverable-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": null,
+      "expanded": 6,
+      "feasible": false
+    }
+  },
+  {
+    "task": "v03-P5-A-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 121,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-A-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 121,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-A-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 121,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-B-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-B-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-B-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-C-0",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 89,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-C-1",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-C-2",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-H-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-H-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-H-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-E-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-E-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-E-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-O-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "audit_monitor"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-O-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "audit_monitor"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-O-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "audit_monitor"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-U-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-U-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P1-U-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-H-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-H-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-H-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-E-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-E-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "B"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 28,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P2-E-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "prior"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "apply",
+          "target": "A"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 21,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-recoverable-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 26,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-recoverable-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 26,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-recoverable-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "advance"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 26,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-fragile_success-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-fragile_success-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-fragile_success-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "wait"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 16,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P3-irrecoverable-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": null,
+      "expanded": 6,
+      "feasible": false
+    }
+  },
+  {
+    "task": "v03-P3-irrecoverable-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": null,
+      "expanded": 6,
+      "feasible": false
+    }
+  },
+  {
+    "task": "v03-P3-irrecoverable-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "completed_stage",
+      "window"
+    ],
+    "oracle": {
+      "actions": null,
+      "expanded": 6,
+      "feasible": false
+    }
+  },
+  {
+    "task": "v03-P5-A-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 121,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-A-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 121,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-A-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 121,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-B-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-B-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-B-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-C-10",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 89,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-C-11",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  },
+  {
+    "task": "v03-P5-C-12",
+    "checkpoint_restore": true,
+    "all_one_step_forks_identical": true,
+    "public_keys": [
+      "observation",
+      "remaining",
+      "terminal",
+      "plan_dependencies",
+      "completed",
+      "inherited_plan"
+    ],
+    "oracle": {
+      "actions": [
+        {
+          "kind": "execute_node",
+          "node": "snapshot"
+        },
+        {
+          "kind": "execute_node",
+          "node": "left"
+        },
+        {
+          "kind": "execute_node",
+          "node": "right"
+        },
+        {
+          "kind": "execute_node",
+          "node": "merge"
+        },
+        {
+          "kind": "execute_node",
+          "node": "publish"
+        },
+        {
+          "kind": "verify"
+        }
+      ],
+      "expanded": 193,
+      "feasible": true
+    }
+  }
+]

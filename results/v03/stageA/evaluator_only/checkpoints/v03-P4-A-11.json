@@ -1,0 +1,42 @@
+{
+  "version": "v03-pomdp-1",
+  "family": "A",
+  "public": {
+    "belief": [
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "1/2"
+      ],
+      [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "1/2"
+      ]
+    ],
+    "remaining": 4,
+    "terminal": false,
+    "history": []
+  },
+  "evaluator_hidden": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "utility": "0"
+}

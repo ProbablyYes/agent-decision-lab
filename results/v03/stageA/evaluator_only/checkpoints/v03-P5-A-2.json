@@ -1,0 +1,164 @@
+{
+  "state": {
+    "version": "v03-world-1",
+    "line": "P5",
+    "family": "A",
+    "seed": 2,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 2
+    },
+    "primitive_cost": 1,
+    "remaining": 12,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Authoritative requirement: left revision 2 is required.",
+    "prior": "A",
+    "alternative": "B",
+    "deps": {
+      "snapshot": [],
+      "credentials": [],
+      "left": [
+        "snapshot"
+      ],
+      "right": [
+        "snapshot",
+        "credentials"
+      ],
+      "merge": [
+        "left",
+        "right"
+      ],
+      "publish": [
+        "merge",
+        "credentials"
+      ]
+    },
+    "required": {
+      "snapshot": 1,
+      "credentials": 1,
+      "left": 2,
+      "right": 1,
+      "merge": 1,
+      "publish": 1
+    },
+    "done": {
+      "snapshot": {
+        "revision": 1,
+        "inputs": {}
+      },
+      "credentials": {
+        "revision": 1,
+        "inputs": {}
+      },
+      "left": {
+        "revision": 1,
+        "inputs": {
+          "snapshot": 1
+        }
+      },
+      "right": {
+        "revision": 1,
+        "inputs": {
+          "snapshot": 1,
+          "credentials": 1
+        }
+      }
+    },
+    "generations": {
+      "snapshot": 1,
+      "credentials": 1,
+      "left": 1,
+      "right": 1,
+      "merge": 0,
+      "publish": 0
+    },
+    "hidden": {
+      "changed": "left",
+      "actual_change": true
+    },
+    "audited": false
+  },
+  "initial": {
+    "version": "v03-world-1",
+    "line": "P5",
+    "family": "A",
+    "seed": 2,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 2
+    },
+    "primitive_cost": 1,
+    "remaining": 12,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Authoritative requirement: left revision 2 is required.",
+    "prior": "A",
+    "alternative": "B",
+    "deps": {
+      "snapshot": [],
+      "credentials": [],
+      "left": [
+        "snapshot"
+      ],
+      "right": [
+        "snapshot",
+        "credentials"
+      ],
+      "merge": [
+        "left",
+        "right"
+      ],
+      "publish": [
+        "merge",
+        "credentials"
+      ]
+    },
+    "required": {
+      "snapshot": 1,
+      "credentials": 1,
+      "left": 2,
+      "right": 1,
+      "merge": 1,
+      "publish": 1
+    },
+    "done": {
+      "snapshot": {
+        "revision": 1,
+        "inputs": {}
+      },
+      "credentials": {
+        "revision": 1,
+        "inputs": {}
+      },
+      "left": {
+        "revision": 1,
+        "inputs": {
+          "snapshot": 1
+        }
+      },
+      "right": {
+        "revision": 1,
+        "inputs": {
+          "snapshot": 1,
+          "credentials": 1
+        }
+      }
+    },
+    "generations": {
+      "snapshot": 1,
+      "credentials": 1,
+      "left": 1,
+      "right": 1,
+      "merge": 0,
+      "publish": 0
+    },
+    "hidden": {
+      "changed": "left",
+      "actual_change": true
+    },
+    "audited": false
+  }
+}

@@ -1,0 +1,213 @@
+[
+  {
+    "id": "google/gemini-3.8-flash",
+    "metadata": {
+      "id": "google/gemini-3.8-flash",
+      "object": "model",
+      "created": 1788307200,
+      "owned_by": "google",
+      "canonical_slug": "gemini-3.8-flash",
+      "name": "Google: Gemini 3.8 Flash",
+      "description": "Gemini 3.8 Flash is Google's most intelligent Flash model, with significant gains over 3.7 Flash across software engineering, agentic tasks, and multi-step reasoning. All input modalities (text/image/video/audio) unified pricing; batch tier at 50% discount. Thinking model with configurable levels. 1M context. Released September 2, 2026.",
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+audio+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "audio",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "gemini",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.0000015",
+        "completion": "0.0000075",
+        "audio": "0.0000015",
+        "input_cache_read": "0.00000015",
+        "input_cache_write": "0.000000083",
+        "input_cache_write_1h": "0.000001",
+        "input_cached_audio": "0.00000015",
+        "web_search": "0.014"
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 65536,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "temperature",
+        "top_p",
+        "max_tokens",
+        "stop",
+        "tools",
+        "tool_choice",
+        "response_format",
+        "reasoning"
+      ],
+      "default_parameters": null,
+      "expiration_date": null,
+      "is_deprecated": false,
+      "supported_endpoints": [
+        "/v1/chat/completions"
+      ],
+      "aliases": [
+        "gemini-3.8-flash"
+      ]
+    },
+    "usd_per_million": {
+      "prompt": "1.5000000",
+      "completion": "7.5000000",
+      "input_cache_read": "0.15000000",
+      "input_cache_write": "0.083000000",
+      "input_cache_write_1h": "1.000000"
+    },
+    "conservative_ratecard": {
+      "currency": "USD",
+      "input": "1.5000000",
+      "output": "7.5000000",
+      "cache_read": "0.15000000",
+      "cache_write": "1.000000",
+      "cny_per_usd": "6.692129216491165",
+      "cache_write_semantics": "unconfirmed"
+    },
+    "request_reserve_micro_cny": 215862,
+    "trajectory_reserve_micro_cny": 1726896,
+    "assumptions": {
+      "max_decisions": 8,
+      "max_input_tokens_per_request": 4096,
+      "max_output_tokens": 512,
+      "cache_discount": false,
+      "contingency": 2,
+      "account_tariff_verified": false
+    },
+    "counts": {
+      "2": {
+        "uncached_reference_cny": "1.0690274895591646617600",
+        "conservative_reserve_cny": "3.453792"
+      },
+      "4": {
+        "uncached_reference_cny": "2.1380549791183293235200",
+        "conservative_reserve_cny": "6.907584"
+      },
+      "6": {
+        "uncached_reference_cny": "3.2070824686774939852800",
+        "conservative_reserve_cny": "10.361376"
+      },
+      "12": {
+        "uncached_reference_cny": "6.4141649373549879705600",
+        "conservative_reserve_cny": "20.722752"
+      }
+    }
+  },
+  {
+    "id": "anthropic/claude-sonnet-5.5",
+    "metadata": {
+      "id": "anthropic/claude-sonnet-5.5",
+      "object": "model",
+      "created": 1790553600,
+      "owned_by": "bedrock",
+      "canonical_slug": "claude-sonnet-5-5",
+      "name": "Anthropic: Claude Sonnet 5.5",
+      "description": "Claude Sonnet 5.5 is Anthropic's Sonnet-tier model, offering a balance of speed and intelligence for coding, reasoning, and agentic workloads. It supports text, image, and file inputs with text output, with a 1M-token context window and up to 128K output tokens, at a lower per-token price than Claude Opus 5.5.",
+      "context_length": 1000000,
+      "architecture": {
+        "modality": "text+image+file->text",
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "claude",
+        "instruct_type": null
+      },
+      "pricing": {
+        "prompt": "0.000002",
+        "completion": "0.00001",
+        "input_cache_read": "0.0000002",
+        "input_cache_write_5m": "0.0000025",
+        "input_cache_write_1h": "0.000004",
+        "web_search": "0.015"
+      },
+      "top_provider": {
+        "context_length": 1000000,
+        "max_completion_tokens": 128000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "temperature",
+        "top_p",
+        "max_tokens",
+        "stop",
+        "tools",
+        "tool_choice",
+        "response_format",
+        "reasoning"
+      ],
+      "default_parameters": null,
+      "expiration_date": null,
+      "is_deprecated": false,
+      "supported_endpoints": [
+        "/v1/chat/completions",
+        "/v1/responses"
+      ],
+      "aliases": [
+        "claude-sonnet-5-5",
+        "claude-sonnet-5.5"
+      ]
+    },
+    "usd_per_million": {
+      "prompt": "2.000000",
+      "completion": "10.00000",
+      "input_cache_read": "0.2000000",
+      "input_cache_write_5m": "2.5000000",
+      "input_cache_write_1h": "4.000000"
+    },
+    "conservative_ratecard": {
+      "currency": "USD",
+      "input": "2.000000",
+      "output": "10.00000",
+      "cache_read": "0.2000000",
+      "cache_write": "4.000000",
+      "cny_per_usd": "6.692129216491165",
+      "cache_write_semantics": "unconfirmed"
+    },
+    "request_reserve_micro_cny": 397459,
+    "trajectory_reserve_micro_cny": 3179672,
+    "assumptions": {
+      "max_decisions": 8,
+      "max_input_tokens_per_request": 4096,
+      "max_output_tokens": 512,
+      "cache_discount": false,
+      "contingency": 2,
+      "account_tariff_verified": false
+    },
+    "counts": {
+      "2": {
+        "uncached_reference_cny": "1.425369986078886215680",
+        "conservative_reserve_cny": "6.359344"
+      },
+      "4": {
+        "uncached_reference_cny": "2.850739972157772431360",
+        "conservative_reserve_cny": "12.718688"
+      },
+      "6": {
+        "uncached_reference_cny": "4.276109958236658647040",
+        "conservative_reserve_cny": "19.078032"
+      },
+      "12": {
+        "uncached_reference_cny": "8.552219916473317294080",
+        "conservative_reserve_cny": "38.156064"
+      }
+    }
+  }
+]

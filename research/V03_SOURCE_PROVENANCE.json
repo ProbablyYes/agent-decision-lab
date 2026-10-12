@@ -1,0 +1,42 @@
+{
+  "read_date": "2026-10-12",
+  "scope": "User adopted Stage A only; Stage B instructions require separate approval",
+  "sources": [
+    {
+      "path": "C:\\Users\\黄璐瑶\\Downloads\\Agent_Decision_Failure_Lab_V0.3_Codex_Experimental_Prompt.md",
+      "sha256": "773e68c1afdde2972edf16a8edd6fb53463fbafb16d5ce196f93958fc1e5e708",
+      "bytes": 17303,
+      "characters": 8608
+    },
+    {
+      "path": "C:\\Users\\黄璐瑶\\Desktop\\Agent\\agent-decision-lab\\Codex_START_HERE_V0.2.md",
+      "sha256": "07b022a7b10da1c2b4f957aae21346f721bf36cc7d9d4f94a47b0a0dbc9a14d9",
+      "bytes": 1478,
+      "characters": 721
+    },
+    {
+      "path": "C:\\Users\\黄璐瑶\\Desktop\\Agent\\agent-decision-lab\\research\\Agent_Decision_Failure_Lab_Codex_Research_Brief_V0.2.md",
+      "sha256": "2e68bb8d0e0e97ed693052efaf8ab2ee4b195719fea1ed74f0c20c4a779f8382",
+      "bytes": 21045,
+      "characters": 9744
+    },
+    {
+      "path": "C:\\Users\\黄璐瑶\\Desktop\\Agent\\agent-decision-lab\\research\\RESEARCH_MAP.md",
+      "sha256": "e36ddd950bbe51f23976ddaa6f80c3aaf395be7dadc9652dbf5b6c15a2f0f689",
+      "bytes": 498,
+      "characters": 238
+    },
+    {
+      "path": "C:\\Users\\黄璐瑶\\Desktop\\Agent\\agent-decision-lab\\GATE1_REAL_TRAJECTORIES.md",
+      "sha256": "a9f7a37898cce6ca1d0f96803bc67c4c4b29ed7a8acae64fe23eae9f5cfb0da1",
+      "bytes": 31689,
+      "characters": 27304
+    },
+    {
+      "path": "C:\\Users\\黄璐瑶\\Desktop\\Agent\\agent-decision-lab\\GATE2_PILOT_REPORT.md",
+      "sha256": "04b6851c7562d45a01c76a8547605d7abb5dc52d84e5ec62b52dfcbb11a9b710",
+      "bytes": 70409,
+      "characters": 62856
+    }
+  ]
+}

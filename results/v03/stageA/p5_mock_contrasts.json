@@ -1,0 +1,3411 @@
+[
+  {
+    "family": "A",
+    "scripted_policy": "old_tail_then_privileged_recovery",
+    "checkpoint_sha256": "edc8c9a81490393900f02fb15c2ffa63b2d18a1de35c0993168a11dc134e47df",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: rejected; invalid prerequisite",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "left"
+          },
+          "observation": {
+            "observation": "left: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 9,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 8,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 1
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 7,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 1
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 5,
+        "net_utility": 0.75,
+        "invalid_actions": 1,
+        "status": "SUCCESS",
+        "valid_work_retention": 1.0,
+        "unnecessary_reexecution": 0,
+        "obsolete_action_attempts": 1,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  },
+  {
+    "family": "A",
+    "scripted_policy": "full_redo_work",
+    "checkpoint_sha256": "edc8c9a81490393900f02fb15c2ffa63b2d18a1de35c0993168a11dc134e47df",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "snapshot"
+          },
+          "observation": {
+            "observation": "snapshot: executed with current requirement and input versions",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "credentials"
+          },
+          "observation": {
+            "observation": "credentials: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "left"
+          },
+          "observation": {
+            "observation": "left: executed with current requirement and input versions",
+            "remaining": 9,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "right"
+          },
+          "observation": {
+            "observation": "right: executed with current requirement and input versions",
+            "remaining": 8,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 7,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 6,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 5,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 7,
+        "net_utility": 0.6499999999999999,
+        "invalid_actions": 0,
+        "status": "SUCCESS",
+        "valid_work_retention": 0.0,
+        "unnecessary_reexecution": 2,
+        "obsolete_action_attempts": 0,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  },
+  {
+    "family": "A",
+    "scripted_policy": "exact_selective",
+    "checkpoint_sha256": "edc8c9a81490393900f02fb15c2ffa63b2d18a1de35c0993168a11dc134e47df",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "left"
+          },
+          "observation": {
+            "observation": "left: executed with current requirement and input versions",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 9,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 1
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 8,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 2,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 1
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 4,
+        "net_utility": 0.8,
+        "invalid_actions": 0,
+        "status": "SUCCESS",
+        "valid_work_retention": 1.0,
+        "unnecessary_reexecution": 0,
+        "obsolete_action_attempts": 0,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  },
+  {
+    "family": "B",
+    "scripted_policy": "old_tail_then_privileged_recovery",
+    "checkpoint_sha256": "6cb9629bdbdd09f014bc8dc290ed9e99005d2ffba7fdc7524ece82f63d073ba8",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: rejected; invalid prerequisite",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "snapshot"
+          },
+          "observation": {
+            "observation": "snapshot: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "left"
+          },
+          "observation": {
+            "observation": "left: executed with current requirement and input versions",
+            "remaining": 9,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "right"
+          },
+          "observation": {
+            "observation": "right: executed with current requirement and input versions",
+            "remaining": 8,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 7,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 6,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 5,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 7,
+        "net_utility": 0.6499999999999999,
+        "invalid_actions": 1,
+        "status": "SUCCESS",
+        "valid_work_retention": 1.0,
+        "unnecessary_reexecution": 0,
+        "obsolete_action_attempts": 1,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  },
+  {
+    "family": "B",
+    "scripted_policy": "full_redo_work",
+    "checkpoint_sha256": "6cb9629bdbdd09f014bc8dc290ed9e99005d2ffba7fdc7524ece82f63d073ba8",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "snapshot"
+          },
+          "observation": {
+            "observation": "snapshot: executed with current requirement and input versions",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "credentials"
+          },
+          "observation": {
+            "observation": "credentials: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "left"
+          },
+          "observation": {
+            "observation": "left: executed with current requirement and input versions",
+            "remaining": 9,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "right"
+          },
+          "observation": {
+            "observation": "right: executed with current requirement and input versions",
+            "remaining": 8,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 7,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 6,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 5,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 7,
+        "net_utility": 0.6499999999999999,
+        "invalid_actions": 0,
+        "status": "SUCCESS",
+        "valid_work_retention": 0.0,
+        "unnecessary_reexecution": 1,
+        "obsolete_action_attempts": 0,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  },
+  {
+    "family": "B",
+    "scripted_policy": "exact_selective",
+    "checkpoint_sha256": "6cb9629bdbdd09f014bc8dc290ed9e99005d2ffba7fdc7524ece82f63d073ba8",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "snapshot"
+          },
+          "observation": {
+            "observation": "snapshot: executed with current requirement and input versions",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "left"
+          },
+          "observation": {
+            "observation": "left: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "right"
+          },
+          "observation": {
+            "observation": "right: executed with current requirement and input versions",
+            "remaining": 9,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 8,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 7,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 6,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 2,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 6,
+        "net_utility": 0.7,
+        "invalid_actions": 0,
+        "status": "SUCCESS",
+        "valid_work_retention": 1.0,
+        "unnecessary_reexecution": 0,
+        "obsolete_action_attempts": 0,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  },
+  {
+    "family": "C",
+    "scripted_policy": "old_tail_then_privileged_recovery",
+    "checkpoint_sha256": "9605a2d4e8f1f7c8a1864cbc3c04ddad773febe54eb03f0e394a14acfcdceeff",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 1,
+                  "right": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 1,
+                  "right": 1
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 9,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 1,
+                  "right": 1
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 3,
+        "net_utility": 0.85,
+        "invalid_actions": 0,
+        "status": "SUCCESS",
+        "valid_work_retention": 1.0,
+        "unnecessary_reexecution": 0,
+        "obsolete_action_attempts": 0,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  },
+  {
+    "family": "C",
+    "scripted_policy": "full_redo_work",
+    "checkpoint_sha256": "9605a2d4e8f1f7c8a1864cbc3c04ddad773febe54eb03f0e394a14acfcdceeff",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "snapshot"
+          },
+          "observation": {
+            "observation": "snapshot: executed with current requirement and input versions",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "credentials"
+          },
+          "observation": {
+            "observation": "credentials: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "left"
+          },
+          "observation": {
+            "observation": "left: executed with current requirement and input versions",
+            "remaining": 9,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "right"
+          },
+          "observation": {
+            "observation": "right: executed with current requirement and input versions",
+            "remaining": 8,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 7,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 6,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 5,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 2,
+                  "credentials": 2
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 2,
+                  "right": 2
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 2
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 7,
+        "net_utility": 0.6499999999999999,
+        "invalid_actions": 0,
+        "status": "SUCCESS",
+        "valid_work_retention": 0.0,
+        "unnecessary_reexecution": 2,
+        "obsolete_action_attempts": 0,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  },
+  {
+    "family": "C",
+    "scripted_policy": "exact_selective",
+    "checkpoint_sha256": "9605a2d4e8f1f7c8a1864cbc3c04ddad773febe54eb03f0e394a14acfcdceeff",
+    "result": {
+      "agent": "Scripted Mock; not an LLM experiment",
+      "trace": [
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "merge"
+          },
+          "observation": {
+            "observation": "merge: executed with current requirement and input versions",
+            "remaining": 11,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 1,
+                  "right": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "execute_node",
+            "node": "publish"
+          },
+          "observation": {
+            "observation": "publish: executed with current requirement and input versions",
+            "remaining": 10,
+            "terminal": false,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 1,
+                  "right": 1
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        },
+        {
+          "action": {
+            "kind": "verify"
+          },
+          "observation": {
+            "observation": "Verified.",
+            "remaining": 9,
+            "terminal": true,
+            "plan_dependencies": {
+              "snapshot": [],
+              "credentials": [],
+              "left": [
+                "snapshot"
+              ],
+              "right": [
+                "snapshot",
+                "credentials"
+              ],
+              "merge": [
+                "left",
+                "right"
+              ],
+              "publish": [
+                "merge",
+                "credentials"
+              ]
+            },
+            "completed": {
+              "snapshot": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "credentials": {
+                "revision": 1,
+                "inputs": {}
+              },
+              "left": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1
+                }
+              },
+              "right": {
+                "revision": 1,
+                "inputs": {
+                  "snapshot": 1,
+                  "credentials": 1
+                }
+              },
+              "merge": {
+                "revision": 1,
+                "inputs": {
+                  "left": 1,
+                  "right": 1
+                }
+              },
+              "publish": {
+                "revision": 1,
+                "inputs": {
+                  "merge": 1,
+                  "credentials": 1
+                }
+              }
+            },
+            "inherited_plan": [
+              "merge",
+              "publish",
+              "verify"
+            ]
+          }
+        }
+      ],
+      "score": {
+        "task_success": true,
+        "tool_cost": 3,
+        "net_utility": 0.85,
+        "invalid_actions": 0,
+        "status": "SUCCESS",
+        "valid_work_retention": 1.0,
+        "unnecessary_reexecution": 0,
+        "obsolete_action_attempts": 0,
+        "obsolete_action_execution": 0,
+        "plan_consistency": {
+          "snapshot": true,
+          "credentials": true,
+          "left": true,
+          "right": true,
+          "merge": true,
+          "publish": true
+        }
+      }
+    }
+  }
+]

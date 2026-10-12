@@ -1,0 +1,76 @@
+{
+  "type": "function",
+  "function": {
+    "name": "cdw_v03_action",
+    "description": "Execute one versioned primitive action; only actions listed for this task are legal.",
+    "parameters": {
+      "type": "object",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "receipt",
+                "compatibility",
+                "audit_monitor",
+                "verify",
+                "wait",
+                "advance",
+                "rollback",
+                "probe",
+                "audit"
+              ]
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "apply"
+            },
+            "target": {
+              "enum": [
+                "A",
+                "B"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "target"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "execute_node"
+            },
+            "node": {
+              "enum": [
+                "snapshot",
+                "credentials",
+                "left",
+                "right",
+                "merge",
+                "publish"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "node"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

@@ -31,3 +31,13 @@ Three authorized runs completed: six decisions/primitives each, all task-success
 
 ## Gate 2A paired pilot v1, 2026-10-12
 User authorized minimal P1/P5 contrasts only after Mock verification. Versioned PilotWorld adds ambiguous H/E failure and partial DAG invalidation without modifying Gate 1 CDW/tasks/results. Exact arms, random order, fairness limits and metrics pre-registered in research/GATE2_PROTOCOL.md. 103 offline tests pass; Mock native loops, checkpoint forks, P2 legal matched carriers, P3 natural successes, P4 complementary probes and dual-effect staging calibrated. Scripted success differences are not Agent scientific evidence. USD account lifetime consumption checked via documented read-only balance endpoint, not attributed to project. Gate 1 unknown CNY0.130739 remains reserved. Additive same-ledger pilot authorization: cumulative CNY40, batch CNY5, per branch CNY1; no retries, no later arms.
+
+## V0.3 Stage A（2026-10-12）
+
+用户仅授权Stage A，不授权附件中的Stage B收费调用。完整阅读V0.3任务书并结合V0.2、研究地图和Gate1/2记录；五线独立、最终成功指标不变。新增src/adfl/v03独立版本和新Schema，不修改旧CDW/PilotWorld/transport语义或旧实验结果。任务覆盖P1 H/E/O/U、P2匹配合法消息通道、P3自然成功/可恢复/预算内不可恢复、P4显式有限POMDP和belief-state精确DP、P5部分完成非线性DAG和代际依赖。144条manifest，holdout只冻结不rollout；72个design/dev世界校验和66条特权Mock成功路径均为仪器证据。最终138项pytest通过（原103项+新增35项），保留开发中4项P4 JSON tuple/list恢复失败的initial XML；修复不作算法提升。
+
+P4带终止叶值的两步基线在四世界均达最优，暂停复杂方法扩展。P5三种Mock校准脚本全部成功，明确成功饱和与成本差，不据此推断强模型失败。过期依赖被工具拒绝，记录attempt与execution区别。Oracle A/B可由普通信息推导，C未audit时才有真特权。新猜想和反证追加OPEN_QUESTIONS。
+
+匿名公开GET核实OFox159模型，推荐google/gemini-3.8-flash与跨家族anthropic/claude-sonnet-5.5；旧Gemini3.5/3.7自动路由风险有官方证据。拟四条dev seed10实验保守预留6.907584元，单独批次建议8元，账户实际费率/cache/reasoning/FX仍阻断；不将估算当账单。只读原SQLite，全56笔未知账单保留0.981665元；全部表逻辑哈希不变，262个旧结果哈希不变。没有收费推理、模型回退、新审批或预算释放。
+
+核查官方论文和代码树/commit，DoVer实际代码已定位microsoft/ACV/misc/DoVer；外部运行能力保持未核实。ALFWorld官方配置/split/reset接口已读，Windows Jericho依赖dry-run失败，smoke明确BLOCKED_DEPENDENCY，无OBS自然轨迹。SiliconFlow仅列备选，未保存或使用新增密钥。生成V03全部指定文档和待审查注册/hash，暂停等研究审查；后续Schema接入收费runner须另行绑定最终commit并通过Mock网络/预算检查。

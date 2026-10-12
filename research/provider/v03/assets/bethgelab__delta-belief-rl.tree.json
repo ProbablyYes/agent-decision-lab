@@ -1,0 +1,1862 @@
+{
+  "sha": "f173b54a559b50db35a45daec0463f571d092981",
+  "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/f173b54a559b50db35a45daec0463f571d092981",
+  "tree": [
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d2ce6926337f306b8fda8f0e7050420b22967ac",
+      "size": 74,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/1d2ce6926337f306b8fda8f0e7050420b22967ac"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c63430efc357ad467d7be1dcaa882688676fdc4e",
+      "size": 1067,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/c63430efc357ad467d7be1dcaa882688676fdc4e"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4db96a79aded19a31f4a6f718ef2f78a81292b47",
+      "size": 9801,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/4db96a79aded19a31f4a6f718ef2f78a81292b47"
+    },
+    {
+      "path": "delta_belief_rl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d00ae2491e290cba6cf773f81e346cce5e43bea",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/9d00ae2491e290cba6cf773f81e346cce5e43bea"
+    },
+    {
+      "path": "delta_belief_rl/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41e3a566a9846a88b140d66b13b46b3fb2d10554",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/41e3a566a9846a88b140d66b13b46b3fb2d10554"
+    },
+    {
+      "path": "delta_belief_rl/config/base.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca14b378bf90792d5fdc72423778c3c30e22ce88",
+      "size": 9229,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/ca14b378bf90792d5fdc72423778c3c30e22ce88"
+    },
+    {
+      "path": "delta_belief_rl/config/base_multiturn.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bae902c52c3246dc1995092e34037b7f03d1c3dd",
+      "size": 16126,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/bae902c52c3246dc1995092e34037b7f03d1c3dd"
+    },
+    {
+      "path": "delta_belief_rl/env",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f28dbc3d94da1a0ef532442de554e2696e433fe9",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/f28dbc3d94da1a0ef532442de554e2696e433fe9"
+    },
+    {
+      "path": "delta_belief_rl/env/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f7d3543f86d52648fde907b64f638c78575b6e0",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/0f7d3543f86d52648fde907b64f638c78575b6e0"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26fa7131c463891dc6cc18552000940e43ca8fc9",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/26fa7131c463891dc6cc18552000940e43ca8fc9"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/config/paprika",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "809719e4a97c244396a34563cbd6c812f8df3a2d",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/809719e4a97c244396a34563cbd6c812f8df3a2d"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/config/paprika/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e7c1541392b433afe8d4c96916be556e521b2ec",
+      "size": 313,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/4e7c1541392b433afe8d4c96916be556e521b2ec"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/config/paprika/customer_service.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5e360b49aef37a7aed0e465c9f90f8d7f3acb06",
+      "size": 208381,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e5e360b49aef37a7aed0e465c9f90f8d7f3acb06"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/direct",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "092fc3199aec606aa54f45653f9be9b01e082e96",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/092fc3199aec606aa54f45653f9be9b01e082e96"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/direct/paprika",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "423015e65fcd49c4845588f90e92ca3c428ac53c",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/423015e65fcd49c4845588f90e92ca3c428ac53c"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/direct/paprika/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62c325a8a23462de059699edc531a6052d20fcc3",
+      "size": 70423,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/62c325a8a23462de059699edc531a6052d20fcc3"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/generate_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21175f23aa15540800d7149af899d55560f85c93",
+      "size": 5820,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/21175f23aa15540800d7149af899d55560f85c93"
+    },
+    {
+      "path": "delta_belief_rl/env/customer_service/reward.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34c4c3af33ef988aa20be0a2d1f654a1e275e545",
+      "size": 1860,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/34c4c3af33ef988aa20be0a2d1f654a1e275e545"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3caf6f904989063d0550c477b5a2c9cafe1939da",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/3caf6f904989063d0550c477b5a2c9cafe1939da"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e7bd50e4b5acd83f7ca5c276964828d3afe804c",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/2e7bd50e4b5acd83f7ca5c276964828d3afe804c"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/config/paprika",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b33d02b008a7df6aabdf9ace8d479d2adb81ff1a",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/b33d02b008a7df6aabdf9ace8d479d2adb81ff1a"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/config/paprika/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e10056be1585ed27c58c4adf016cd8cb756be2c5",
+      "size": 247,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e10056be1585ed27c58c4adf016cd8cb756be2c5"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/config/paprika/eval.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61bb4e781bfaafa441849754455945e15f661593",
+      "size": 3419,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/61bb4e781bfaafa441849754455945e15f661593"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/config/paprika/extract_eval_envs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f8c7d4b9a9e3dfd7e05956165d9d5de48ff5415",
+      "size": 697,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/1f8c7d4b9a9e3dfd7e05956165d9d5de48ff5415"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/config/paprika/guess_my_city.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2b752ef2e65d507121f3cf4d30c3804aac16790",
+      "size": 74734,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/f2b752ef2e65d507121f3cf4d30c3804aac16790"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/direct",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c3d647a62eec69da223f08671fdca528c448ae0",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/4c3d647a62eec69da223f08671fdca528c448ae0"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/direct/paprika",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "082ad4cc7cdba41d69a7a471341bfa474466204d",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/082ad4cc7cdba41d69a7a471341bfa474466204d"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/direct/paprika/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36a4af8144501873f6371a6afc03ba436474e7e4",
+      "size": 19322,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/36a4af8144501873f6371a6afc03ba436474e7e4"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/generate_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85b49edabbf33cd43603046f22af4cbbb6dc74b8",
+      "size": 4039,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/85b49edabbf33cd43603046f22af4cbbb6dc74b8"
+    },
+    {
+      "path": "delta_belief_rl/env/guess_my_city/reward.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1418194e73fe218fa761b81974aa819009319a64",
+      "size": 6153,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/1418194e73fe218fa761b81974aa819009319a64"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9f4c6eb54c7f3de78af0b8a6732ade356ab92a7",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/f9f4c6eb54c7f3de78af0b8a6732ade356ab92a7"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60c253e8e73d9b7a3fed72061a74ec8a9f320c08",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/60c253e8e73d9b7a3fed72061a74ec8a9f320c08"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/config/paprika",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20a5f93bcedc4eea283647fb146649e982c5a6bb",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/20a5f93bcedc4eea283647fb146649e982c5a6bb"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/config/paprika/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d958df90f66668d26ebf18ceaab1a74050f35a6",
+      "size": 305,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/6d958df90f66668d26ebf18ceaab1a74050f35a6"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/config/paprika/murder_mystery.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9a4fd35ce049168bec9efaa8adb4f1eee2286c1",
+      "size": 281029,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/a9a4fd35ce049168bec9efaa8adb4f1eee2286c1"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/direct",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77611a534ad676b6e8ec068db895a87c976fc431",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/77611a534ad676b6e8ec068db895a87c976fc431"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/direct/paprika",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24b17f4cc9bea83d684d1ccc8ad0e6935caf8359",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/24b17f4cc9bea83d684d1ccc8ad0e6935caf8359"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/direct/paprika/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c49dc93e77c6080eb9662a422907bbd65a94dea1",
+      "size": 73324,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/c49dc93e77c6080eb9662a422907bbd65a94dea1"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/generate_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84ef1bb94c0a292d9add113c3c5f9c56087edf7c",
+      "size": 6164,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/84ef1bb94c0a292d9add113c3c5f9c56087edf7c"
+    },
+    {
+      "path": "delta_belief_rl/env/murder_mystery/reward.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29d7c6a821f7a564d30109ed8c6cd95bce1b0bc1",
+      "size": 1905,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/29d7c6a821f7a564d30109ed8c6cd95bce1b0bc1"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82add8a53463aca202a790eebea7a3e3bf8f7b33",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/82add8a53463aca202a790eebea7a3e3bf8f7b33"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a5c510b9b9d544cafdd40f267d0f6fc9ad47abe",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/4a5c510b9b9d544cafdd40f267d0f6fc9ad47abe"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13223b2e4aa4edf29c6e0c3754176be86aabe50d",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/13223b2e4aa4edf29c6e0c3754176be86aabe50d"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5195e93964e35be13ad81664c18324581bf849d1",
+      "size": 337,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/5195e93964e35be13ad81664c18324581bf849d1"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca/create_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52a336f7cf614ad84964499a6afa43a7a882f145",
+      "size": 2696,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/52a336f7cf614ad84964499a6afa43a7a882f145"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca/rl_training.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2292cac77a4525327b4986579545b2ca70949cc4",
+      "size": 7177,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/2292cac77a4525327b4986579545b2ca70949cc4"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca/sft_single_turn_training.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50026c4d9bd7570d8d6d2d88d8ede06445005299",
+      "size": 5610,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/50026c4d9bd7570d8d6d2d88d8ede06445005299"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca/test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31dd10943554aaa3b5367c2ea5da4486ed66a60f",
+      "size": 2003,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/31dd10943554aaa3b5367c2ea5da4486ed66a60f"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca/train.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "893909db6633ad65d1cbb85e135efcaa0849cf47",
+      "size": 17978,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/893909db6633ad65d1cbb85e135efcaa0849cf47"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca/unique_gemini_test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90feab125a31feac539ec75c41f8bba13ab84116",
+      "size": 3307,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/90feab125a31feac539ec75c41f8bba13ab84116"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42837b1238dfd33bf08dec6c9be911b7f734d8c3",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/42837b1238dfd33bf08dec6c9be911b7f734d8c3"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "412790d1a24c8ce50d675ffa87a5909129625cb1",
+      "size": 461,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/412790d1a24c8ce50d675ffa87a5909129625cb1"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus/create_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "238417f51490daa722c440d66bfc6a6f64beeae9",
+      "size": 3557,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/238417f51490daa722c440d66bfc6a6f64beeae9"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus/prompts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8052b6d3b9d8c1ff812b4231ce7b2bbc7705c990",
+      "size": 1037,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/8052b6d3b9d8c1ff812b4231ce7b2bbc7705c990"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus/rl_training_coca_wo_gemini_test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c00e353a768217ca09be9dc6f84b527629a4b68",
+      "size": 7179,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/7c00e353a768217ca09be9dc6f84b527629a4b68"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus/unique_gemini_test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ecd0df822b40e5a87b3344b7c42fa3905eb6047",
+      "size": 3303,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/0ecd0df822b40e5a87b3344b7c42fa3905eb6047"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus/unique_gemini_val.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6955b9e2b4571f514532ee0af424fb6ddc64ec53",
+      "size": 1517,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/6955b9e2b4571f514532ee0af424fb6ddc64ec53"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus_thinking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9203960c894bdb848b156ed6de859a048be93540",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/9203960c894bdb848b156ed6de859a048be93540"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus_thinking/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "137d4dab2d3263f4f0c5c76da7dbfde4a85476cc",
+      "size": 335,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/137d4dab2d3263f4f0c5c76da7dbfde4a85476cc"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus_thinking/create_test.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "238417f51490daa722c440d66bfc6a6f64beeae9",
+      "size": 3557,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/238417f51490daa722c440d66bfc6a6f64beeae9"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus_thinking/prompts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8052b6d3b9d8c1ff812b4231ce7b2bbc7705c990",
+      "size": 1037,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/8052b6d3b9d8c1ff812b4231ce7b2bbc7705c990"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus_thinking/rl_training_coca_wo_gemini_test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c00e353a768217ca09be9dc6f84b527629a4b68",
+      "size": 7179,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/7c00e353a768217ca09be9dc6f84b527629a4b68"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus_thinking/unique_gemini_test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ecd0df822b40e5a87b3344b7c42fa3905eb6047",
+      "size": 3303,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/0ecd0df822b40e5a87b3344b7c42fa3905eb6047"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/coca_plus_thinking/unique_gemini_val.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6955b9e2b4571f514532ee0af424fb6ddc64ec53",
+      "size": 1517,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/6955b9e2b4571f514532ee0af424fb6ddc64ec53"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a481fb67d3867232a98725b914469ce04b1d120e",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/a481fb67d3867232a98725b914469ce04b1d120e"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a978e0e1797053101be7caa41c60c07a1f8a51c7",
+      "size": 1480,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/a978e0e1797053101be7caa41c60c07a1f8a51c7"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/solved_secrets.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaf1c88bae972e330bc2bac1e19150db8582bac2",
+      "size": 35643,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/eaf1c88bae972e330bc2bac1e19150db8582bac2"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/test_secrets.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8780a6ed721f3e467220095bd1bee1a7bd6f21c9",
+      "size": 3726,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/8780a6ed721f3e467220095bd1bee1a7bd6f21c9"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/train_rl_curriculum_100-10ps.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3abc71bba65bdd442ad0e4701d7835a2a746af7",
+      "size": 8968,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/d3abc71bba65bdd442ad0e4701d7835a2a746af7"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/train_rl_curriculum_100-33ps.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f87a35215518aaa79dc1a58cf54a443cdff7638",
+      "size": 3666,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/0f87a35215518aaa79dc1a58cf54a443cdff7638"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/train_rl_curriculum_100-50ps.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fabf1b377225a8cb7b54f041e355eb1f7aebeaf9",
+      "size": 2367,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/fabf1b377225a8cb7b54f041e355eb1f7aebeaf9"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/train_rl_curriculum_100-5ps.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6729a493b6cdc3018f5f2e511dd27f537656e813",
+      "size": 11252,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/6729a493b6cdc3018f5f2e511dd27f537656e813"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/train_rl_curriculum_100-66ps.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58f42c3f62eeef287553c28509c77fe92df5ac78",
+      "size": 1075,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/58f42c3f62eeef287553c28509c77fe92df5ac78"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/train_rl_secrets.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f2d0d15a7854e8b7017797a49b5115368869859",
+      "size": 27483,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/7f2d0d15a7854e8b7017797a49b5115368869859"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/train_sft_secrets.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef86fe6d0ea07aa1f90bdb358e74c40076fab639",
+      "size": 2577,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/ef86fe6d0ea07aa1f90bdb358e74c40076fab639"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/unsolved_secrets.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38dcaf007c753c8c62c2047bf1a879c2af1c50f0",
+      "size": 27134,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/38dcaf007c753c8c62c2047bf1a879c2af1c50f0"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/gemini/val_secrets.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41c47f3f1c0d94094d83278a93e71de4dceebd4e",
+      "size": 1857,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/41c47f3f1c0d94094d83278a93e71de4dceebd4e"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/grok",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68f726594d480d2317484df4f910f190970305a4",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/68f726594d480d2317484df4f910f190970305a4"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/grok/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce041313c7e859bfd7f25e54375eb969a55ffdc4",
+      "size": 335,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/ce041313c7e859bfd7f25e54375eb969a55ffdc4"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/grok/rl_training.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df0e46aa1b6ce18ce22db329c393f61f93bc7fb5",
+      "size": 40065,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/df0e46aa1b6ce18ce22db329c393f61f93bc7fb5"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/grok/test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5a738d4ea9266649faa5fcea4578f1b5b8cf57c",
+      "size": 10114,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e5a738d4ea9266649faa5fcea4578f1b5b8cf57c"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/merged",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da1c93cfb17216e6b8494ce4518468339e9110fe",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/da1c93cfb17216e6b8494ce4518468339e9110fe"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/merged/_all.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9838f1fd825bf55f6dfa0eb4aa07378abdee2145",
+      "size": 62777,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/9838f1fd825bf55f6dfa0eb4aa07378abdee2145"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/merged/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20c43ea2e74cf8b8273a1187fd1d05c1f249f0e7",
+      "size": 531,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/20c43ea2e74cf8b8273a1187fd1d05c1f249f0e7"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/merged/rlft_training.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/merged/sft_training.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/merged/test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/objects",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8046680d96d20673fc7d5f9aebe7d0b6a6715e41",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/8046680d96d20673fc7d5f9aebe7d0b6a6715e41"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/objects/config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa179922f0c6e694c0cac2216e0be52e620d2a6a",
+      "size": 346,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/fa179922f0c6e694c0cac2216e0be52e620d2a6a"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/objects/objects.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "288541044addf3a25f7caf2d27d3638028e15928",
+      "size": 23330,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/288541044addf3a25f7caf2d27d3638028e15928"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/objects/test.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f109fa8df143307c32ab1b3e2404450490874ff",
+      "size": 4736,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/2f109fa8df143307c32ab1b3e2404450490874ff"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/config/objects/train.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0bd85f48c1f19a8fc71798334c594fc7a06de54",
+      "size": 18594,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/d0bd85f48c1f19a8fc71798334c594fc7a06de54"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "912ec6cbf57d41c2ae234ca8667099a12a22f875",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/912ec6cbf57d41c2ae234ca8667099a12a22f875"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cf22eff7e8dc2a2b482a464632c9b998017e046e",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/cf22eff7e8dc2a2b482a464632c9b998017e046e"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca/rl_training.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd65ef957f531035290a3e4b9db89e860bd8da42",
+      "size": 40203,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/fd65ef957f531035290a3e4b9db89e860bd8da42"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "910c27daa0b9f1f26f4aa9ddb1914d0a5ff7a45f",
+      "size": 19211,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/910c27daa0b9f1f26f4aa9ddb1914d0a5ff7a45f"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca/test_old_prompt.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccfb2ea3a185781d45d2e6b16d5c2df162d8c2d1",
+      "size": 19126,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/ccfb2ea3a185781d45d2e6b16d5c2df162d8c2d1"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca_plus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2e6c7633d1894f4f465c744c08f8458523b8fec",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/b2e6c7633d1894f4f465c744c08f8458523b8fec"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca_plus/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1de4c9f5af764f9a6d266f143e000c36a2c51bbd",
+      "size": 23698,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/1de4c9f5af764f9a6d266f143e000c36a2c51bbd"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca_plus/train_rl.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e2e5897299672106d43cb6714480e479e9b84ab",
+      "size": 39452,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/2e2e5897299672106d43cb6714480e479e9b84ab"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca_plus/val.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93da05c173e1a12e390fa705302fc4bc189a2381",
+      "size": 17218,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/93da05c173e1a12e390fa705302fc4bc189a2381"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca_plus_thinking",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c30eb123cd5299b00aa4edd764dd79407c107418",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/c30eb123cd5299b00aa4edd764dd79407c107418"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca_plus_thinking/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "485b97699aaeb4a5bfee1d3bddcd4c5452833cbc",
+      "size": 712609,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/485b97699aaeb4a5bfee1d3bddcd4c5452833cbc"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/coca_plus_thinking/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1613a7769cfaac7d41b4c05548c1fa03c4c5e71",
+      "size": 26158,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/f1613a7769cfaac7d41b4c05548c1fa03c4c5e71"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/curriculum",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cde222fd171e648eb3c39d6b165cccb81072ef72",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/cde222fd171e648eb3c39d6b165cccb81072ef72"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/curriculum/gen_curriculum.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a1d842194da3f7437840c34e9760319759c9426",
+      "size": 5273,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/5a1d842194da3f7437840c34e9760319759c9426"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/easy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "354d6fec3bceab3685f271764232ded7f2bad4d5",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/354d6fec3bceab3685f271764232ded7f2bad4d5"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/easy/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a37b95fc375475943be7f87385f94769133c0d2",
+      "size": 28426,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/2a37b95fc375475943be7f87385f94769133c0d2"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/easy/train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53096b383c3b734e796cd524026c2c3b1dbcb006",
+      "size": 84705,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/53096b383c3b734e796cd524026c2c3b1dbcb006"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62894e3f98ec6435926892f8c25811636c613004",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/62894e3f98ec6435926892f8c25811636c613004"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5858112410a962a4a26057d883daf53ca8257862",
+      "size": 24935,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/5858112410a962a4a26057d883daf53ca8257862"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/train_rl.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16c71080d742d1f2d8799dac15c33e771056e75c",
+      "size": 115564,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/16c71080d742d1f2d8799dac15c33e771056e75c"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/train_rl_curriculum_100-0ps.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a868a9b6b0263899e5d7256b041f99c08653ebd",
+      "size": 236574,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/7a868a9b6b0263899e5d7256b041f99c08653ebd"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/train_rl_curriculum_100-10ps.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b61b244230a1843af879d0aa2dd662a78ee4b44a",
+      "size": 48015,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/b61b244230a1843af879d0aa2dd662a78ee4b44a"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/train_rl_curriculum_100-33ps.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "286483bb09f123bcedfac6fd1772698d24b3b5e0",
+      "size": 26592,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/286483bb09f123bcedfac6fd1772698d24b3b5e0"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/train_rl_curriculum_100-50ps.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23332f2ce361d166e82db0bf66befbc28779bed4",
+      "size": 21098,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/23332f2ce361d166e82db0bf66befbc28779bed4"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/train_rl_curriculum_100-5ps.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bc4809db13be430ce6ac2fa9d9e79f174e7dc48",
+      "size": 56643,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/0bc4809db13be430ce6ac2fa9d9e79f174e7dc48"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/train_rl_curriculum_100-66ps.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac57297884d93e5ec452cf30f0c34089329c4ac8",
+      "size": 15880,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/ac57297884d93e5ec452cf30f0c34089329c4ac8"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/train_sft.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41504a7cbb2aad9d56cfe15c4aa050838736d166",
+      "size": 21056,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/41504a7cbb2aad9d56cfe15c4aa050838736d166"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/unsolved.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c00737c03f223d7892a4022870858273e1356caa",
+      "size": 110489,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/c00737c03f223d7892a4022870858273e1356caa"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/gemini/val.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5e7ea43108af99b6d5b789069ad1aa10d766c1a",
+      "size": 17805,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/c5e7ea43108af99b6d5b789069ad1aa10d766c1a"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/grok",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62c2e24923362b3a8903fb411b8359096f9d8cf6",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/62c2e24923362b3a8903fb411b8359096f9d8cf6"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/grok/rl_training.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3405e5716848fd7a83d87dfb033ef6061b1b0163",
+      "size": 170865,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/3405e5716848fd7a83d87dfb033ef6061b1b0163"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/grok/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "102b02705ad1f02afcd6f551d0fd03c5a2d93083",
+      "size": 50559,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/102b02705ad1f02afcd6f551d0fd03c5a2d93083"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/objects",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d11b5bd7a2dfeff69f4c28ec5a46796b41cf266c",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/d11b5bd7a2dfeff69f4c28ec5a46796b41cf266c"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/objects/test_orig_sp.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ac745327ddb883d7d5a6cf635c0a0f41d711cf1",
+      "size": 29699,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/4ac745327ddb883d7d5a6cf635c0a0f41d711cf1"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/objects/test_orig_sp_sub.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "428fc941628b527cf7ceeff79409f80156b52e12",
+      "size": 12016,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/428fc941628b527cf7ceeff79409f80156b52e12"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/objects/train_orig_sp.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9196a6b6c6a8568ba21f963a67a7d8a4ad75d4e9",
+      "size": 85979,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/9196a6b6c6a8568ba21f963a67a7d8a4ad75d4e9"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/objects/train_orig_sp_sub.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d09eccc92957bdb7e78cf9dd21696f1f54ff061f",
+      "size": 12966,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/d09eccc92957bdb7e78cf9dd21696f1f54ff061f"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "833e6162c1ed5dd9d15f412ba772c4f588e72d84",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/833e6162c1ed5dd9d15f412ba772c4f588e72d84"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/filter_unqiue.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "839812b9551f643ea31ad2a3d51e555e0680540a",
+      "size": 1708,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/839812b9551f643ea31ad2a3d51e555e0680540a"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/flip_last_entry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "253bf87f85812fe1116c15f8c8aef44e8b1f38a5",
+      "size": 1364,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/253bf87f85812fe1116c15f8c8aef44e8b1f38a5"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/gem_lta_sft_qwen3_1.7b_st.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd836efd41ebc3d27202c09c69d186089011dc94",
+      "size": 3951275,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/dd836efd41ebc3d27202c09c69d186089011dc94"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/gem_lta_sft_qwen3_1.7b_st_ALL_TRAJECTORIES.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bb47bf33e3aa2671f284bc8cd5039714056c558",
+      "size": 53887114,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/9bb47bf33e3aa2671f284bc8cd5039714056c558"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/gem_lta_sft_qwen3_4b_st.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9caaf17d537eb555825b5a84e4e805ff5862c0a",
+      "size": 2403042,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/d9caaf17d537eb555825b5a84e4e805ff5862c0a"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/gem_lta_sft_qwen3_4b_st_ALL_TRAJECTORIES.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d4cbd5b5e5c7cc7676f467605f507baffe5446d",
+      "size": 47378854,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/9d4cbd5b5e5c7cc7676f467605f507baffe5446d"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/generate_curriculum.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e82674cd20a914ccfe5917b87c9c593cfda9f462",
+      "size": 2824,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e82674cd20a914ccfe5917b87c9c593cfda9f462"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/multiturn_grpo_all_no_skip_easy.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bdcdd70d564219fcbf7870991147060e95769dd",
+      "size": 1643613,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/5bdcdd70d564219fcbf7870991147060e95769dd"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/multiturn_grpo_all_skip_1_train_easy_qwen3_1.7B_single_sft_hard.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "376ecaddc0b0cd309bb6dcc022bd48014fe20c70",
+      "size": 1562242,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/376ecaddc0b0cd309bb6dcc022bd48014fe20c70"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/multiturn_grpo_all_skip_1_train_easy_qwen3_4B_single_sft_hard.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eeae8f2b2804509c663f70b4bf2d6a08c6c698ce",
+      "size": 1462816,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/eeae8f2b2804509c663f70b4bf2d6a08c6c698ce"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/multiturn_grpo_all_skip_2_easy.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "744cffb9a118622bf25611b551f8306577aa9ff3",
+      "size": 1430016,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/744cffb9a118622bf25611b551f8306577aa9ff3"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/multiturn_grpo_all_skip_2_easy_unique.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50753469098ba24a0af5230763c438d2fb72de1d",
+      "size": 196665,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/50753469098ba24a0af5230763c438d2fb72de1d"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/multiturn_grpo_best_no_skip_test_gemini_unique.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1f3d8302faa39514c34c4cfc1cacdc8f43f5d85",
+      "size": 36560,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/f1f3d8302faa39514c34c4cfc1cacdc8f43f5d85"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/direct/single_step/multiturn_grpo_best_no_skip_test_gemini_unique_flip.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f0b41accdaf2b510a81785e94c5030a7d64d7c3",
+      "size": 36556,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/9f0b41accdaf2b510a81785e94c5030a7d64d7c3"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/generate_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb7a385f80ac660a99d8a291c9a06d7e19fc4a1d",
+      "size": 3617,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/eb7a385f80ac660a99d8a291c9a06d7e19fc4a1d"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/generate_split.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c19e346e6daf8eb0746f7a82ca096bb95109be5",
+      "size": 2287,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/2c19e346e6daf8eb0746f7a82ca096bb95109be5"
+    },
+    {
+      "path": "delta_belief_rl/env/twenty_questions/reward.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dc01a7b05e73e5f6ee1059908a18a24c886b370",
+      "size": 5782,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/9dc01a7b05e73e5f6ee1059908a18a24c886b370"
+    },
+    {
+      "path": "delta_belief_rl/llm_agent",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b57630cd579569889c382b5f7700647de3e4f65",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/9b57630cd579569889c382b5f7700647de3e4f65"
+    },
+    {
+      "path": "delta_belief_rl/llm_agent/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/llm_agent/belief.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cd9b2b15ba350ee2cd7149ceb78152520aaddec",
+      "size": 11081,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/3cd9b2b15ba350ee2cd7149ceb78152520aaddec"
+    },
+    {
+      "path": "delta_belief_rl/llm_agent/generation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "669461e064a01806e57934c8b579185f458dd0e3",
+      "size": 90473,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/669461e064a01806e57934c8b579185f458dd0e3"
+    },
+    {
+      "path": "delta_belief_rl/llm_agent/prompts.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6638c8c82c69b008eb0cc79dfc0f834d193b0a6",
+      "size": 24461,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/f6638c8c82c69b008eb0cc79dfc0f834d193b0a6"
+    },
+    {
+      "path": "delta_belief_rl/llm_agent/tensor_helper.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b803d1224b87d68cac9a2c0313d13f0d2a390426",
+      "size": 5978,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/b803d1224b87d68cac9a2c0313d13f0d2a390426"
+    },
+    {
+      "path": "delta_belief_rl/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88b0ebe8230da584b61a1842aeb3eb022e240c42",
+      "size": 625,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/88b0ebe8230da584b61a1842aeb3eb022e240c42"
+    },
+    {
+      "path": "delta_belief_rl/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9efe38eb2b1fd46a1805f0b665b98b612e8ebeaa",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/9efe38eb2b1fd46a1805f0b665b98b612e8ebeaa"
+    },
+    {
+      "path": "delta_belief_rl/scripts/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/scripts/eval",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81a525576fb802c282ad2c13e510aa4c63b0c039",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/81a525576fb802c282ad2c13e510aa4c63b0c039"
+    },
+    {
+      "path": "delta_belief_rl/scripts/eval/customer_service.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "164743945a0dd3613bfc4eaab8d9cb006127d1a3",
+      "size": 2772,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/164743945a0dd3613bfc4eaab8d9cb006127d1a3"
+    },
+    {
+      "path": "delta_belief_rl/scripts/eval/guess_my_city.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1c6653ffbded487ee4869b54c6d745891c3669e",
+      "size": 2631,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e1c6653ffbded487ee4869b54c6d745891c3669e"
+    },
+    {
+      "path": "delta_belief_rl/scripts/eval/murder_mystery.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92af99619044d818aea394a285e95fbee820aa6f",
+      "size": 2721,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/92af99619044d818aea394a285e95fbee820aa6f"
+    },
+    {
+      "path": "delta_belief_rl/scripts/eval/twenty_questions.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a16bd7b0d661df986e36cde58b27a291f5f9bed3",
+      "size": 2690,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/a16bd7b0d661df986e36cde58b27a291f5f9bed3"
+    },
+    {
+      "path": "delta_belief_rl/scripts/modal_setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c1b1baa1d982d2e5a7ed76e3c30a30d9de16842",
+      "size": 2303,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/1c1b1baa1d982d2e5a7ed76e3c30a30d9de16842"
+    },
+    {
+      "path": "delta_belief_rl/scripts/model_merger.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee9527fbc4eaf81ad5c9d9006893e95f7a3cff31",
+      "size": 27219,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/ee9527fbc4eaf81ad5c9d9006893e95f7a3cff31"
+    },
+    {
+      "path": "delta_belief_rl/scripts/slurm_setup.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "679369a6e9b8fd915c1cbd46b12f1f5cc885a93a",
+      "size": 9573,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/679369a6e9b8fd915c1cbd46b12f1f5cc885a93a"
+    },
+    {
+      "path": "delta_belief_rl/scripts/train",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f32e79171c4c5a6f4c9a7174dbebb895e6d24bd2",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/f32e79171c4c5a6f4c9a7174dbebb895e6d24bd2"
+    },
+    {
+      "path": "delta_belief_rl/scripts/train/delta-belief-rl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cafeecf2d268877adb8af3c56d393d8c240dd0e7",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/cafeecf2d268877adb8af3c56d393d8c240dd0e7"
+    },
+    {
+      "path": "delta_belief_rl/scripts/train/delta-belief-rl/qwen1.7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e5dd2e6c8eacc4a04859cff3934be7740666d03",
+      "size": 4033,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/6e5dd2e6c8eacc4a04859cff3934be7740666d03"
+    },
+    {
+      "path": "delta_belief_rl/scripts/train/delta-belief-rl/qwen4b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23abde2a6a19b54da2f2643aa7bf1320e919f3a6",
+      "size": 4027,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/23abde2a6a19b54da2f2643aa7bf1320e919f3a6"
+    },
+    {
+      "path": "delta_belief_rl/scripts/train/grpo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ac47aabb6252d0fd436ef96f4bdcfa1ad53803c5",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/ac47aabb6252d0fd436ef96f4bdcfa1ad53803c5"
+    },
+    {
+      "path": "delta_belief_rl/scripts/train/grpo/qwen1.7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "328da3da9b2f444f47c58e2605f6878dbe28e9d8",
+      "size": 3882,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/328da3da9b2f444f47c58e2605f6878dbe28e9d8"
+    },
+    {
+      "path": "delta_belief_rl/scripts/train/grpo/qwen4b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7979e5e75f98f20bc55e0725a825cfdcfde5eca9",
+      "size": 3880,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/7979e5e75f98f20bc55e0725a825cfdcfde5eca9"
+    },
+    {
+      "path": "delta_belief_rl/trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5694f36f7ba8b2b954c182017bab8258fd9036ce",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/5694f36f7ba8b2b954c182017bab8258fd9036ce"
+    },
+    {
+      "path": "delta_belief_rl/trainer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/trainer/metrics_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e360cb3796721505a5f81a4c9d27833c074c592",
+      "size": 18592,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/5e360cb3796721505a5f81a4c9d27833c074c592"
+    },
+    {
+      "path": "delta_belief_rl/trainer/multistep_trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "361d20c258cfa734490fd6270fa853e7960baaa5",
+      "size": 90010,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/361d20c258cfa734490fd6270fa853e7960baaa5"
+    },
+    {
+      "path": "delta_belief_rl/trainer/ppo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be5bec3b80c870d861a272c30b8d2bd6ef6ad4af",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/be5bec3b80c870d861a272c30b8d2bd6ef6ad4af"
+    },
+    {
+      "path": "delta_belief_rl/trainer/ppo/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/trainer/ppo/core_algos.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "286c3fba1b9db665e0c4c772b07436e3e48c296f",
+      "size": 9071,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/286c3fba1b9db665e0c4c772b07436e3e48c296f"
+    },
+    {
+      "path": "delta_belief_rl/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c76dbbecb635d9092fb87b8d6b487744d067217a",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/c76dbbecb635d9092fb87b8d6b487744d067217a"
+    },
+    {
+      "path": "delta_belief_rl/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/utils/compiled_constants.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73a89511c5ba7e257511ec82e42666d759b2ea21",
+      "size": 518,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/73a89511c5ba7e257511ec82e42666d759b2ea21"
+    },
+    {
+      "path": "delta_belief_rl/utils/dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd6622a1a89ac3174155c57438cd320fa66b4d1c",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/fd6622a1a89ac3174155c57438cd320fa66b4d1c"
+    },
+    {
+      "path": "delta_belief_rl/utils/dataset/create_datasets.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0dafb64ddfd1c0eb8f90e4d9202515365f398402",
+      "size": 12096,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/0dafb64ddfd1c0eb8f90e4d9202515365f398402"
+    },
+    {
+      "path": "delta_belief_rl/utils/dataset/rl_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "426bc2251abc5848b761fd535c8f1dcb4d50c692",
+      "size": 7042,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/426bc2251abc5848b761fd535c8f1dcb4d50c692"
+    },
+    {
+      "path": "delta_belief_rl/utils/format.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b05fb5a96051aeec43f0544ded75cda997f9729e",
+      "size": 8006,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/b05fb5a96051aeec43f0544ded75cda997f9729e"
+    },
+    {
+      "path": "delta_belief_rl/utils/lora_adapters.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "162074e50f616a34884ecc5d9cab34b33423dc87",
+      "size": 10843,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/162074e50f616a34884ecc5d9cab34b33423dc87"
+    },
+    {
+      "path": "delta_belief_rl/utils/syntax.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "facd268ed48dff630f50272b3b211f7f95c677e5",
+      "size": 16299,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/facd268ed48dff630f50272b3b211f7f95c677e5"
+    },
+    {
+      "path": "delta_belief_rl/utils/watchdog.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eb34d24a74935876fff9556f06a41adfb73dc6f",
+      "size": 788,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/1eb34d24a74935876fff9556f06a41adfb73dc6f"
+    },
+    {
+      "path": "delta_belief_rl/workers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e5af6f9f582cf0a28df5be04ba48afbefdda003",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/2e5af6f9f582cf0a28df5be04ba48afbefdda003"
+    },
+    {
+      "path": "delta_belief_rl/workers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/workers/actor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "71398f741699238cde50438c1acbf7300f5b5bc1",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/71398f741699238cde50438c1acbf7300f5b5bc1"
+    },
+    {
+      "path": "delta_belief_rl/workers/actor/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a574b2a87a23aaaa15edb3f1a953c2480b2f35c2",
+      "size": 80,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/a574b2a87a23aaaa15edb3f1a953c2480b2f35c2"
+    },
+    {
+      "path": "delta_belief_rl/workers/actor/dp_actor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cf942769ca1ebf327eebac3ea20942a480efb5f",
+      "size": 20501,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/4cf942769ca1ebf327eebac3ea20942a480efb5f"
+    },
+    {
+      "path": "delta_belief_rl/workers/api_workers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff5580619a67c0912b1cd91bdac65c613192b533",
+      "size": 18526,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/ff5580619a67c0912b1cd91bdac65c613192b533"
+    },
+    {
+      "path": "delta_belief_rl/workers/fsdp_workers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d030f30b7038a2e63fb9ea0a65edd153c3135e6b",
+      "size": 101166,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/d030f30b7038a2e63fb9ea0a65edd153c3135e6b"
+    },
+    {
+      "path": "delta_belief_rl/workers/rollout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07f7b9efc27173a57c1bb276222519b2bd4bdbed",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/07f7b9efc27173a57c1bb276222519b2bd4bdbed"
+    },
+    {
+      "path": "delta_belief_rl/workers/rollout/api_batch_processing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0266827b05eeeaa7b0bf7fa2dc67b87a8101786",
+      "size": 4321,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e0266827b05eeeaa7b0bf7fa2dc67b87a8101786"
+    },
+    {
+      "path": "delta_belief_rl/workers/rollout/api_key.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3bf6c73cf5afbc8a48b21fa1ba5399f3df923b3",
+      "size": 35,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/a3bf6c73cf5afbc8a48b21fa1ba5399f3df923b3"
+    },
+    {
+      "path": "delta_belief_rl/workers/rollout/vllm_rollout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1dd2759f6291e0376db60ef776b7426b24399361",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/1dd2759f6291e0376db60ef776b7426b24399361"
+    },
+    {
+      "path": "delta_belief_rl/workers/rollout/vllm_rollout/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "478c4979cdd0534e08cc99bc6a3a322ecfe99d8d",
+      "size": 2434,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/478c4979cdd0534e08cc99bc6a3a322ecfe99d8d"
+    },
+    {
+      "path": "delta_belief_rl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef2260a845d4cf388d3ea09762c435a88c44d7df",
+      "size": 17612,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/ef2260a845d4cf388d3ea09762c435a88c44d7df"
+    },
+    {
+      "path": "delta_belief_rl/workers/sharding_manager",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75d934facafca4b9da5ca1cbd6b387fe78604495",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/75d934facafca4b9da5ca1cbd6b387fe78604495"
+    },
+    {
+      "path": "delta_belief_rl/workers/sharding_manager/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "delta_belief_rl/workers/sharding_manager/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7415892a5cd7e7a5164a487cec48530b20dae9f",
+      "size": 981,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/d7415892a5cd7e7a5164a487cec48530b20dae9f"
+    },
+    {
+      "path": "delta_belief_rl/workers/sharding_manager/fsdp_vllm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4f220749ed0b0d1bf479a855926d95fec3d1c0c",
+      "size": 25095,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/f4f220749ed0b0d1bf479a855926d95fec3d1c0c"
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f17a13ec3ab4f4ff5135182057544dc3b3cc3b9",
+      "size": 24058,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/0f17a13ec3ab4f4ff5135182057544dc3b3cc3b9"
+    },
+    {
+      "path": "paper_ica.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "053a27e3948bd41506bd628c4ac783e5acbd52ce",
+      "size": 4439901,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/053a27e3948bd41506bd628c4ac783e5acbd52ce"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc9ef8c9814b0a758b20eac7131e73dec82de696",
+      "size": 461,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/cc9ef8c9814b0a758b20eac7131e73dec82de696"
+    },
+    {
+      "path": "static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d010dfe4a44d6a5a2af445f94c974d71fa1161e",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/4d010dfe4a44d6a5a2af445f94c974d71fa1161e"
+    },
+    {
+      "path": "static/css",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3573cd78157983778f9fc5338cd374f69519f83",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/c3573cd78157983778f9fc5338cd374f69519f83"
+    },
+    {
+      "path": "static/css/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b76fb067e3a432ef24bb2a306c744576bd108ea0",
+      "size": 8679,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/b76fb067e3a432ef24bb2a306c744576bd108ea0"
+    },
+    {
+      "path": "static/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f353bd783a65b163f09c093fd8b0fdacd450c1e",
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/trees/9f353bd783a65b163f09c093fd8b0fdacd450c1e"
+    },
+    {
+      "path": "static/images/1.7b_interaction_scaling_1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75eb1e173d70d461ba31da4b754032d58b851768",
+      "size": 341329,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/75eb1e173d70d461ba31da4b754032d58b851768"
+    },
+    {
+      "path": "static/images/20qs_passk_1.7b.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9cd257b95da5bb1005769d0209012b499f6b938",
+      "size": 182451,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/d9cd257b95da5bb1005769d0209012b499f6b938"
+    },
+    {
+      "path": "static/images/20qs_passk_4b.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c440762d9f5f8b6602dca058cfc9f97b89555fc",
+      "size": 179641,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/4c440762d9f5f8b6602dca058cfc9f97b89555fc"
+    },
+    {
+      "path": "static/images/20qs_passk_combined.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb88930c4d2158972ee7eaea6ed7bd58dc5bbc99",
+      "size": 300923,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/fb88930c4d2158972ee7eaea6ed7bd58dc5bbc99"
+    },
+    {
+      "path": "static/images/4b_interaction_scaling_1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ffad960a9f67f007096db01d85959ffba8f7268",
+      "size": 344815,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/6ffad960a9f67f007096db01d85959ffba8f7268"
+    },
+    {
+      "path": "static/images/ablation_lambda.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "560edf999b841a2c850bc1dfa23bdeed2a5b9c11",
+      "size": 316378,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/560edf999b841a2c850bc1dfa23bdeed2a5b9c11"
+    },
+    {
+      "path": "static/images/ablation_reward_normalization.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3c9447809dbce03d41021c9c529e949873e7fa1",
+      "size": 360274,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e3c9447809dbce03d41021c9c529e949873e7fa1"
+    },
+    {
+      "path": "static/images/beliefs_1.7b.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ec69ad3cbb0f8878578bf99fe46f2cb6b3e84e3",
+      "size": 217638,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/4ec69ad3cbb0f8878578bf99fe46f2cb6b3e84e3"
+    },
+    {
+      "path": "static/images/beliefs_4b.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74057a4364499bd012ea966bc04240921e0c4a42",
+      "size": 227480,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/74057a4364499bd012ea966bc04240921e0c4a42"
+    },
+    {
+      "path": "static/images/beliefs_combined.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d4d5a7d633f0fcfd6e7a568207132e086f9814c",
+      "size": 401327,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/8d4d5a7d633f0fcfd6e7a568207132e086f9814c"
+    },
+    {
+      "path": "static/images/beliefs_deepseek_v3.2_base_only.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27abba077147e04b7e29d8dc70970771b26d4e2d",
+      "size": 111017,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/27abba077147e04b7e29d8dc70970771b26d4e2d"
+    },
+    {
+      "path": "static/images/figure1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8516e180ef5de32f2137feba3851900bb1963cfe",
+      "size": 231040,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/8516e180ef5de32f2137feba3851900bb1963cfe"
+    },
+    {
+      "path": "static/images/interaction_scaling_combined.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "942e84a14cc60f01344b8faac8f8ec2e0dd63427",
+      "size": 416464,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/942e84a14cc60f01344b8faac8f8ec2e0dd63427"
+    },
+    {
+      "path": "static/images/num_questions.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ca3b0fd484554a150ee2de04a17906dc3641e50",
+      "size": 318643,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/8ca3b0fd484554a150ee2de04a17906dc3641e50"
+    },
+    {
+      "path": "static/images/num_repeated_questions.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33254abda2197ea9ad4c5a3702440aabd3ffc2e0",
+      "size": 299952,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/33254abda2197ea9ad4c5a3702440aabd3ffc2e0"
+    },
+    {
+      "path": "static/images/passk_benchmarks_k8_games.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fe5e5f3d2064d7f3b36af78fe8534b83b18b76f",
+      "size": 155697,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/2fe5e5f3d2064d7f3b36af78fe8534b83b18b76f"
+    },
+    {
+      "path": "static/images/passk_cs_k8.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf60958ba0cd92f36059e968b98f4fd66fbc8348",
+      "size": 155611,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/cf60958ba0cd92f36059e968b98f4fd66fbc8348"
+    },
+    {
+      "path": "static/images/relic_sampling_comparison.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1d19e833533fa7feca154b29f2d3de911509fcc",
+      "size": 165456,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/e1d19e833533fa7feca154b29f2d3de911509fcc"
+    },
+    {
+      "path": "static/images/training_dynamics_combined.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4faf40b7792d20db3f05ad02f5b3c5dd12479a57",
+      "size": 509714,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/4faf40b7792d20db3f05ad02f5b3c5dd12479a57"
+    },
+    {
+      "path": "static/images/tuebingen-ai-logo-shuffle.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbcf2ade1d0f7792d5df43b635e2716f490b82bb",
+      "size": 6361,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/dbcf2ade1d0f7792d5df43b635e2716f490b82bb"
+    },
+    {
+      "path": "static/images/user_personalization.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7785bfa0c5e927b09085e1017983fcd3a3b5da3c",
+      "size": 145002,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/7785bfa0c5e927b09085e1017983fcd3a3b5da3c"
+    },
+    {
+      "path": "train.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67c16f20362aeec84a2c63b11ae8e91ec355b3f9",
+      "size": 23629,
+      "url": "https://api.github.com/repos/bethgelab/delta-belief-rl/git/blobs/67c16f20362aeec84a2c63b11ae8e91ec355b3f9"
+    },
+    {
+      "path": "verl",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "e95bd9edf206ee6028b3e0a62221c6fa67931898"
+    }
+  ],
+  "truncated": false
+}

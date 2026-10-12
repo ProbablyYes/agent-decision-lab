@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "Complete and verify the task using tools. Costs are one primitive per action; every observed failure remains in the record. Receipts, compatibility and sensor validity are distinct. Plan node execution uses current requirements, rejects invalid prerequisites, and changes its generation, invalidating dependent stamps. Do not assume every report is authoritative."
+  },
+  {
+    "role": "user",
+    "content": "{\"actions\": [{\"kind\": \"execute_node\", \"node\": \"snapshot\"}, {\"kind\": \"execute_node\", \"node\": \"credentials\"}, {\"kind\": \"execute_node\", \"node\": \"left\"}, {\"kind\": \"execute_node\", \"node\": \"right\"}, {\"kind\": \"execute_node\", \"node\": \"merge\"}, {\"kind\": \"execute_node\", \"node\": \"publish\"}, {\"kind\": \"audit\"}, {\"kind\": \"verify\"}], \"observation\": {\"completed\": {\"credentials\": {\"inputs\": {}, \"revision\": 1}, \"left\": {\"inputs\": {\"snapshot\": 1}, \"revision\": 1}, \"right\": {\"inputs\": {\"credentials\": 1, \"snapshot\": 1}, \"revision\": 1}, \"snapshot\": {\"inputs\": {}, \"revision\": 1}}, \"inherited_plan\": [\"merge\", \"publish\", \"verify\"], \"observation\": \"Unverified report (reliability 0.8): snapshot revision 2 might be required. Audit available; report is not authoritative.\", \"plan_dependencies\": {\"credentials\": [], \"left\": [\"snapshot\"], \"merge\": [\"left\", \"right\"], \"publish\": [\"merge\", \"credentials\"], \"right\": [\"snapshot\", \"credentials\"], \"snapshot\": []}, \"remaining\": 12, \"terminal\": false}, \"task\": \"Restore/complete and verify\"}"
+  }
+]

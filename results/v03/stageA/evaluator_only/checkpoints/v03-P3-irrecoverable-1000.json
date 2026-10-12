@@ -1,0 +1,48 @@
+{
+  "state": {
+    "version": "v03-world-1",
+    "line": "P3",
+    "family": "irrecoverable",
+    "seed": 1000,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 1000
+    },
+    "primitive_cost": 1,
+    "remaining": 1,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Job partially complete. Status pending; next observation not yet available.",
+    "prior": "A",
+    "alternative": "B",
+    "stage": 1,
+    "window": 2,
+    "hidden": {
+      "required_stage": 3
+    }
+  },
+  "initial": {
+    "version": "v03-world-1",
+    "line": "P3",
+    "family": "irrecoverable",
+    "seed": 1000,
+    "rng_state": {
+      "algorithm": "deterministic seed mapping; no random draws",
+      "seed": 1000
+    },
+    "primitive_cost": 1,
+    "remaining": 1,
+    "history": [],
+    "success": false,
+    "terminal": false,
+    "last": "Job partially complete. Status pending; next observation not yet available.",
+    "prior": "A",
+    "alternative": "B",
+    "stage": 1,
+    "window": 2,
+    "hidden": {
+      "required_stage": 3
+    }
+  }
+}
